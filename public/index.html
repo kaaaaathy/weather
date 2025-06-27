@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>FUN PROJECT W SIB</title>
     <link rel="icon" href="/favicon.ico">
-    <!-- ...add other meta or link tags as needed... -->
 </head>
 
 <body>
@@ -16,14 +15,12 @@
         <input id="input" autocomplete="off" /><button>Send</button>
     </form>
 
-    <ul id="messages"></ul>
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
         const socket = io();
         const form = document.getElementById('form');
         const input = document.getElementById('input');
-        const messages = document.getElementById('messages');
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -33,12 +30,6 @@
             }
         });
 
-        socket.on('chat message', (msg) => {
-            const item = document.createElement('li');
-            item.textContent = msg;
-            messages.appendChild(item);
-            window.scrollTo(0, document.body.scrollHeight);
-        });
     </script>
 </body>
 
