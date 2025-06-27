@@ -1,22 +1,36 @@
 const express = require('express')
 const path = require('path')
-
+const { createServer } = require('node:http');
+const { Server } = require('socket.io');
 const port = process.env.PORT || 5006
 
-const app = express()
+const app = express();
+const server = createServer(app);
+const io = new Server(server);
+
+
+
+io.on('connection', (socket) => {
+  console.log('a user connected');
+  socket.on('chat message', (msg) => {
+    console.log('message: ' + msg);
+    io.emit('chat message', msg);
+
+  });
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
+});
+
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
+// app.set('views', path.join(__dirname, 'views'))
+// app.set('view engine', 'ejs')
 
-app.get('/', (req, res) => {
-  console.log(`Rendering 'pages/index' for route '/'`)
-  res.render('pages/index')
-})
-
-const server = app.listen(port, () => {
-  console.log(`Listening on ${port}`)
-})
+// app.get('/', (req, res) => {
+//   console.log(`Rendering 'pages/index' for route '/'`)
+//   res.render('pages/index')
+// })
 
 process.on('SIGTERM', async () => {
   console.log('SIGTERM signal received: gracefully shutting down')
@@ -26,3 +40,8 @@ process.on('SIGTERM', async () => {
     })
   }
 })
+
+server.listen(port, () => {
+  console.log(`Listening on ${port}`)
+})
+
