@@ -6,23 +6,258 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>FUN PROJECT W SIB</title>
     <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <script src='https://unpkg.com/opentype.js@1.3.4/dist/opentype.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
 </head>
 
 <body>
-
-    <ul id="messages"></ul>
-
+    <div id="weather-info"></div>
+    <div id="questions-container"></div>
+    <div id="sky">
+        <div id="viewport">
+            <div id="answers"> </div>
+        </div>
+        <div id="rain"></div>
+    </div>
+    <a href="/index.html" target="_blank" id="ask">Ask a Question</a>
     <script src="/socket.io/socket.io.js"></script>
     <script>
+
+        let tomorrow;
+
+        async function getData() {
+            try {
+                const response = await fetch('https://api.weather.gov/gridpoints/OKX/64,64/forecast');
+                data = await response.json();
+                tomorrow = data.properties.periods[1];
+                console.log(tomorrow.detailedForecast);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+        getData();
+
+        // Initialize socket.io
         const socket = io();
         const messages = document.getElementById('messages');
+        let questions = [];
+        let windSpeed = 1;
+        let temp = 0;
+        let rain = 0;
+        let clock = 0;
+        let margin = 20;
+        let answers = `What's the weather like, Patchy fog after 1am. Mostly
+                cloudy, with a
+                low around 66. South
+                wind 1 to 6 mph. Seeing machines, these future tense objects, in this photo, a body of water, Copyright
+                Google 2023, in this photo, a large balloon drifts above the Atlantic, when is it going to rain, when,
+                this or atmospheric phenomena, crease in cloud unidentified object above
+                Montana, balloon shot down, in this photo, an object. “The cloud” is only the latest in this series of
+                metaphors
+
+                If we come to see the cloud as a historical object. On investigation, most UFOs are identified as known
+                objects or atmospheric phenomena while a small number remain unexplained. Future: flying-object
+                sky-object object-object, initially, model of disciplinary power and subjects managed. The largest
+                European database of sightings: Il voit alors un objet qu'il prend pour un ballon sonde mais de forme
+                ovale et très brillant, de couleur noire.
+
+                Il semble tomber. The word UFO was first coined by the US Navy to describe it, sky spectacle object, at
+                a wonderful speed, mass panic, pure fake. Known object known object atmospheric phenomena a weather
+                balloon a, what when is it going to rain
+
+                the cloud is a massive network object perhaps Xi Jinping can make it happen, people have observed the
+                sky throughout history, and have sometimes seen unusual sights such as comets, bright meteors perhaps
+                Justin Trudeau can shoot it, such as planetary conjunction such as atmospheric optical phenomena such as
+                parhelia and lenticular clouds such as Wechat
+
+                Have you ever written a poem with satellites, When is it going to rain? In this photo,
+                when cattle, then when pigs, when deer, when weasels run when foxes bark it means
+                I feel the rain is some sort of object. Tell the window to make this last. A ceiling says maybe you can
+                hold it all. In this photo. My friend my foe my fantasy my aggregation index value, What's
+           `;
+
+
+        let styles, axis, font;
+        let n = -100;
+
+        // Load the font and its variations
+
+        // Remove font/text settings from setup
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+            background(0);
+            angleMode(DEGREES);
+            createAnswers();
+
+        }
+        function createAnswers() {
+            let answerWords = answers.split(' ');
+            for (let i = 0; i < answerWords.length; i++) {
+                if (answerWords[i].length > 1) {
+                    let answerDiv = document.createElement('div');
+                    answerDiv.className = 'word';
+                    answerDiv.innerText = answerWords[i];
+                    document.getElementById('answers').appendChild(answerDiv);
+                }
+            }
+        }
 
         socket.on('chat message', (msg) => {
-            const item = document.createElement('li');
-            item.textContent = msg;
-            messages.appendChild(item);
+            questions.push(new Question(msg, floor(random(margin, width - margin)), floor(random(margin, height - margin)), randomVelocity(), randomVelocity()));
+
             window.scrollTo(0, document.body.scrollHeight);
         });
+
+
+
+        // Remove textFont from draw
+        function draw() {
+            clock++;
+            background(0);
+
+            // Animate all questions (divs)
+            for (let i = 0; i < questions.length; i++) {
+                questions[i].animate();
+                if (clock % 800 == 0) {
+                    questions[i].windy = true;
+                    if (n < 14) n += 0.1;
+                } else {
+                    questions[i].windy = false;
+                    if (n > 0) n -= 0.1;
+                }
+            }
+
+            // Weather info as HTML
+            if (tomorrow) {
+                let weatherDiv = document.getElementById('weather-info');
+                let raw = tomorrow.shortForecast.split(".");
+                // Extract highest number from windSpeed string
+                const windNumbers = tomorrow.windSpeed.match(/\d+(\.\d+)?/g);
+                let maxWind = windNumbers ? Math.max(...windNumbers.map(Number)) : '';
+                windSpeed = maxWind;
+                temp = tomorrow.temperature;
+                rain = tomorrow.probabilityOfPrecipitation.value;
+                weatherDiv.innerHTML =
+                    raw.join(".<br>") + "<br>" +
+                    "TEMP: " + temp + " F<br>" +
+                    "WIND: " + windSpeed + " mph<br>" +
+                    "RAIN: " + rain + "%";
+            }
+        }
+
+
+
+
+        // Update Question class to use HTML divs
+        class Question {
+            constructor(text, x, y, velX, velY) {
+                this.text = text;
+                this.x = x;
+                this.y = y;
+                this.velX = velX;
+                this.velY = velY;
+                this.angle = 0;
+                this.windy = false;
+                this.life = 0;
+                this.div = document.createElement('div');
+                this.div.className = 'question';
+                this.div.innerText = text;
+                this.div.style.left = `${x}px`;
+                this.div.style.top = `${y}px`;
+                document.getElementById('questions-container').appendChild(this.div);
+            }
+
+            animate() {
+                this.life++;
+                this.decay();
+
+                if (this.windy == true) {
+                    this.blowAround();
+                } else {
+                    this.x += this.velX * Math.cos(this.angle * Math.PI / 180);
+                    this.y += this.velY * Math.sin(this.angle * Math.PI / 180);
+                }
+
+                if (this.angle >= 360) this.angle = 0;
+                this.angle++;
+
+                // Keep within bounds
+                let textWidthPx = this.div.offsetWidth;
+                let textHeightPx = this.div.offsetHeight;
+
+                if (this.x >= window.innerWidth - textWidthPx * 0.5 || this.x <= 0 + textWidthPx * 0.5) {
+                    this.velX = this.velX * -1;
+                }
+                if (this.y >= window.innerHeight - textHeightPx * 0.5 || this.y <= 0 + textHeightPx * 0.5) {
+                    this.velY = this.velY * -1;
+                }
+
+                // Update div position
+                this.div.style.left = `${this.x}px`;
+                this.div.style.top = `${this.y}px`;
+                this.div.style.opacity = (this.opacity / 255).toString();
+            }
+
+            // WRITE IN HTML INSTEAD
+            blowAround() {
+                // Use CSS animation for a "windy" effect
+                this.div.style.animation = '';
+                const gust = windSpeed * 20 + 'px';
+                if (this.velX < 0) {
+                    this.div.style.setProperty('--windX', gust);
+                    this.div.style.setProperty('--windY', gust * 0.5);
+
+                } else if (this.velX > 0) {
+                    this.div.style.setProperty('--windX', -gust);
+                    this.div.style.setProperty('--windY', gust * 0.5);
+
+
+                }
+
+                this.div.style.animation = 'blow 3s ease-in-out 1';
+                setTimeout(() => {
+                    this.div.style.animation = '';
+                }, 3000);
+
+
+            }
+
+            checkCollision(other) {
+                let d = dist(this.x, this.y, other.x, other.y);
+                if (d < textWidth(this.text) * 0.5 + textWidth(other.text) * 0.5) {
+                    this.velX *= -1;
+                    other.velX *= -1;
+                    this.velY *= -1;
+                    other.velY *= -1;
+
+                    console.log("Collision detected between: " + this.text + " and " + other.text);
+                }
+
+            }
+
+            decay() {
+                if (this.life > 100000) {
+                    this.style.opacity -= 0.5;
+                }
+            }
+
+        }
+
+        function randomVelocity() {
+            let randomV = random(-0.5, 0.5);
+            if (randomV != 0) {
+                return randomV;
+            } else {
+                return randomVelocity();
+            }
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+            // Optionally reposition divs if needed
+        }
     </script>
 </body>
 

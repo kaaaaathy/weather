@@ -1,27 +1,137 @@
-.jumbotron {
-  background: #532F8C;
-  color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }
+@font-face {
+  font-family: "Hershey Futuram";
+  src: url("fonts/Hershey-Noailles-futuram.ttf");
+}
 
+@font-face {
+  font-family: "Hershey Times";
+  src: url("fonts/Hershey-Noailles-astrology0.5.ttf");
+}
+
+body {
+  background: black;
+  margin: 0px;
+  font-family: "Hershey Futuram", sans-serif;
+  font-size: 10px;
+  color: white;
+
+}
+
+#sky {
+  width: 100;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+#viewport {
+  width: 95%;
+  height: 95%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-self: center;
+  overflow: hidden;
+
+  border-radius: 50%;
+  border: 1px dotted white;
+
+
+}
+
+#answers {
+  font-family: "Hershey Times", serif;
+  font-size: 50px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.word {
+  width: auto;
+  padding-left: 10px;
+  color: black;
+  transition: 0.1s ease color;
+
+
+}
+
+.word:hover {
+  color: white;
+  transition: 0.1s ease color;
+}
+
+#weather-info {
+  position: absolute;
+  margin: 20px;
+  z-index: 10;
+  color: white;
+
+}
+
+#ask {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.question {
+  font-family: "Hershey Futuram", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* animation: fuzz 10s ease 10s infinite alternate; */
+  transition: opacity 0.5s linear;
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  pointer-events: none;
+
+
+}
+
+#questions-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+#instruction {
+  font-size: 30px;
+}
+
+@keyframes fuzz {
+  0% {
+    filter: blur(0px);
+  }
+
+  50% {
+    filter: blur(2px);
+  }
+
+  0% {
+    filter: blur(0px);
+  }
+
+}
+
+@keyframes blow {
+  0% {
+    transform: skew(0deg, 0deg) translate(0px, 0px);
+  }
+
+  50% {
+    transform: skew(5deg, 0deg) translate(var(--windX, 0px), var(--windY, 0px));
+  }
+
+}
