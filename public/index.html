@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <p id="instruction">Ask a question:</p>
+    <p id="instruction">Ask a question</p>
 
     <form id="form">
-        <input id="input" autocomplete="off" /><button>Send</button>
+        <input id="input" autocomplete="off" /><button id="submit">Send</button>
     </form>
 
 
@@ -23,15 +23,18 @@
         const socket = io();
         const form = document.getElementById('form');
         const input = document.getElementById('input');
+        const bannedWords = ["nigg", "fag", "cunt"]; // Add more as needed
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            if (input.value) {
+            const value = input.value.trim().toLowerCase();
+            if (value && !bannedWords.some(word => value.includes(word))) {
                 socket.emit('chat message', input.value);
                 input.value = '';
+            } else if (bannedWords.some(word => value.includes(word))) {
+                alert("Your message contains a word that kathy decided to censor, sorry!");
             }
         });
-
     </script>
 </body>
 

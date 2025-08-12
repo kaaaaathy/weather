@@ -14,6 +14,74 @@
 }
 
 
+#form,
+#instruction {
+  margin: 50px;
+  text-align: center;
+
+}
+
+#instruction {
+  margin-top: 60px;
+
+}
+
+button {
+  font-family: "Hershey Futuram", sans-serif;
+
+}
+
+#instruction,
+#submit {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+
+
+#input {
+  border: 1px dotted white;
+  background: black;
+  height: 100px;
+  width: 100%;
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  font-family: "Hershey Futuram", sans-serif;
+  transition: 0.5s ease all;
+}
+
+#input:focus {
+  outline: none;
+  box-shadow: 0 0 10px white;
+  transition: 0.5s ease all;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 0px white;
+
+  }
+
+  to {
+    box-shadow: 0 0 10px white;
+
+  }
+
+}
+
+#submit {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 20px;
+  width: 40%;
+  font-family: "Hershey Futuram", sans-serif;
+}
+
 #cloud-container {
   font-size: 30px;
   font-family: "Hershey Futuram", sans-serif;
@@ -133,16 +201,32 @@ body {
 
 }
 
-#ask {
+#ask,
+#download-btn {
   position: absolute;
   bottom: 20px;
-  right: 20px;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid white;
+  background: black;
   color: white;
   text-align: center;
   text-decoration: none;
+  text-transform: lowercase;
+
+}
+
+#ask {
+  right: 20px;
+
+}
+
+#download-btn {
+  left: 20px;
+  font-size: 10px;
+  width: auto;
+
+
 }
 
 .question {
@@ -168,9 +252,6 @@ body {
   pointer-events: none;
 }
 
-#instruction {
-  font-size: 30px;
-}
 
 @keyframes fuzz {
   0% {
