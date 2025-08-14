@@ -145,10 +145,16 @@ button {
 
 }
 
-.hide {
+iframe {
+  transform: scale(2.5);
+  /* Scales the content to 75% of its original size */
+  transform-origin: 250 150;
+}
+
+/* .hide {
   opacity: 0 !important;
   transition: 0.5s opacity ease;
-}
+} */
 
 
 @keyframes blur {

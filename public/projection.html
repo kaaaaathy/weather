@@ -208,6 +208,7 @@ Very doubtful
         function draw() {
             clock++;
             background(0);
+            let showAnswer = false;
 
             // Animate all questions (divs)
             for (let i = 0; i < questions.length; i++) {
@@ -215,8 +216,9 @@ Very doubtful
 
                 if (questions[i].isMouseOver()) {
                     giveAnswer(questions[i].answer, questions[i].symbol, questions[i].bg);
+                    showAnswer = true;
+                    console.log("hovered on " + questions[i].text);
                 } else {
-                    clearAnswer();
                 }
 
                 if (clock % 800 == 0) {
@@ -228,6 +230,10 @@ Very doubtful
                 }
 
             }
+            if (!showAnswer) {
+                clearAnswer();
+            }
+
 
             // Weather info as HTML
             if (tomorrow) {
@@ -256,20 +262,21 @@ Very doubtful
         function clearAnswer() {
             answerDiv.innerHTML = "";
             symbolDiv.innerHTML = "";
-            if (!imageDiv.classList.contains('hide')) {
-                imageDiv.classList.add('hide');
-            }
+            imageDiv.style.opacity = 0;
+            //            if (!imageDiv.classList.contains('hide')) {
+            //                imageDiv.classList.add('hide');
+            //            }
 
 
         }
         function giveAnswer(answer, symbol, bg) {
-            console.log("CLICKED!");
             answerDiv.innerHTML = answer;
             symbolDiv.innerHTML = symbol;
-            if (imageDiv.classList.contains('hide')) {
-                imageDiv.classList.remove('hide');
-            }
+            // if (imageDiv.classList.contains('hide')) {
+            //     imageDiv.classList.remove('hide');
+            // }
             imageDiv.style.backgroundImage = "url('/images/" + bg + "')"
+            imageDiv.style.opacity = 1;
 
         }
 
@@ -292,6 +299,16 @@ Very doubtful
                 this.answer = answer;
                 this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
                 this.bg = images[Math.floor(Math.random() * images.length)];
+
+                // this.div.addEventListener('mouseOver', () => {
+                //     giveAnswer(this.answer, this.symbol, this.bg);
+                //     console.log("hovered on " + questions[i].text);
+                //     console.log("mousing over " + this.text);
+                // });
+
+                // this.div.addEventListener('mouseOut', () => {
+                //     clearAnswer();
+                // });
 
                 document.getElementById('questions-container').appendChild(this.div);
 
