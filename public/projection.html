@@ -8,6 +8,8 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="stylesheets/main.css">
     <script src='https://unpkg.com/opentype.js@1.3.4/dist/opentype.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/rita"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
 </head>
@@ -18,26 +20,143 @@
     <div id="weather-info"></div>
     <div id="questions-container"></div>
     <div id="sky">
-        <iframe src="symbols.html" id="viewport">
-        </iframe>
+        <div id="viewport">
+            <div id="bg">
+                <div id="symbol"></div>
+                <div id="answer"></div>
+            </div>
 
-        <div id="rain"></div>
+        </div>
     </div>
     <a href="/index.html" target="_blank" id="ask">Ask a Question</a>
     <script src="/socket.io/socket.io.js"></script>
     <script>
 
+
+        let data;
+        let rm;
         let tomorrow;
+        let eightball = `
+It is certain
+It is decidedly so
+Without a doubt
+Yes definitely
+You may rely on it
+As I see it, yes
+Most likely
+Outlook good
+Yes
+Signs point to yes
+Reply hazy, try again
+Ask again later
+Better not tell you now
+Cannot predict now
+Concentrate and ask again
+Don't count on it
+My reply is no
+My sources say no
+Outlook not so good
+Very doubtful
+`;
+        let answers = ``;
+        let symbols = [];
+        let images = ["1.jpg", "2.gif", "3.gif", "4.png", "5.png"];
+
+        let imageDiv = document.getElementById('bg');
+        let answerDiv = document.getElementById('answer');
+        let symbolDiv = document.getElementById('symbol');
+
+
+
+        let symbolTracker = [];
+
+        function checkRain(rain) {
+            if (rain < 25) {
+                symbols.push("A");
+                rm.addText("My sources say no, My sources say no, My sources say no, no no no no no no no no no no no");
+            } else if (rain >= 25 && rain < 50) {
+                symbols.push("B");
+                rm.addText("no probably not probably not");
+            } else if (rain >= 50 && rain < 75) {
+                symbols.push("C");
+                rm.addText("it's more than likely, yes yes yes, but not definitely");
+            } else {
+                symbols.push("D");
+                rm.addText("yes yes, it is yes, definitely yes, definitely yes, it is yes, definitely yes");
+
+            }
+
+        }
+
+        function checkWind(wind) {
+            if (wind < 3) {
+                symbols.push("1");
+                rm.addText("in a very long time from now, slowly, ever so slowly, evenly and without hurry");
+
+            } else if (wind >= 3 && wind < 5) {
+                symbols.push("2");
+                rm.addText("soon but not terribly soon, wait a little bit, not too long, not too soon, soon but not too soon");
+            } else if (wind >= 5 && wind < 8) {
+                symbols.push("3");
+                rm.addText("almost certainly tomorrow, tomorrow it will happen tomorrow. It is tomorrow. It will be tomorrow.")
+            } else {
+                symbols.push("4");
+                rm.addText("My sources say hurriedly, My sources say quickly, immediately, sooner is better than later, rush rush rush, ASAP, as soon as possible, it will be quickly hurriedly");
+
+            }
+
+        }
+
+        // function pickBg() {
+        //     return "url('/images/" + images[Math.floor(Math.random() * images.length)] + "')"
+        // }
+
+        function checkTemp(temp, div) {
+            if (temp < 30) {
+                div.classList.add("cold");
+            } else if (temp >= 30 && temp < 50) {
+                div.classList.add("cool");
+            } else if (temp >= 50 && temp < 70) {
+                div.classList.add("temperate");
+            } else if (temp >= 70 && temp < 85) {
+                div.classList.add("warm");
+            } else {
+                div.classList.add("hot");
+            }
+
+        }
+
 
         async function getData() {
             try {
                 const response = await fetch('https://api.weather.gov/gridpoints/OKX/64,64/forecast');
                 data = await response.json();
                 tomorrow = data.properties.periods[1];
-                console.log(tomorrow.detailedForecast);
+
+
+                temp = tomorrow.temperature;
+                // getPoem();
+                rm = RiTa.markov(3);
+                rm.addText(eightball);
+
+                checkRain(tomorrow.probabilityOfPrecipitation.value);
+                checkWind(tomorrow.windSpeed);
             } catch (error) {
                 console.error('Error:', error);
             }
+        }
+
+        function markov() {
+
+            // console.log(getPoem());
+            sentences = rm.generate();
+
+            if (sentences.length > 0) {
+                return sentences;
+            } else {
+                return "something went wrong"
+            }
+
         }
         getData();
 
@@ -53,6 +172,8 @@
 
 
         let styles, axis, font;
+
+        // I dont remember what this is about but it has to do with with timing / clock
         let n = -100;
 
         // Load the font and its variations
@@ -66,9 +187,18 @@
         }
 
 
-        socket.on('chat message', (msg) => {
-            questions.push(new Question(msg, floor(random(margin, width - margin)), floor(random(margin, height - margin)), randomVelocity(), randomVelocity()));
+        // TESTING FUNCTION
+        document.body.addEventListener('keydown', (event) => {
+            if (event.key === 'z') {
+                giveAnswer(markov(), "A", images[Math.floor(Math.random() * images.length)]);
+            }
+            if (event.key === 'x') {
+                clearAnswer();
+            }
+        });
 
+        socket.on('chat message', (msg) => {
+            questions.push(new Question(msg, floor(random(margin, width - margin)), floor(random(margin, height - margin)), randomVelocity(), randomVelocity(), markov()));
             window.scrollTo(0, document.body.scrollHeight);
         });
 
@@ -82,6 +212,13 @@
             // Animate all questions (divs)
             for (let i = 0; i < questions.length; i++) {
                 questions[i].animate();
+
+                if (questions[i].isMouseOver()) {
+                    giveAnswer(questions[i].answer, questions[i].symbol, questions[i].bg);
+                } else {
+                    clearAnswer();
+                }
+
                 if (clock % 800 == 0) {
                     questions[i].windy = true;
                     if (n < 14) n += 0.1;
@@ -89,6 +226,7 @@
                     questions[i].windy = false;
                     if (n > 0) n -= 0.1;
                 }
+
             }
 
             // Weather info as HTML
@@ -106,15 +244,38 @@
                     "TEMP: " + temp + " F<br>" +
                     "WIND: " + windSpeed + " mph<br>" +
                     "RAIN: " + rain + "%";
+
+
+
+                // I dont think this works...
+                checkTemp(temp, answerDiv);
             }
         }
 
 
+        function clearAnswer() {
+            answerDiv.innerHTML = "";
+            symbolDiv.innerHTML = "";
+            if (!imageDiv.classList.contains('hide')) {
+                imageDiv.classList.add('hide');
+            }
 
+
+        }
+        function giveAnswer(answer, symbol, bg) {
+            console.log("CLICKED!");
+            answerDiv.innerHTML = answer;
+            symbolDiv.innerHTML = symbol;
+            if (imageDiv.classList.contains('hide')) {
+                imageDiv.classList.remove('hide');
+            }
+            imageDiv.style.backgroundImage = "url('/images/" + bg + "')"
+
+        }
 
         // Update Question class to use HTML divs
         class Question {
-            constructor(text, x, y, velX, velY) {
+            constructor(text, x, y, velX, velY, answer) {
                 this.text = text;
                 this.x = x;
                 this.y = y;
@@ -128,7 +289,31 @@
                 this.div.innerText = text;
                 this.div.style.left = `${x}px`;
                 this.div.style.top = `${y}px`;
+                this.answer = answer;
+                this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
+                this.bg = images[Math.floor(Math.random() * images.length)];
+
                 document.getElementById('questions-container').appendChild(this.div);
+
+
+            }
+
+
+
+            isMouseOver() {
+                const rect = this.div.getBoundingClientRect();
+                // Use window event coordinates
+                if (
+                    mouseX >= rect.left &&
+                    mouseX <= rect.right &&
+                    mouseY >= rect.top &&
+                    mouseY <= rect.bottom
+                ) {
+                    return true;
+                } else {
+                    return false;
+                }
+
             }
 
             animate() {
@@ -142,7 +327,9 @@
                     this.y += this.velY * Math.sin(this.angle * Math.PI / 180);
                 }
 
-                if (this.angle >= 360) this.angle = 0;
+                if (this.angle >= 360) {
+                    this.angle = 0;
+                }
                 this.angle++;
 
                 // Keep within bounds
@@ -160,6 +347,7 @@
                 this.div.style.left = `${this.x}px`;
                 this.div.style.top = `${this.y}px`;
                 this.div.style.opacity = (this.opacity / 255).toString();
+                console.log(this.isMouseOver());
             }
 
             // WRITE IN HTML INSTEAD
@@ -169,7 +357,7 @@
                 const gust = windSpeed * 20 + 'px';
                 if (this.velX < 0) {
                     this.div.style.setProperty('--windX', gust);
-                    this.div.style.setProperty('--windY', gust * 0.5);
+                    this.div.style.setProperty('--windY', gust);
 
                 } else if (this.velX > 0) {
                     this.div.style.setProperty('--windX', -gust);

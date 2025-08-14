@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Hershey Times";
-  src: url("fonts/Hershey-Noailles-astrology0.5.ttf");
+  src: url("fonts/Hershey-Noailles-timesl-1-1.ttf");
 }
 
 @font-face {
@@ -13,6 +13,13 @@
   src: url("fonts/weather.ttf");
 }
 
+/* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
 
 #form,
 #instruction {
@@ -81,6 +88,84 @@ button {
   width: 40%;
   font-family: "Hershey Futuram", sans-serif;
 }
+
+
+/* ———————————— THIS IS THE CSS FOR ANSWERS HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR ANSWERS HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR ANSWERS HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR ANSWERS HTML ———————————— */
+
+#answer {
+  margin: 50px;
+  font-size: 40px;
+  width: 80%;
+  text-transform: capitalize;
+
+  font-family: "Hershey Times", serif;
+
+
+}
+
+#answer,
+#symbol {
+  color: white;
+  text-align: center;
+  user-select: none;
+
+}
+
+#symbol {
+  font-family: "Weather", "wingdings";
+  text-align: center;
+  font-size: 80px;
+  color: transparent;
+  width: 100%;
+
+  -webkit-text-stroke: 1px white;
+
+
+  height: 60px;
+  margin-top: -80px;
+
+}
+
+#bg {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  filter: blur(1px);
+  overflow: hidden;
+  transition: 1s opacity ease;
+  animation: blur 10s ease-in-out infinite alternate;
+
+}
+
+.hide {
+  opacity: 0;
+  transition: 0.5s opacity ease;
+}
+
+
+@keyframes blur {
+  from {
+    filter: blur(1px);
+  }
+
+  to {
+    filter: blur(2px);
+  }
+}
+
+/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
 
 #cloud-container {
   font-size: 30px;
@@ -156,12 +241,22 @@ iframe {
 
 }
 
+
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML (AND MOST THINGS) ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML (AND MOST THINGS) ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML (AND MOST THINGS) ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML (AND MOST THINGS) ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML (AND MOST THINGS) ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML (AND MOST THINGS) ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML (AND MOST THINGS) ———————————— */
+
 body {
   background: black;
   margin: 0px;
   font-family: "Hershey Futuram", sans-serif;
   font-size: 10px;
   color: white;
+
 
 }
 
@@ -198,6 +293,7 @@ body {
   margin: 20px;
   z-index: 10;
   color: white;
+  pointer-events: none;
 
 }
 
@@ -235,12 +331,16 @@ body {
   transition: opacity 0.5s linear;
   font-size: 12px;
   color: white;
+  padding: 10px;
   position: absolute;
-  pointer-events: none;
 
-  z-index: 100;
+  z-index: 1001;
 
 
+}
+
+.question:hover {
+  color: red;
 }
 
 #questions-container {
@@ -249,7 +349,6 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none;
 }
 
 
