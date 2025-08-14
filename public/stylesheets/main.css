@@ -137,6 +137,7 @@ button {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  opacity: 1;
   filter: blur(1px);
   overflow: hidden;
   transition: 1s opacity ease;
@@ -145,7 +146,7 @@ button {
 }
 
 .hide {
-  opacity: 0;
+  opacity: 0 !important;
   transition: 0.5s opacity ease;
 }
 
