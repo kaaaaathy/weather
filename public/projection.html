@@ -19,13 +19,17 @@
 
     <div id="weather-info"></div>
     <div id="questions-container"></div>
-    <div id="sky">
-        <div id="viewport">
-            <div id="bg">
+    <div id="outline">
+        <div id="sky">
+            <div id="answer-panel">
+
                 <div id="symbol"></div>
                 <div id="answer"></div>
-            </div>
 
+            </div>
+            <iframe id="nasa" src="blank.html">
+
+            </iframe>
         </div>
     </div>
     <a href="/index.html" target="_blank" id="ask">Ask a Question</a>
@@ -33,38 +37,20 @@
     <script>
 
         let showAnswer = false;
+        let testAnswer = "TESTING";
         let data;
-        let rm;
+        let rm = RiTa.markov(3);
+
         let tomorrow;
-        let eightball = `
-It is certain
-It is decidedly so
-Without a doubt
-Yes definitely
-You may rely on it
-As I see it, yes
-Most likely
-Outlook good
-Yes
-Signs point to yes
-Reply hazy, try again
-Ask again later
-Better not tell you now
-Cannot predict now
-Concentrate and ask again
-Don't count on it
-My reply is no
-My sources say no
-Outlook not so good
-Very doubtful
-`;
+
         let answers = ``;
         let symbols = [];
-        let images = ["1.jpg", "2.gif", "3.gif", "4.png", "5.png"];
-
-        let imageDiv = document.getElementById('bg');
+        // let images = ["1.jpg", "2.gif", "3.gif", "4.png", "5.png"];
+        let url = "https://weather.ndc.nasa.gov/cgi-bin/get-abi?satellite=GOESEastconusband02&lat=35&lon=-87&zoom=2&type=Animation&numframes=10&width=650&height=450&quality=80g"
+        let imageDiv = document.getElementById('nasa');
         let answerDiv = document.getElementById('answer');
         let symbolDiv = document.getElementById('symbol');
+        let sky = document.getElementById('sky');
 
 
 
@@ -135,27 +121,14 @@ Very doubtful
 
 
                 temp = tomorrow.temperature;
-                // getPoem();
-                rm = RiTa.markov(3);
-                rm.addText(eightball);
-
                 checkRain(tomorrow.probabilityOfPrecipitation.value);
                 checkWind(tomorrow.windSpeed);
+                makeWeatherPanel();
+
             } catch (error) {
                 console.error('Error:', error);
             }
         }
-
-        async function getText() {
-            try {
-                const response = await fetch('/src.txt');
-                const text = await response.text();
-                console.log(text);
-            } catch (error) {
-                console.error('Error fetching clouds:', error);
-            }
-        }
-
         function markov() {
 
             // console.log(getPoem());
@@ -168,8 +141,48 @@ Very doubtful
             }
 
         }
+        async function getText() {
+            try {
+                const response = await fetch('/src.txt');
+                const text = await response.text();
+
+                rm.addText(text);
+                console.log(rm);
+                console.log(text);
+                testAnswer = markov();
+
+
+            } catch (error) {
+                console.error('Error fetching clouds:', error);
+            }
+        }
+
+        function makeWeatherPanel() {
+            if (tomorrow) {
+                let weatherDiv = document.getElementById('weather-info');
+                let raw = tomorrow.shortForecast.split(".");
+                // Extract highest number from windSpeed string
+                const windNumbers = tomorrow.windSpeed.match(/\d+(\.\d+)?/g);
+                let maxWind = windNumbers ? Math.max(...windNumbers.map(Number)) : '';
+                windSpeed = maxWind;
+                temp = tomorrow.temperature;
+                rain = tomorrow.probabilityOfPrecipitation.value;
+                weatherDiv.innerHTML =
+                    raw.join(".<br>") + "<br>" +
+                    "TEMP: " + temp + " F<br>" +
+                    "WIND: " + windSpeed + " mph<br>" +
+                    "RAIN: " + rain + "%";
+
+
+
+                // I dont think this works...
+                checkTemp(temp, answerDiv);
+            }
+        }
+
         getData();
         getText();
+
 
 
 
@@ -230,65 +243,61 @@ Very doubtful
                 if (questions[i].isMouseOver()) {
                     giveAnswer(questions[i].answer, questions[i].symbol, questions[i].bg);
                     showAnswer = true;
-                    console.log("hovered on " + questions[i].text);
+                    // console.log("hovered on " + questions[i].text);
                 } else {
                 }
 
-                if (clock % 800 == 0) {
+                if (clock % 2000 == 0) {
                     questions[i].windy = true;
+                    //everynow and then get
+
                     if (n < 14) n += 0.1;
                 } else {
                     questions[i].windy = false;
                     if (n > 0) n -= 0.1;
                 }
-
             }
-            if (!showAnswer && !keyIsDown(90)) {
+
+            // If there's no answer being shown, then every 2 minutes, refresh satellite image (with 5 sec buffer)
+            if (!showAnswer && clock >= 120000 && clock % 120000 == 0) {
+                refreshClouds();
+            }
+            // if there's no answer being shown and z is pressed, turn it off
+            if (!showAnswer) {
                 clearAnswer();
 
             }
 
             if (keyIsDown(90)) {
-                showAnswer = true
-                giveAnswer(markov(), "A", images[Math.floor(Math.random() * images.length)]);
-                console.log("z pressed, giving answer");
+                showAnswer = true;
+                giveAnswer(testAnswer, "A");
+
+                // giveAnswer(markov(), "A", images[Math.floor(Math.random() * images.length)]);
+            } else {
+                showAnswer = false;
             }
 
 
 
             // Weather info as HTML
-            if (tomorrow) {
-                let weatherDiv = document.getElementById('weather-info');
-                let raw = tomorrow.shortForecast.split(".");
-                // Extract highest number from windSpeed string
-                const windNumbers = tomorrow.windSpeed.match(/\d+(\.\d+)?/g);
-                let maxWind = windNumbers ? Math.max(...windNumbers.map(Number)) : '';
-                windSpeed = maxWind;
-                temp = tomorrow.temperature;
-                rain = tomorrow.probabilityOfPrecipitation.value;
-                weatherDiv.innerHTML =
-                    raw.join(".<br>") + "<br>" +
-                    "TEMP: " + temp + " F<br>" +
-                    "WIND: " + windSpeed + " mph<br>" +
-                    "RAIN: " + rain + "%";
 
-
-
-                // I dont think this works...
-                checkTemp(temp, answerDiv);
-            }
         }
 
 
         function clearAnswer() {
             answerDiv.innerHTML = "";
             symbolDiv.innerHTML = "";
-            imageDiv.style.opacity = 0;
+            sky.style.opacity = 0;
+
             //            if (!imageDiv.classList.contains('hide')) {
             //                imageDiv.classList.add('hide');
             //            }
 
 
+        }
+        function refreshClouds() {
+            imageDiv.src = "blank.html";
+            imageDiv.src = url;
         }
         function giveAnswer(answer, symbol, bg) {
             answerDiv.innerHTML = answer;
@@ -296,22 +305,12 @@ Very doubtful
             // if (imageDiv.classList.contains('hide')) {
             //     imageDiv.classList.remove('hide');
             // }
-            imageDiv.style.backgroundImage = "url('/images/" + bg + "')"
-            imageDiv.style.opacity = 1;
+            // imageDiv.style.backgroundImage = "url('/images/" + bg + "')"
+            refreshClouds();
+            sky.style.opacity = 1;
 
         }
-        // TESTING FUNCTION
-        document.body.addEventListener('keydown', (event) => {
-            if (event.key === 'z') {
-                giveAnswer(markov(), "A", images[Math.floor(Math.random() * images.length)]);
-                console.log("z pressed, giving answer");
-            }
-            if (event.key === 'x') {
-                clearAnswer();
-                console.log("x pressed, giving answer");
-            }
-            console.log("LISTENING");
-        });
+
         // Update Question class to use HTML divs
         class Question {
             constructor(text, x, y, velX, velY, answer) {
@@ -330,7 +329,7 @@ Very doubtful
                 this.div.style.top = `${y}px`;
                 this.answer = answer;
                 this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
-                this.bg = images[Math.floor(Math.random() * images.length)];
+                // this.bg = images[Math.floor(Math.random() * images.length)];
 
                 // this.div.addEventListener('mouseOver', () => {
                 //     giveAnswer(this.answer, this.symbol, this.bg);
