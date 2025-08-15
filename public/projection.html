@@ -32,7 +32,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
 
-
+        let showAnswer = false;
         let data;
         let rm;
         let tomorrow;
@@ -146,6 +146,16 @@ Very doubtful
             }
         }
 
+        async function getText() {
+            try {
+                const response = await fetch('/src.txt');
+                const text = await response.text();
+                console.log(text);
+            } catch (error) {
+                console.error('Error fetching clouds:', error);
+            }
+        }
+
         function markov() {
 
             // console.log(getPoem());
@@ -159,6 +169,17 @@ Very doubtful
 
         }
         getData();
+        getText();
+
+
+
+
+
+
+
+
+
+
 
         // Initialize socket.io
         const socket = io();
@@ -187,15 +208,7 @@ Very doubtful
         }
 
 
-        // TESTING FUNCTION
-        document.body.addEventListener('keydown', (event) => {
-            if (event.key === 'z') {
-                giveAnswer(markov(), "A", images[Math.floor(Math.random() * images.length)]);
-            }
-            if (event.key === 'x') {
-                clearAnswer();
-            }
-        });
+
 
         socket.on('chat message', (msg) => {
             questions.push(new Question(msg, floor(random(margin, width - margin)), floor(random(margin, height - margin)), randomVelocity(), randomVelocity(), markov()));
@@ -208,7 +221,7 @@ Very doubtful
         function draw() {
             clock++;
             background(0);
-            let showAnswer = false;
+            showAnswer = false;
 
             // Animate all questions (divs)
             for (let i = 0; i < questions.length; i++) {
@@ -230,9 +243,17 @@ Very doubtful
                 }
 
             }
-            if (!showAnswer) {
+            if (!showAnswer && !keyIsDown(90)) {
                 clearAnswer();
+
             }
+
+            if (keyIsDown(90)) {
+                showAnswer = true
+                giveAnswer(markov(), "A", images[Math.floor(Math.random() * images.length)]);
+                console.log("z pressed, giving answer");
+            }
+
 
 
             // Weather info as HTML
@@ -279,7 +300,18 @@ Very doubtful
             imageDiv.style.opacity = 1;
 
         }
-
+        // TESTING FUNCTION
+        document.body.addEventListener('keydown', (event) => {
+            if (event.key === 'z') {
+                giveAnswer(markov(), "A", images[Math.floor(Math.random() * images.length)]);
+                console.log("z pressed, giving answer");
+            }
+            if (event.key === 'x') {
+                clearAnswer();
+                console.log("x pressed, giving answer");
+            }
+            console.log("LISTENING");
+        });
         // Update Question class to use HTML divs
         class Question {
             constructor(text, x, y, velX, velY, answer) {
