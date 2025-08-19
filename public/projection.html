@@ -12,6 +12,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
+
 </head>
 
 <body>
@@ -34,6 +35,7 @@
     </div>
     <a href="/index.html" target="_blank" id="ask">Ask a Question</a>
     <script src="/socket.io/socket.io.js"></script>
+
     <script>
 
         let showAnswer = false;
@@ -241,6 +243,7 @@
 
         socket.on('chat message', (msg) => {
             questions.push(new Question(msg, floor(random(margin, width - margin)), floor(random(margin, height - margin)), randomVelocity(), randomVelocity(), markov()));
+            saveQuestions();
             window.scrollTo(0, document.body.scrollHeight);
         });
 
@@ -488,6 +491,48 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
         });
+
+        // Helper to save questions to localStorage
+        function saveQuestions() {
+            const data = questions.map(q => ({
+                text: q.text,
+                x: q.x,
+                y: q.y,
+                velX: q.velX,
+                velY: q.velY,
+                answer: q.answer,
+                symbol: q.symbol,
+                lat: q.lat,
+                lon: q.lon
+            }));
+            localStorage.setItem('questions', JSON.stringify(data));
+        }
+
+        // Helper to load questions from localStorage
+        function loadQuestions() {
+            const data = localStorage.getItem('questions');
+            if (data) {
+                const arr = JSON.parse(data);
+                arr.forEach(obj => {
+                    questions.push(new Question(
+                        obj.text,
+                        obj.x,
+                        obj.y,
+                        obj.velX,
+                        obj.velY,
+                        obj.answer
+                    ));
+                    // Optionally set symbol, lat, lon if needed
+                    const q = questions[questions.length - 1];
+                    q.symbol = obj.symbol;
+                    q.lat = obj.lat;
+                    q.lon = obj.lon;
+                });
+            }
+        }
+
+        // Call loadQuestions on page load
+        loadQuestions();
     </script>
 </body>
 
