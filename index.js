@@ -8,6 +8,22 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server);
 
+var proxy = require('express-http-proxy');
+app.use('/proxy', proxy('https://weather.ndc.nasa.gov'));
+app.use('/js', proxy('https://weather.ndc.nasa.gov/js', {
+  proxyReqPathResolver: function (req) {
+    console.log(req.url);
+    return ("/js" + req.url);
+
+  }
+}));
+
+app.use('/goes', proxy('https://weather.ndc.nasa.gov/goes', {
+  proxyReqPathResolver: function (req) {
+    return ("/goes" + req.url);
+
+  }
+}));
 
 
 io.on('connection', (socket) => {

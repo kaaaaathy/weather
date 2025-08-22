@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="stylesheets/main.css">
     <script src="https://cdn.jsdelivr.net/npm/rita"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script> -->
-
 </head>
 
 <body>
@@ -34,9 +31,8 @@
     </div>
     <a href="/index.html" target="_blank" id="ask">Ask a Question</a>
     <script src="/socket.io/socket.io.js"></script>
-    <script type="module" src="https://unpkg.com/playhtml@latest/dist/init.es.js"></script>
     <script>
-        // import { playhtml } from "https://unpkg.com/playhtml@latest";
+
 
         let sentences = "";
         let showAnswer = false;
@@ -60,7 +56,6 @@
 
         let answers = ``;
         let symbols = [];
-        // let images = ["1.jpg", "2.gif", "3.gif", "4.png", "5.png"];
         let url;
         let imageDiv = document.getElementById('nasa');
         let answerDiv = document.getElementById('answer');
@@ -72,7 +67,7 @@
         let symbolTracker = [];
 
         function makeURL(lat, lon) {
-            return "https://weather.ndc.nasa.gov/cgi-bin/get-abi?satellite=GOESEastconusband02&lat=" + lat + "&lon=" + lon + "&zoom=2&type=Animation&numframes=10&width=650&height=450&quality=80g"
+            return "/proxy/cgi-bin/get-abi?satellite=GOESEastconusband02&lat=" + lat + "&lon=" + lon + "&zoom=2&type=Animation&numframes=10&width=650&height=450&quality=80g"
         }
 
         let nycURL = makeURL(nycN, nycW);
@@ -113,9 +108,6 @@
 
         }
 
-        // function pickBg() {
-        //     return "url('/images/" + images[Math.floor(Math.random() * images.length)] + "')"
-        // }
 
         function checkTemp(temp, div) {
             if (temp < 30) {
@@ -220,22 +212,11 @@
         let rain = 0;
         let clock = 0;
         let margin = 20;
-
-
         let styles, axis, font;
-
-        // I dont remember what this is about but it has to do with with timing / clock
         let n = -100;
 
-        // Load the font and its variations
 
         // Remove font/text settings from setup
-        function setup() {
-            createCanvas(windowWidth, windowHeight);
-            background(0);
-            angleMode(DEGREES);
-
-        }
 
 
 
@@ -251,23 +232,17 @@
         // Remove textFont from draw
         function draw() {
             clock++;
-            background(0);
-            showAnswer = false;
+            // showAnswer = false;
 
             // Animate all questions (divs)
             for (let i = 0; i < questions.length; i++) {
                 questions[i].animate();
 
-                if (questions[i].isMouseOver()) {
-                    giveAnswer(questions[i].answer, questions[i].symbol, questions[i].lat, questions[i].lon);
-                    showAnswer = true;
-                    // console.log("hovered on " + questions[i].text);
-                } else {
-                }
+
 
                 if (clock % 2000 == 0) {
                     questions[i].windy = true;
-                    //everynow and then get windy
+                    //every now and then get windy
 
                     if (n < 14) n += 0.1;
                 } else {
@@ -277,26 +252,28 @@
             }
 
 
-            // if there's no answer being shown and z is pressed, turn it off
-            if (!showAnswer) {
-                clearAnswer();
-
-            }
-
-            if (keyIsDown(90)) {
-                giveAnswer(testAnswer, "A", nycN, nycW);
-                showAnswer = true;
-
-            } else {
-                showAnswer = false;
-            }
 
 
-
-            // Weather info as HTML
+            setTimeout(draw, 16);
 
         }
 
+        draw();
+
+        window.addEventListener("keydown", (event) => {
+            if (event.key == "z" && !event.repeat) {
+                giveAnswer(testAnswer, "A", nycN, nycW);
+
+            }
+        });
+
+        window.addEventListener("keyup", (event) => {
+            if (event.key == "z") {
+                clearAnswer();
+
+
+            }
+        });
 
         function clearAnswer() {
             answerDiv.innerHTML = "";
@@ -339,9 +316,6 @@
                 this.life = 0;
                 this.div = document.createElement('div');
                 this.div.className = 'question';
-                this.div.setAttribute('can-move', ''); // Add can-move attribute
-                this.div.id = text + "-play";
-                playhtml.setupPlayElement(this.div);
                 this.div.innerText = text;
                 this.div.style.left = `${x}px`;
                 this.div.style.top = `${y}px`;
@@ -349,17 +323,15 @@
                 this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
                 this.lat = randomLatLon(maxN, minN);
                 this.lon = randomLatLon(maxW, minW);
-                // this.bg = images[Math.floor(Math.random() * images.length)];
 
-                // this.div.addEventListener('mouseOver', () => {
-                //     giveAnswer(this.answer, this.symbol, this.bg);
-                //     console.log("hovered on " + questions[i].text);
-                //     console.log("mousing over " + this.text);
-                // });
+                this.div.addEventListener("mouseenter", () => {
+                    giveAnswer(this.answer, this.symbol, this.lat, this.lon);
 
-                // this.div.addEventListener('mouseOut', () => {
-                //     clearAnswer();
-                // });
+                });
+
+                this.div.addEventListener("mouseleave", () => {
+                    clearAnswer();
+                });
 
                 document.getElementById('questions-container').appendChild(this.div);
 
@@ -368,21 +340,21 @@
 
 
 
-            isMouseOver() {
-                const rect = this.div.getBoundingClientRect();
-                // Use window event coordinates
-                if (
-                    mouseX >= rect.left &&
-                    mouseX <= rect.right &&
-                    mouseY >= rect.top &&
-                    mouseY <= rect.bottom
-                ) {
-                    return true;
-                } else {
-                    return false;
-                }
+            // isMouseOver() {
+            //     const rect = this.div.getBoundingClientRect();
+            //     // Use window event coordinates
+            //     if (
+            //         mouseX >= rect.left &&
+            //         mouseX <= rect.right &&
+            //         mouseY >= rect.top &&
+            //         mouseY <= rect.bottom
+            //     ) {
+            //         return true;
+            //     } else {
+            //         return false;
+            //     }
 
-            }
+            // }
 
             animate() {
                 this.life++;
@@ -415,7 +387,6 @@
                 this.div.style.left = `${this.x}px`;
                 this.div.style.top = `${this.y}px`;
                 this.div.style.opacity = (this.opacity / 255).toString();
-                console.log(this.isMouseOver());
             }
 
             // WRITE IN HTML INSTEAD
