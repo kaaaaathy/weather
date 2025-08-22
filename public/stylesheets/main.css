@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Hershey Futuram";
   src: url("fonts/Hershey-Noailles-futuram.ttf");
 }
@@ -11,6 +11,20 @@
 @font-face {
   font-family: "Weather";
   src: url("fonts/weather.ttf");
+} */
+@font-face {
+  font-family: "Hershey Futuram";
+  src: url("https://backend.sheepdog.work/storage/v1/object/public/assets/6a50fa2a-3514-41f5-a3a6-18662faf4ae8/SGVyc2hleS1Ob2FpbGxlcy1mdXR1cmFtLnR0Zg==");
+}
+
+@font-face {
+  font-family: "Hershey Times";
+  src: url("https://backend.sheepdog.work/storage/v1/object/public/assets/6a50fa2a-3514-41f5-a3a6-18662faf4ae8/SGVyc2hleS1Ob2FpbGxlcy10aW1lc2wtMS0xLnR0Zg==");
+}
+
+@font-face {
+  font-family: "Weather";
+  src: url("https://backend.sheepdog.work/storage/v1/object/public/assets/6a50fa2a-3514-41f5-a3a6-18662faf4ae8/d2VhdGhlci50dGY=");
 }
 
 /* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
@@ -142,19 +156,14 @@ iframe {
 
   z-index: -1;
 
-
 }
 
 
-/* .hide {
-  opacity: 0 !important;
-  transition: 0.5s opacity ease;
-} */
 
 
 @keyframes blur {
   from {
-    filter: blur(2px);
+    filter: blur(1.5px);
   }
 
   to {
@@ -265,7 +274,6 @@ body {
   margin: 2% 2.5%;
   position: absolute;
   border-radius: 50%;
-  filter: blur(0px);
 
 
   border: 1px dotted #555;
@@ -278,11 +286,14 @@ body {
   height: 100%;
   text-align: center;
   position: absolute;
-  filter: blur(2px);
+  /* filter: blur(2px); */
   transition: 1s opacity ease;
   animation: blur 10s ease-in-out infinite alternate;
   opacity: 1;
+  user-select: none;
+
 }
+
 
 
 #answer-panel {
@@ -350,17 +361,23 @@ body {
   color: white;
   padding: 10px;
   position: absolute;
-
   z-index: 1001;
-
+  letter-spacing: 0;
+  transition: all 0.5s ease;
+  cursor: pointer;
 
 }
 
-.question:hover {
-  color: red;
+.question:hover,
+.question:active {
+  letter-spacing: 1.5;
+  /* font-size: 14px; */
+  transition: all 0.5s ease;
+  cursor: grab;
+
 }
 
-#questions-container {
+s #questions-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -368,21 +385,6 @@ body {
   height: 100vh;
 }
 
-
-@keyframes fuzz {
-  0% {
-    filter: blur(0px);
-  }
-
-  50% {
-    filter: blur(2px);
-  }
-
-  0% {
-    filter: blur(0px);
-  }
-
-}
 
 @keyframes blow {
   0% {

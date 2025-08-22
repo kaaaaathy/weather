@@ -7,11 +7,10 @@
     <title></title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="stylesheets/main.css">
-    <script src='https://unpkg.com/opentype.js@1.3.4/dist/opentype.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/rita"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script> -->
 
 </head>
 
@@ -35,9 +34,11 @@
     </div>
     <a href="/index.html" target="_blank" id="ask">Ask a Question</a>
     <script src="/socket.io/socket.io.js"></script>
-
+    <script type="module" src="https://unpkg.com/playhtml@latest/dist/init.es.js"></script>
     <script>
+        // import { playhtml } from "https://unpkg.com/playhtml@latest";
 
+        let sentences = "";
         let showAnswer = false;
         let testAnswer = "TESTING";
         let data;
@@ -161,7 +162,9 @@
         }
         async function getText() {
             try {
-                const response = await fetch('/src.txt');
+
+                // ORDINARILY, '/SRC.TXT'
+                const response = await fetch('https://backend.sheepdog.work/storage/v1/object/public/assets/6a50fa2a-3514-41f5-a3a6-18662faf4ae8/c3JjLnR4dA==');
                 const text = await response.text();
 
                 rm.addText(text);
@@ -200,10 +203,6 @@
 
         getData();
         getText();
-
-
-
-
 
 
 
@@ -303,11 +302,7 @@
             answerDiv.innerHTML = "";
             symbolDiv.innerHTML = "";
             sky.style.opacity = 0;
-            sky.style.filter = "blur(0px)";
 
-            //            if (!imageDiv.classList.contains('hide')) {
-            //                imageDiv.classList.add('hide');
-            //            }
 
 
         }
@@ -325,7 +320,8 @@
 
             }
             sky.style.opacity = 1;
-            sky.style.filter = "blur(2px)";
+
+
 
 
         }
@@ -343,6 +339,9 @@
                 this.life = 0;
                 this.div = document.createElement('div');
                 this.div.className = 'question';
+                this.div.setAttribute('can-move', ''); // Add can-move attribute
+                this.div.id = text + "-play";
+                playhtml.setupPlayElement(this.div);
                 this.div.innerText = text;
                 this.div.style.left = `${x}px`;
                 this.div.style.top = `${y}px`;
