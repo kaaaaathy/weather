@@ -29,8 +29,12 @@
             e.preventDefault();
             const value = input.value.trim().toLowerCase();
             if (value && !bannedWords.some(word => value.includes(word))) {
-                socket.emit('chat message', input.value);
+                const xRand = Math.random();
+                const yRand = Math.random();
+                socket.emit('chat message', [input.value, xRand, yRand]);
+
                 input.value = '';
+
             } else if (bannedWords.some(word => value.includes(word))) {
                 alert("Your message contains a word that kathy decided to censor, sorry!");
             }

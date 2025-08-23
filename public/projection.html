@@ -32,6 +32,7 @@
     <a href="/index.html" onclick="window.open(this.href, 'ASK A QUESTION',
 'left=800,top=20,width=400,height=500,toolbar=0,resizable=0'); return false;" id="ask">Ask a Question</a>
     <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="https://unpkg.com/playhtml@latest/dist/init.es.js"></script>
     <script>
 
 
@@ -153,8 +154,6 @@
         }
         async function getText() {
             try {
-
-                // ORDINARILY, '/SRC.TXT'
                 const response = await fetch('/src.txt');
                 const text = await response.text();
 
@@ -211,17 +210,16 @@
         let rain = 0;
         let clock = 0;
         let margin = 20;
-        let styles, axis, font;
-        let n = -100;
-
-
-        // Remove font/text settings from setup
 
 
 
 
-        socket.on('chat message', (msg) => {
-            questions.push(new Question(msg, floor(random(margin, width - margin)), floor(random(margin, height - margin)), randomVelocity(), randomVelocity(), markov()));
+
+        socket.on('chat message', ([msg, xRand, yRand]) => {
+            const xPos = Math.floor(xRand * (window.innerWidth - 2 * margin) + margin);
+            const yPos = Math.floor(yRand * (window.innerHeight - 2 * margin) + margin);
+            const randomSym = symbols[Math.floor(Math.random() * symbols.length)];
+            questions.push(new Question(msg, xPos, yPos, randomVelocity(), randomVelocity(), markov(), randomSym, randomLatLon(maxN, minN), randomLatLon(maxW, minW)));
             saveQuestions();
             window.scrollTo(0, document.body.scrollHeight);
         });
@@ -231,23 +229,18 @@
         // Remove textFont from draw
         function draw() {
             clock++;
-            // showAnswer = false;
 
             // Animate all questions (divs)
             for (let i = 0; i < questions.length; i++) {
                 questions[i].animate();
 
+                // if (clock % 2000 == 0) {
+                //     questions[i].windy = true;
+                //     //every now and then get windy
 
-
-                if (clock % 2000 == 0) {
-                    questions[i].windy = true;
-                    //every now and then get windy
-
-                    if (n < 14) n += 0.1;
-                } else {
-                    questions[i].windy = false;
-                    if (n > 0) n -= 0.1;
-                }
+                // } else {
+                //     questions[i].windy = false;
+                // }
             }
 
 
@@ -304,7 +297,7 @@
 
         // Update Question class to use HTML divs
         class Question {
-            constructor(text, x, y, velX, velY, answer) {
+            constructor(text, x, y, velX, velY, answer, symbol, lat, lon) {
                 this.text = text;
                 this.x = x;
                 this.y = y;
@@ -319,9 +312,12 @@
                 this.div.style.left = `${x}px`;
                 this.div.style.top = `${y}px`;
                 this.answer = answer;
-                this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
-                this.lat = randomLatLon(maxN, minN);
-                this.lon = randomLatLon(maxW, minW);
+                this.symbol = symbol;
+                this.lat = lat;
+                this.lon = lon;
+
+                // this.div.setAttribute("can-move", true);
+                // this.div.id = text.replace(/ /g, '-') + "-play";
 
                 this.div.addEventListener("mouseenter", () => {
                     giveAnswer(this.answer, this.symbol, this.lat, this.lon);
@@ -333,34 +329,19 @@
                 });
 
                 document.getElementById('questions-container').appendChild(this.div);
+                // playhtml.setupPlayElement(this.div);
 
 
             }
 
 
 
-            // isMouseOver() {
-            //     const rect = this.div.getBoundingClientRect();
-            //     // Use window event coordinates
-            //     if (
-            //         mouseX >= rect.left &&
-            //         mouseX <= rect.right &&
-            //         mouseY >= rect.top &&
-            //         mouseY <= rect.bottom
-            //     ) {
-            //         return true;
-            //     } else {
-            //         return false;
-            //     }
-
-            // }
-
             animate() {
                 this.life++;
                 this.decay();
 
                 if (this.windy == true) {
-                    this.blowAround();
+                    // this.blowAround();
                 } else {
                     this.x += this.velX * Math.cos(this.angle * Math.PI / 180);
                     this.y += this.velY * Math.sin(this.angle * Math.PI / 180);
@@ -389,28 +370,28 @@
             }
 
             // WRITE IN HTML INSTEAD
-            blowAround() {
-                // Use CSS animation for a "windy" effect
-                this.div.style.animation = '';
-                const gust = windSpeed * 20 + 'px';
-                if (this.velX < 0) {
-                    this.div.style.setProperty('--windX', gust);
-                    this.div.style.setProperty('--windY', gust);
+            // blowAround() {
+            //     // Use CSS animation for a "windy" effect
+            //     this.div.style.animation = '';
+            //     const gust = windSpeed * 20 + 'px';
+            //     if (this.velX < 0) {
+            //         this.div.style.setProperty('--windX', gust);
+            //         this.div.style.setProperty('--windY', gust);
 
-                } else if (this.velX > 0) {
-                    this.div.style.setProperty('--windX', -gust);
-                    this.div.style.setProperty('--windY', gust * 0.5);
-
-
-                }
-
-                this.div.style.animation = 'blow 3s ease-in-out 1';
-                setTimeout(() => {
-                    this.div.style.animation = '';
-                }, 3000);
+            //     } else if (this.velX > 0) {
+            //         this.div.style.setProperty('--windX', -gust);
+            //         this.div.style.setProperty('--windY', gust * 0.5);
 
 
-            }
+            //     }
+
+            //     this.div.style.animation = 'blow 3s ease-in-out 1';
+            //     setTimeout(() => {
+            //         this.div.style.animation = '';
+            //     }, 3000);
+
+
+            // }
 
             checkCollision(other) {
                 let d = dist(this.x, this.y, other.x, other.y);
@@ -434,7 +415,7 @@
         }
 
         function randomVelocity() {
-            let randomV = random(-0.5, 0.5);
+            let randomV = Math.random() - 0.5;
             if (randomV != 0) {
                 return randomV;
             } else {
@@ -489,19 +470,19 @@
                         obj.y,
                         obj.velX,
                         obj.velY,
-                        obj.answer
+                        obj.answer,
+                        obj.symbol,
+                        obj.lat,
+                        obj.lon
                     ));
-                    // Optionally set symbol, lat, lon if needed
-                    const q = questions[questions.length - 1];
-                    q.symbol = obj.symbol;
-                    q.lat = obj.lat;
-                    q.lon = obj.lon;
+
                 });
             }
         }
 
-        // Call loadQuestions on page load
         loadQuestions();
+        // Call loadQuestions on page load
+        // document.body.addEventListener("load", loadQuestions)
     </script>
 </body>
 
