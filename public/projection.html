@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>INTO UNCERTAIN WEATHERS</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="stylesheets/main.css">
     <script src="https://cdn.jsdelivr.net/npm/rita"></script>
@@ -17,8 +17,8 @@
     <div id="weather-info"></div>
     <div id="questions-container"></div>
     <div id="outline">
-        <div id="sky">
-            <div id="answer-panel">
+        <div id="sky" class="hide">
+            <div id="answer-panel" class="hide">
 
                 <div id="symbol"></div>
                 <div id="answer"></div>
@@ -57,10 +57,11 @@
         let answers = ``;
         let symbols = [];
         let url;
-        let imageDiv = document.getElementById('nasa');
+        let iframe = document.getElementById('nasa');
         let answerDiv = document.getElementById('answer');
         let symbolDiv = document.getElementById('symbol');
         let sky = document.getElementById('sky');
+        let answerPanel = document.getElementById('answer-panel')
 
 
 
@@ -161,6 +162,9 @@
                 console.log(rm);
                 console.log(text);
                 testAnswer = markov();
+                if (!testAnswer) {
+                    testAnswer = "blahblah"
+                }
 
 
             } catch (error) {
@@ -209,7 +213,7 @@
         let temp = 0;
         let rain = 0;
         let clock = 0;
-        let margin = 20;
+        let margin = 50;
 
 
 
@@ -257,6 +261,9 @@
                 giveAnswer(testAnswer, "A", nycN, nycW);
 
             }
+            if (event.key === "x" && !event.repeat) {
+                document.getElementById('download-btn').style.opacity = 0.5;
+            }
         });
 
         window.addEventListener("keyup", (event) => {
@@ -265,30 +272,45 @@
 
 
             }
+            if (event.key === "x") {
+                document.getElementById('download-btn').style.opacity = 0;
+            }
         });
 
         function clearAnswer() {
-            answerDiv.innerHTML = "";
-            symbolDiv.innerHTML = "";
-            sky.style.opacity = 0;
+            sky.classList.add("hide");
+            answerPanel.classList.add("hide");
+
+
+
+
 
 
 
         }
         function refreshClouds(url) {
-            // imageDiv.src = "blank.html";
-            imageDiv.src = url;
+            // iframe.src = "blank.html";
+            iframe.src = url;
         }
         function giveAnswer(answer, symbol, lat, lon) {
+
+
+            url = refreshClouds(makeURL(lat, lon));
             answerDiv.innerHTML = answer;
             symbolDiv.innerHTML = symbol;
 
-            let url = refreshClouds(makeURL(lat, lon));
-            if (imageDiv.src !== url) {
-                sky.style.opacity = 0.25;
-
+            if (answerPanel.classList.contains("hide")) {
+                answerPanel.classList.remove("hide");
             }
-            sky.style.opacity = 1;
+
+            if (sky.classList.contains("hide")) {
+                sky.classList.remove("hide");
+            }
+
+
+
+
+
 
 
 
@@ -316,9 +338,9 @@
                 this.lat = lat;
                 this.lon = lon;
 
-                // this.div.setAttribute("can-move", true);
-                // this.div.id = text.replace(/ /g, '-') + "-play";
-
+                this.div.setAttribute("can-move", true);
+                this.div.id = text.replace(/ /g, '-') + "-play";
+                playhtml.setupPlayElement(this.div);
                 this.div.addEventListener("mouseenter", () => {
                     giveAnswer(this.answer, this.symbol, this.lat, this.lon);
 
@@ -329,7 +351,6 @@
                 });
 
                 document.getElementById('questions-container').appendChild(this.div);
-                // playhtml.setupPlayElement(this.div);
 
 
             }
@@ -481,6 +502,8 @@
         }
 
         loadQuestions();
+
+
         // Call loadQuestions on page load
         // document.body.addEventListener("load", loadQuestions)
     </script>

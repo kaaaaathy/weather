@@ -122,11 +122,15 @@ button {
 
 #answer,
 #symbol {
-  color: white;
+  color: hsl(0, 0%, 100%);
   text-align: center;
   user-select: none;
 
+
+
 }
+
+
 
 #symbol {
   font-family: "Weather", "wingdings";
@@ -153,8 +157,10 @@ iframe {
 
   transform: scale(2);
   transform-origin: 0 0;
-
+  opacity: 0.7;
   z-index: -1;
+  transition: 0.2s all ease;
+  transition-delay: 0s;
 
 }
 
@@ -163,11 +169,11 @@ iframe {
 
 @keyframes blur {
   from {
-    filter: blur(1.5px);
+    filter: blur(0.5px);
   }
 
   to {
-    filter: blur(3px);
+    filter: blur(1px);
   }
 }
 
@@ -281,17 +287,28 @@ body {
   overflow: hidden;
 }
 
+.hide {
+  opacity: 0 !important;
+  transition: 0.5s opacity 2s ease-in;
+
+  filter: blur(20px) !important;
+  transition: 1s filter ease-in;
+
+}
+
 #sky {
   width: 100%;
   height: 100%;
   text-align: center;
   position: absolute;
-  /* filter: blur(2px); */
-  transition: 1s opacity ease;
-  animation: blur 10s ease-in-out infinite alternate;
+
+  transition: 1s all 1.5s ease;
+  filter: blur(1px);
   opacity: 1;
+
   user-select: none;
   pointer-events: none;
+
 
 }
 
@@ -311,6 +328,13 @@ body {
   align-items: center;
   border: 1px dotted #222;
   z-index: 1;
+
+  filter: blur(0.5px);
+  animation: blur 10s ease-in-out infinite alternate;
+
+  opacity: 1;
+  transition: 1s opacity 2.5s ease-in;
+  transition: 1.5s filter 2.5s ease-in;
 
 
 }
@@ -350,6 +374,8 @@ body {
   left: 20px;
   font-size: 10px;
   width: auto;
+  opacity: 0;
+
 
 
 }
@@ -360,9 +386,13 @@ body {
   transition: opacity 0.5s linear;
   font-size: 12px;
   color: white;
-  padding: 10px;
+  padding: 20px;
   position: absolute;
   z-index: 1001;
+  /* width: 200px; */
+  text-align: center;
+  white-space-collapse: collapse;
+  white-space: nowrap;
   letter-spacing: 0;
   transition: all 0.5s ease;
   user-select: none;
