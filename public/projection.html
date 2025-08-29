@@ -35,6 +35,21 @@
     <script>
 
 
+        let weathers = {
+            'start': `The $adj $noun is $modifier`,
+            'noun': `Spray, Boundary, Convergence, Zone, KNOTS, LOVE, sun, moon, MILLIBARS, tufts, wishing, wanting, Veil of $noun, towers of $noun`.split(", ").join(" | "),
+            'modifier': `at a distance, heard, but no $noun, within the past hour, during the past hour, at the time of observation, which the $noun or $noun may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun, on land, in a chaotic sky, in the form of small towers or battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, combined with $noun, becoming thicker during the past hour.`.split(", ").join(" | "),
+            'adj': `DECREASING, CALM, cold, warm, DISSAPATING, Weakening, Rapidly Intensifying, Intertropical, Freezing, Moving, Outflow 
+Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, steady, unsteady, well developed, heavy, less developed, discernable`.split(", ").join(" | ")
+        }
+
+
+
+        let rg = RiTa.grammar(weathers);
+        let result = rg.expand();
+        console.log(result);
+
+
 
         function weatherAnswer() {
             rg = RiTa.grammar(weathers);
