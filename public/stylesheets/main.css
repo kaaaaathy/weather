@@ -289,10 +289,10 @@ body {
 
 .hide {
   opacity: 0 !important;
-  transition: 0.5s opacity 2s ease-in;
+  transition: 0.5s opacity 2s ease-in !important;
 
   filter: blur(20px) !important;
-  transition: 1s filter ease-in;
+  transition: 1s filter ease-in !important;
 
 }
 

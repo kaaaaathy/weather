@@ -8,7 +8,6 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="stylesheets/main.css">
     <script src="https://cdn.jsdelivr.net/npm/rita"></script>
-
 </head>
 
 <body>
@@ -36,9 +35,14 @@
     <script>
 
 
-        let sentences = "";
+
+        function weatherAnswer() {
+            rg = RiTa.grammar(weathers);
+            return rg.expand();
+        }
+        // let sentences = "";
         let data;
-        let rm = RiTa.markov(3);
+        // let rm = RiTa.markov(3);
 
         let maxN = 49;
         let minN = 25;
@@ -71,20 +75,31 @@
             return "/proxy/cgi-bin/get-abi?satellite=GOESEastconusband02&lat=" + lat + "&lon=" + lon + "&zoom=2&type=Animation&numframes=10&width=650&height=450&quality=80g"
         }
 
+        function addModifier(phrase) {
+            weathers.modifier += "|" + phrase;
+
+
+        }
+        function addNoun(phrase) {
+            weathers.noun += "|" + phrase;
+
+
+        }
+
         let nycURL = makeURL(nycN, nycW);
         function checkRain(rain) {
             if (rain < 25) {
                 symbols.push("A");
-                rm.addText("My sources say no, My sources say no, My sources say no, no no no no no no no no no no no");
+                addModifier("absolutely no");
             } else if (rain >= 25 && rain < 50) {
                 symbols.push("B");
-                rm.addText("no probably not probably not");
+                addModifier("probably no");
             } else if (rain >= 50 && rain < 75) {
                 symbols.push("C");
-                rm.addText("it's more than likely, yes yes yes, but not definitely");
+                addModifier("more than likely");
             } else {
                 symbols.push("D");
-                rm.addText("yes yes, it is yes, definitely yes, definitely yes, it is yes, definitely yes");
+                addModifier("most certainly");
 
             }
 
@@ -93,17 +108,19 @@
         function checkWind(wind) {
             if (wind < 3) {
                 symbols.push("1");
-                rm.addText("in a very long time from now, slowly, ever so slowly, evenly and without hurry");
+                addModifier("evenly and without hurry");
 
             } else if (wind >= 3 && wind < 5) {
                 symbols.push("2");
-                rm.addText("soon but not terribly soon, wait a little bit, not too long, not too soon, soon but not too soon");
+                addModifier("not terribly soon");
+
             } else if (wind >= 5 && wind < 8) {
                 symbols.push("3");
-                rm.addText("almost certainly tomorrow, tomorrow it will happen tomorrow. It is tomorrow. It will be tomorrow.")
+                addModifier("almost certainly tomorrow");
             } else {
                 symbols.push("4");
-                rm.addText("My sources say hurriedly, My sources say quickly, immediately, sooner is better than later, rush rush rush, ASAP, as soon as possible, it will be quickly hurriedly");
+                addModifier("immediately");
+                addModifier("quickly");
 
             }
 
@@ -142,35 +159,35 @@
                 console.error('Error:', error);
             }
         }
-        function markov() {
+        // function markov() {
 
-            sentences = rm.generate();
+        //     sentences = rm.generate();
 
-            if (sentences.length > 0) {
-                return sentences;
-            } else {
-                return "something went wrong"
-            }
+        //     if (sentences.length > 0) {
+        //         return sentences;
+        //     } else {
+        //         return "something went wrong"
+        //     }
 
-        }
-        async function getText() {
-            try {
-                const response = await fetch('/src.txt');
-                const text = await response.text();
+        // }
+        // async function getText() {
+        //     try {
+        //         const response = await fetch('/src.txt');
+        //         const text = await response.text();
 
-                rm.addText(text);
-                console.log(rm);
-                console.log(text);
-                testAnswer = markov();
-                if (!testAnswer) {
-                    testAnswer = "blahblah"
-                }
+        //         rm.addText(text);
+        //         console.log(rm);
+        //         console.log(text);
+        //         testAnswer = markov();
+        //         if (!testAnswer) {
+        //             testAnswer = "blahblah"
+        //         }
 
 
-            } catch (error) {
-                console.error('Error fetching clouds:', error);
-            }
-        }
+        //     } catch (error) {
+        //         console.error('Error fetching clouds:', error);
+        //     }
+        // }
 
         function makeWeatherPanel() {
             if (tomorrow) {
@@ -196,7 +213,7 @@
         }
 
         getData();
-        getText();
+        // getText();
 
 
 
@@ -223,7 +240,7 @@
             const xPos = Math.floor(xRand * (window.innerWidth - 2 * margin) + margin);
             const yPos = Math.floor(yRand * (window.innerHeight - 2 * margin) + margin);
             const randomSym = symbols[Math.floor(Math.random() * symbols.length)];
-            questions.push(new Question(msg, xPos, yPos, randomVelocity(), randomVelocity(), markov(), randomSym, randomLatLon(maxN, minN), randomLatLon(maxW, minW)));
+            questions.push(new Question(msg, xPos, yPos, randomVelocity(), randomVelocity(), weatherAnswer(), randomSym, randomLatLon(maxN, minN), randomLatLon(maxW, minW)));
             saveQuestions();
             window.scrollTo(0, document.body.scrollHeight);
         });
@@ -258,7 +275,7 @@
 
         window.addEventListener("keydown", (event) => {
             if (event.key == "z" && !event.repeat) {
-                giveAnswer(testAnswer, "A", nycN, nycW);
+                giveAnswer(weatherAnswer(), "A", nycN, nycW);
 
             }
             if (event.key === "x" && !event.repeat) {
@@ -348,6 +365,14 @@
 
                 this.div.addEventListener("mouseleave", () => {
                     clearAnswer();
+                });
+
+                let nounCheck = this.text.split(" ");
+                nounCheck.forEach(word => {
+                    if (RiTa.isNoun(word)) {
+                        addNoun(word + "(2)");
+                        console.log("added " + word + " to nouns");
+                    }
                 });
 
                 document.getElementById('questions-container').appendChild(this.div);
