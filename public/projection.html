@@ -174,35 +174,6 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                 console.error('Error:', error);
             }
         }
-        // function markov() {
-
-        //     sentences = rm.generate();
-
-        //     if (sentences.length > 0) {
-        //         return sentences;
-        //     } else {
-        //         return "something went wrong"
-        //     }
-
-        // }
-        // async function getText() {
-        //     try {
-        //         const response = await fetch('/src.txt');
-        //         const text = await response.text();
-
-        //         rm.addText(text);
-        //         console.log(rm);
-        //         console.log(text);
-        //         testAnswer = markov();
-        //         if (!testAnswer) {
-        //             testAnswer = "blahblah"
-        //         }
-
-
-        //     } catch (error) {
-        //         console.error('Error fetching clouds:', error);
-        //     }
-        // }
 
         function makeWeatherPanel() {
             if (tomorrow) {
@@ -228,7 +199,6 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
         }
 
         getData();
-        // getText();
 
 
 
@@ -541,11 +511,12 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
             }
         }
 
-        loadQuestions();
 
 
         // Call loadQuestions on page load
-        // document.body.addEventListener("load", loadQuestions)
+        document.body.addEventListener("load", loadQuestions);
+        loadQuestions();
+
     </script>
 </body>
 
