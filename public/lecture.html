@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <meta charset="utf-8" />
+
+</head>
+
+<body>
+  <main>
+  </main>
+  <script>
+    let images = [
+      { url: "casper", cap: "Caspar David Friedrich, Wolkenstudie, 1798" },
+      { url: "pocket", cap: "Pocket Forecaster, 1920" },
+      { url: "herschel", cap: "Herschel’s Table of the Weather, circa 1815" },
+      { url: "mawangdui", cap: "天文氣象雜占   Divination by Astrological and Meteorological Phenomena \nInk on silk manuscript by Han astronomers. 200 BC" },
+      { url: "dharawal", cap: "Weather cycles around Sydney \nfrom the Bodkin/Andrews clan of the D’harawal People" },
+      { url: "afar", cap: "Mulubrhan Balehegn, Selam Balehey, Chao Fu & Wu Liang \nIndigenous weather and climate forecasting knowledge among Afar pastoralists of north eastern Ethiopia: Role in adaptation to weather and climate variability" },
+      { url: "transosonde", cap: "Transosonde, Weather Bureau Topics publication, 1958" },
+      { url: "dome", cap: "Buckminster Fuller Geodesic Dome 1953 \nbuilt with students of University of Oregon" },
+      { url: "echo1_", cap: "NASA Echo I Satellite, 1960" },
+      { url: "echo1", cap: "NASA Echo I Satellite, 1960" },
+      { url: "mylar-men", cap: "T. Keith Glennan and President Lindon B. Johnson, 1960" },
+      { url: "warhol", cap: "Andy Warhol, Silver Clouds, 1966" },
+      { url: "google", cap: "Google Maps, Pacific Ocean, 2025" },
+      { url: "amazon", cap: "amazon.com" },
+      { url: "goes", cap: "GOES-16 Weather Satellite" },
+      { url: "zhanyi", cap: "Zhanyi Chen, Do Clouds Hate Weather Satellites? 2020—" },
+      { url: "stereyl", cap: "Hito Stereyl, How Not to Be Seen, a Fucking Didactic.MOV, 2013" }
+
+
+    ];
+
+    let i = 0;
+
+    function preload() {
+      font = loadFont(
+        "stylesheets/fonts/Hershey-Noailles-timesl-1-1.ttf"
+      );
+    }
+
+    function setup() {
+      createCanvas(windowWidth, windowHeight);
+
+      for (let x = 0; x < images.length; x++) {
+        images[x].url = loadImage("images/" + images[x].url + ".png");
+      }
+      fill(255);
+      textFont(font);
+      textSize(12);
+      textAlign(CENTER);
+    }
+
+    function draw() {
+      background(0);
+
+      if (images[i].url) {
+        if (i == 5) {
+          images[i].url.resize(width - 50, 0);
+        } else {
+          images[i].url.resize(0, 500);
+        }
+        image(images[i].url, width / 2 - images[i].url.width / 2, height / 2 - images[i].url.height / 2);
+        text(images[i].cap, width / 2, 40);
+      }
+    }
+
+    function mouseClicked() {
+      if (i < images.length - 1) {
+        i++;
+      } else {
+        i = 0;
+      }
+    }
+    function keyPressed() {
+      if (keyCode == RIGHT_ARROW) {
+        if (i < images.length - 1) {
+          i++;
+        } else {
+          i = 0;
+        }
+      }
+      if (keyCode == LEFT_ARROW) {
+        if (i > 0) {
+          i--;
+        } else {
+          i = images.length - 1;
+        }
+      }
+      console.log(i);
+    }
+    function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);
+    }
+
+  </script>
+</body>
+
+</html>
