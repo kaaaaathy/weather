@@ -66,9 +66,10 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
         // FIGURE OUT WHAT DAY IT is
         let now = new Date(Date.now());
         const dowCurrent = now.getDay();
-        nextDay.innerText = "NEXT " + returnDow(dowCurrent);
+        nextDay.innerText = "THIS " + returnNextDow(dowCurrent);
 
-        function returnDow(day) {
+
+        function returnNextDow(day) {
             const dowref = {
                 0: "Sunday",
                 1: "Monday",
@@ -87,6 +88,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                 nextdow = day + 2;
             }
 
+            weathers.modifier += "|" + dowref[nextdow];
             return dowref[nextdow];
         }
 
@@ -228,7 +230,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                         day = 1;
                     }
                     newDay(day);
-                    nextDay.innerText = "NEXT " + returnDow(dowCurrent + day);
+                    nextDay.innerText = "THIS " + returnNextDow(dowCurrent + day);
 
 
                 })
