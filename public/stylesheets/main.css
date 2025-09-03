@@ -79,6 +79,27 @@ button {
 
 }
 
+#day-info {
+  position: absolute;
+
+  margin: 20px;
+}
+
+#next-day,
+#tomorrow {
+  background: #444;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1px;
+  /* border-radius: 4px; */
+  outline: none !important;
+  padding: 4px;
+  border: transparent;
+  font-family: 'Hershey Times';
+  /* border-bottom: 1px solid white; */
+
+}
+
 #instruction,
 #submit {
   text-transform: uppercase;
@@ -370,7 +391,7 @@ body {
 
 #weather-info {
   position: absolute;
-  margin: 20px;
+  margin-top: 20px;
   line-height: 1.2rem;
   z-index: 10;
   color: white;
@@ -389,7 +410,7 @@ body {
   color: white;
   text-align: center;
   text-decoration: none;
-  text-transform: lowercase;
+  text-transform: uppercase;
 
 }
 
