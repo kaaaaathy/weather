@@ -202,6 +202,9 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
         }
 
 
+        function blur() {
+            iframe.style.filter = "blur(" + day + "px)";
+        }
         function checkTemp(temp, div) {
             if (temp < 30) {
                 div.classList.add("cold");
@@ -258,7 +261,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                 temp = forecast.temperature;
                 rain = forecast.probabilityOfPrecipitation.value;
                 weatherDiv.innerHTML =
-                    raw.join(".<br>") + "<br>" +
+                    raw.join(".<br>") + "<br><br>" +
                     "TEMP: " + temp + " F<br>" +
                     "WIND: " + windSpeed + " mph<br>" +
                     "RAIN: " + rain + "%";
@@ -394,6 +397,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
             if (sky.classList.contains("hide")) {
                 sky.classList.remove("hide");
             }
+            blur();
 
 
 
