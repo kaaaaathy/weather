@@ -41,14 +41,16 @@ io.on('connection', (socket) => {
   });
 
   socket.on('drag', (msg) => {
-    console.log('message: ' + msg);
     socket.broadcast.emit('drag', msg);
     drags[msg.id] = msg;
 
   });
 
+  // socket.on('refresh', (msg) => {
+  //   socket.broadcast.emit('refresh', msg);
+  // });
+
   socket.on('key input', (msg) => {
-    console.log('message: ' + msg);
     socket.broadcast.emit('key input', msg);
 
   });

@@ -12,6 +12,9 @@
 
 <body>
     <button id="download-btn" style="z-index:1000" type="button">Download Questions</button>
+    <button id="tomorrow" style="z-index:1000" type="button">TOMORROW</button>
+
+    <button id="next-day" style="z-index:1000" type="button">DAY AFTER</button>
 
     <div id="weather-info"></div>
     <div id="questions-container"></div>
@@ -32,7 +35,9 @@
 'left=800,top=20,width=400,height=500,toolbar=0,resizable=0'); return false;" id="ask">Ask a Question</a>
     <script src="/socket.io/socket.io.js"></script>
     <script>
+        let nextDay = document.getElementById("next-day");
 
+        let tomorrow = document.getElementById("tomorrow");
 
         let weathers = {
             'start': `The $adj $noun is $modifier`,
@@ -55,6 +60,35 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
             return rg.expand();
         }
         let data;
+        let day = 1;
+
+
+        // FIGURE OUT WHAT DAY IT is
+        let now = new Date(Date.now());
+        const dowCurrent = now.getDay();
+        nextDay.innerText = "NEXT " + returnDow(dowCurrent);
+
+        function returnDow(day) {
+            const dowref = {
+                0: "Sunday",
+                1: "Monday",
+                2: "Tuesday",
+                3: "Wednesday",
+                4: "Thursday",
+                5: "Friday",
+                6: "Saturday",
+            }
+
+            let nextdow;
+            if (day + 2 >= 7) {
+                nextdow = (day + 2) % 7;
+            }
+            else {
+                nextdow = day + 2;
+            }
+
+            return dowref[nextdow];
+        }
 
         let maxN = 49;
         let minN = 25;
@@ -68,7 +102,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
             return Math.floor(Math.random() * (max - min + 1) + min);
         }
 
-        let tomorrow;
+        let forecast;
 
         let answers = ``;
         let symbols = [];
@@ -98,6 +132,27 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
 
         }
 
+        function newDay(day) {
+            if (data) {
+                forecast = data.properties.periods[day]
+                console.log(forecast);
+                temp = forecast.temperature;
+                makeWeatherPanel();
+
+                resetSymbols;
+                checkRain(forecast.probabilityOfPrecipitation.value);
+                checkWind(forecast.windSpeed);
+                questions.forEach(q => {
+                    q.answer = weatherAnswer();
+                    let randomSym = symbols[Math.floor(Math.random() * symbols.length)];
+                    q.symbol = randomSym;
+
+                    console.log(q.answer)
+                })
+            }
+        }
+
+
         let nycURL = makeURL(nycN, nycW);
         function checkRain(rain) {
             if (rain < 25) {
@@ -117,7 +172,12 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
 
         }
 
+        function resetSymbols() {
+            symbols = [];
+        }
+
         function checkWind(wind) {
+
             if (wind < 3) {
                 symbols.push("1");
                 addModifier("evenly and without hurry");
@@ -128,7 +188,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
 
             } else if (wind >= 5 && wind < 8) {
                 symbols.push("3");
-                addModifier("almost certainly tomorrow");
+                addModifier("almost certainly forecast");
             } else {
                 symbols.push("4");
                 addModifier("immediately");
@@ -159,13 +219,25 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
             try {
                 const response = await fetch('https://api.weather.gov/gridpoints/OKX/64,64/forecast');
                 data = await response.json();
-                tomorrow = data.properties.periods[1];
+                newDay(day);
+                nextDay.addEventListener('click', () => {
+
+                    if (day < 6) {
+                        day++;
+                    } else {
+                        day = 1;
+                    }
+                    newDay(day);
+                    nextDay.innerText = "NEXT " + returnDow(dowCurrent + day);
 
 
-                temp = tomorrow.temperature;
-                checkRain(tomorrow.probabilityOfPrecipitation.value);
-                checkWind(tomorrow.windSpeed);
-                makeWeatherPanel();
+                })
+                tomorrow.addEventListener('click', () => {
+
+                    day = 1;
+
+                    newDay(day);
+                })
 
             } catch (error) {
                 console.error('Error:', error);
@@ -173,25 +245,21 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
         }
 
         function makeWeatherPanel() {
-            if (tomorrow) {
+            if (forecast) {
                 let weatherDiv = document.getElementById('weather-info');
-                let raw = tomorrow.shortForecast.split(".");
+                let raw = forecast.shortForecast.split(".");
                 // Extract highest number from windSpeed string
-                const windNumbers = tomorrow.windSpeed.match(/\d+(\.\d+)?/g);
+                const windNumbers = forecast.windSpeed.match(/\d+(\.\d+)?/g);
                 let maxWind = windNumbers ? Math.max(...windNumbers.map(Number)) : '';
                 windSpeed = maxWind;
-                temp = tomorrow.temperature;
-                rain = tomorrow.probabilityOfPrecipitation.value;
+                temp = forecast.temperature;
+                rain = forecast.probabilityOfPrecipitation.value;
                 weatherDiv.innerHTML =
                     raw.join(".<br>") + "<br>" +
                     "TEMP: " + temp + " F<br>" +
                     "WIND: " + windSpeed + " mph<br>" +
                     "RAIN: " + rain + "%";
 
-
-
-                // I dont think this works...
-                checkTemp(temp, answerDiv);
             }
         }
 
@@ -221,7 +289,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
         socket.on('chat message', ([msg, xRand, yRand]) => {
             const xPos = Math.floor(xRand * (window.innerWidth - 3 * margin) + margin);
             const yPos = Math.floor(yRand * (window.innerHeight - 2 * margin) + margin);
-            const randomSym = symbols[Math.floor(Math.random() * symbols.length)];
+            let randomSym = symbols[Math.floor(Math.random() * symbols.length)];
             questions.push(new Question(xRand, msg, xPos, yPos, randomVelocity(), randomVelocity(), weatherAnswer(), randomSym, randomLatLon(maxN, minN), randomLatLon(maxW, minW)));
 
             // console.log(questions);
@@ -269,7 +337,6 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
 
             window.requestAnimationFrame(draw);
 
-            // setTimeout(draw, 16);
 
         }
 
@@ -308,11 +375,9 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
 
         }
         function refreshClouds(url) {
-            // iframe.src = "blank.html";
             iframe.src = url;
         }
         function giveAnswer(answer, symbol, lat, lon) {
-            console.log("it's giving GIVE ANSWER");
 
 
             url = refreshClouds(makeURL(lat, lon));
@@ -338,7 +403,6 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
         }
 
         // Update Question class to use HTML divs
-        // THERES 3 THINGS WE NEED FOR DRAGGING TO WORK!
 
         class Question {
             constructor(id, text, x, y, velX, velY, answer, symbol, lat, lon) {
@@ -361,9 +425,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                 this.lon = lon;
                 this.dragging = false;
 
-                // this.div.setAttribute("can-move", true);
-                // this.div.id = text.replace(/ /g, '-') + "-play";
-                // playhtml.setupPlayElement(this.div);
+
                 this.div.addEventListener("mouseenter", () => {
                     giveAnswer(this.answer, this.symbol, this.lat, this.lon);
 
@@ -445,12 +507,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                     this.y += 5;
                 }
 
-                // if (this.x >= window.innerWidth - textWidthPx * 0.5 || this.x <= 0 + textWidthPx * 0.5) {
-                //     this.velX = this.velX * -1;
-                // }
-                // if (this.y >= window.innerHeight - textHeightPx * 0.5 || this.y <= 0 + textHeightPx * 0.5) {
-                //     this.velY = this.velY * -1;
-                // }
+
 
                 // Update div position
                 this.div.style.left = `${this.x}px`;
@@ -496,54 +553,6 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
             URL.revokeObjectURL(url);
         });
 
-        // Helper to save questions to localStorage
-        // function saveQuestions() {
-        //     const data = questions.map(q => ({
-        //         id: q.id,
-        //         text: q.text,
-        //         x: q.x,
-        //         y: q.y,
-        //         velX: q.velX,
-        //         velY: q.velY,
-        //         answer: q.answer,
-        //         symbol: q.symbol,
-        //         lat: q.lat,
-        //         lon: q.lon
-        //     }));
-        //     localStorage.setItem('questions', JSON.stringify(data));
-
-        // }
-
-        // Helper to load questions from localStorage
-        // function loadQuestions() {
-        //     const data = localStorage.getItem('questions');
-        //     console.log(data);
-        //     console.log("loading Questions")
-        //     if (data) {
-        //         const arr = JSON.parse(data);
-        //         arr.forEach(q => {
-        //             questions.push(new Question(
-        //                 q.id,
-        //                 q.text,
-        //                 q.x,
-        //                 q.y,
-        //                 q.velX,
-        //                 q.velY,
-        //                 q.answer,
-        //                 q.symbol,
-        //                 q.lat,
-        //                 q.lon
-        //             ));
-
-        //         });
-        //     }
-        // }
-
-
-
-        // Call loadQuestions on page load
-        // document.body.addEventListener("load", loadQuestions);
-        // loadQuestions();
 
     </script>
 </body>

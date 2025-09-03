@@ -75,6 +75,7 @@
 
 button {
   font-family: "Hershey Futuram", sans-serif;
+  text-transform: uppercase;
 
 }
 
@@ -137,7 +138,7 @@ button {
 
 #answer {
   margin: 50px;
-  font-size: 40px;
+  font-size: 50px;
   width: 80%;
   text-transform: capitalize;
 
@@ -293,7 +294,7 @@ body {
   background: black;
   margin: 0px;
   font-family: "Hershey Futuram", sans-serif;
-  font-size: 10px;
+  font-size: 14px;
   color: white;
   overflow: hidden;
 
@@ -308,7 +309,7 @@ body {
   border-radius: 50%;
 
 
-  border: 1px dotted #555;
+  border: 2px dotted #777;
   box-shadow: inset 10px 10px 10px black;
   overflow: hidden;
 }
@@ -370,7 +371,7 @@ body {
 #weather-info {
   position: absolute;
   margin: 20px;
-  line-height: 1.1rem;
+  line-height: 1.2rem;
   z-index: 10;
   color: white;
   pointer-events: none;
@@ -409,7 +410,7 @@ body {
 
 .question {
   font-family: "Hershey Futuram", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   padding: 20px;
   position: absolute;
