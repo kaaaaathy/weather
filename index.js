@@ -47,6 +47,12 @@ io.on('connection', (socket) => {
 
   });
 
+  socket.on('key input', (msg) => {
+    console.log('message: ' + msg);
+    socket.broadcast.emit('key input', msg);
+
+  });
+
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
