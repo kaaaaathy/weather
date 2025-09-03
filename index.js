@@ -25,17 +25,40 @@ app.use('/goes', proxy('https://weather.ndc.nasa.gov/goes', {
   }
 }));
 
+let messages = [];
+let drags = {};
 
 io.on('connection', (socket) => {
+
+
+
   console.log('a user connected');
   socket.on('chat message', (msg) => {
     console.log('message: ' + msg);
     io.emit('chat message', msg);
+    messages.push(msg);
 
   });
+
+  socket.on('drag', (msg) => {
+    console.log('message: ' + msg);
+    socket.broadcast.emit('drag', msg);
+    drags[msg.id] = msg;
+
+  });
+
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
+  messages.forEach(msg => {
+    socket.emit('chat message', msg);
+
+  });
+
+  Object.values(drags).forEach(msg => {
+    socket.emit('drag', msg);
+  })
+
 });
 
 
