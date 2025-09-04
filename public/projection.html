@@ -204,6 +204,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
 
         function blur() {
             iframe.style.filter = "blur(" + day + "px)";
+            document.body.style.filter = "blur(" + day * 0.5 + "px)";
         }
         function checkTemp(temp, div) {
             if (temp < 30) {
@@ -234,15 +235,18 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                         day = 1;
                     }
                     newDay(day);
+                    blur();
+
                     nextDay.innerText = "THIS " + returnNextDow(dowCurrent + day);
 
 
                 })
                 tomorrow.addEventListener('click', () => {
-
                     day = 1;
 
                     newDay(day);
+                    blur();
+
                 })
 
             } catch (error) {
@@ -397,7 +401,7 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
             if (sky.classList.contains("hide")) {
                 sky.classList.remove("hide");
             }
-            blur();
+            // blur();
 
 
 
