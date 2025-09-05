@@ -41,23 +41,34 @@
         let tomorrow = document.getElementById("tomorrow");
 
         let weathers = {
-            'start': `The $adj $noun is $modifier`,
-            'noun': `cumulus, cirrus, stratocumulus, fog, patches of $noun, swell, seas, wave, depression, droplets, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, sun, moon, MILLIBARS, tufts, wishing, wanting, Veil of $noun, towers of $noun`.toLowerCase().split(", ").join(" | "),
-            'modifier': `at a distance, heard, but no $noun, within the past hour, during the past hour, at the time of observation, which the $noun or $noun may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun, on land, in a chaotic sky, in the form of $adj towers or battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, combined with $noun, becoming thicker during the past hour.`.toLowerCase().split(", ").join(" | "),
-            'adj': `freezing, anvil-shaped, occluded, super, front, coastal, combined, primary, extratropical, DECREASING, CALM, cold, warm, DISSAPATING, Weakening, Rapidly Intensifying, Intertropical, Freezing, Moving, Outflow 
-Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, steady, unsteady, well developed, heavy, less developed, discernable`.toLowerCase().split(", ").join(" | ")
+            'start': `The $noun is $adj $modifier | $modifier the $noun $verb | If $noun is $adj, the $noun $verb`,
+            'noun': `fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, cumulus, cirrus, stratocumulus, fog, patches of $noun, swell, seas, wave, depression, droplets, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, sun, moon, tufts, wishing, wanting, Veil of $noun, towers of $noun`.toLowerCase().split(", ").join(" | "),
+            'modifier': `at a distance, heard, but no $noun, within the past hour, at the time of observation, which the $noun or $noun may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun, on land, in a chaotic sky, in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | "),
+            'verb': `freezes, knows, recedes, evaporates, lands, occludes, fronts, decreases, cools, warms, dissapates, weakens, intensifies, converges, outflows,becomes thicker`.toLowerCase().split(", ").join(" | "),
+            'adj': `of cups, of swords, red, blue, loving, knowing, unprecedented, unknown, freezing, anvil-shaped, occluded, super, front, coastal, combined, primary, extratropical, DECREASING, CALM, cold, warm, DISSAPATING, Weakening, Rapidly Intensifying, Intertropical, Freezing, Moving, Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, steady, unsteady, well developed, heavy, less developed, discernable`.toLowerCase().split(", ").join(" | ")
         }
 
 
 
+        weatherSingularize();
         let rg = RiTa.grammar(weathers);
-        let result = rg.expand();
-        console.log(result);
 
+        function weatherSingularize() {
+            let nounHelper = weathers.noun.split(' | ');
+            for (let i = 0; i < nounHelper.length; i++) {
+                if (RiTa.isNoun(nounHelper[i])) {
+                    nounHelper[i] = RiTa.singularize(nounHelper[i]);
+                }
+            }
+            weathers.noun = nounHelper.join(' | ');
+        }
 
 
         function weatherAnswer() {
             rg = RiTa.grammar(weathers);
+
+
+
             return rg.expand();
         }
         let data;
@@ -131,9 +142,11 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
         }
         function addNoun(phrase) {
             weathers.noun += "|" + phrase;
+            weatherSingularize();
 
 
         }
+
 
         function newDay(day) {
             if (data) {
@@ -149,9 +162,8 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                     q.answer = weatherAnswer();
                     let randomSym = symbols[Math.floor(Math.random() * symbols.length)];
                     q.symbol = randomSym;
-
-                    console.log(q.answer)
                 })
+                blur();
             }
         }
 
@@ -161,15 +173,22 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
             if (rain < 25) {
                 symbols.push("A");
                 addModifier("absolutely no");
+                addNoun("dryness");
             } else if (rain >= 25 && rain < 50) {
                 symbols.push("B");
-                addModifier("probably no");
+                addModifier("probably not");
+                addNoun("dampness");
+
             } else if (rain >= 50 && rain < 75) {
                 symbols.push("C");
                 addModifier("more than likely");
+                addNoun("wetness");
+
             } else {
                 symbols.push("D");
                 addModifier("most certainly");
+                addNoun("flooding");
+
 
             }
 
@@ -187,15 +206,21 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
 
             } else if (wind >= 3 && wind < 5) {
                 symbols.push("2");
-                addModifier("not terribly soon");
+
+                addModifier("waiting");
+                addModifier("watching");
+
 
             } else if (wind >= 5 && wind < 8) {
                 symbols.push("3");
-                addModifier("almost certainly forecast");
+                addModifier("almost certain");
             } else {
                 symbols.push("4");
                 addModifier("immediately");
-                addModifier("quickly");
+                addModifier("ready for you");
+                addModifier("hastened");
+
+
 
             }
 
@@ -235,7 +260,6 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                         day = 1;
                     }
                     newDay(day);
-                    blur();
 
                     nextDay.innerText = "THIS " + returnNextDow(dowCurrent + day);
 
@@ -245,7 +269,6 @@ Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, s
                     day = 1;
 
                     newDay(day);
-                    blur();
 
                 })
 
