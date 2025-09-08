@@ -105,7 +105,7 @@
 }
 
 #instruction {
-  margin-top: 60px;
+  margin-top: 33%;
 
 }
 
@@ -115,31 +115,10 @@ button {
 
 }
 
-#day-info {
-  position: absolute;
-
-  margin: 20px;
-}
-
-#next-day,
-#tomorrow {
-  background: #444;
-  color: white;
-  font-size: 10px;
-  letter-spacing: 1px;
-  /* border-radius: 4px; */
-  outline: none !important;
-  padding: 4px;
-  border: transparent;
-  font-family: 'Hershey Times';
-  /* border-bottom: 1px solid white; */
-
-}
-
 #instruction,
 #submit {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 
@@ -147,9 +126,9 @@ button {
 #input {
   border: 1px dotted white;
   background: black;
-  height: 100px;
+  height: 150px;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 50%;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -182,8 +161,8 @@ button {
   background: white;
   border-radius: 8px;
   padding: 10px;
-  margin-top: 16px;
-  width: 40%;
+  margin-top: 40px;
+  width: 100%;
   font-family: "Hershey Futuram", sans-serif;
 }
 
@@ -259,12 +238,36 @@ iframe {
   }
 }
 
-/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
-/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
-/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
-/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
-/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
-/* ———————————— THIS IS THE CSS FOR SYMBOLS HTML ———————————— */
+
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML ———————————— */
+/* ———————————— THIS IS THE CSS FOR PROJECTION HTML ———————————— */
+
+
+#day-info {
+  position: absolute;
+
+  margin: 20px;
+}
+
+#next-day,
+#tomorrow {
+  background: #444;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1px;
+  /* border-radius: 4px; */
+  outline: none !important;
+  padding: 4px;
+  border: transparent;
+  font-family: 'Hershey Times';
+  /* border-bottom: 1px solid white; */
+
+}
+
 
 #cloud-container {
   font-size: 30px;
@@ -305,6 +308,15 @@ iframe {
 .word:hover {
   margin: 0px 10px;
   transition: 0.5s ease all;
+}
+
+.cold,
+.warm,
+.hot,
+.temperate,
+.cold {
+  transition: 1s ease all;
+
 }
 
 .cold {
@@ -411,6 +423,7 @@ body {
   color: white;
   overflow: hidden;
   transition: 0.5s filter ease;
+  user-select: none;
 
 
 }
