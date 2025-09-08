@@ -78,8 +78,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 //   console.log(`Rendering 'pages/index' for route '/'`)
 //   res.render('pages/index')
 // })
-app.get('/projection', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'projection.html'))
+app.get('/ask', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'ask.html'))
 })
 process.on('SIGTERM', async () => {
   console.log('SIGTERM signal received: gracefully shutting down')
