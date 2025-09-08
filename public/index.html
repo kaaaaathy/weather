@@ -293,6 +293,8 @@
         function blur() {
             iframe.style.filter = "blur(" + day + "px)";
             document.body.style.filter = "blur(" + day * 0.5 + "px)";
+            player.volume.value = (1 / day) * 3;
+
         }
         function checkTemp(temp, div) {
             div.className = '';
@@ -400,6 +402,7 @@
         let rain = 0;
         let margin = 50;
 
+        let screen = true;
 
 
 
@@ -469,8 +472,22 @@
             if (event.key === "x" && !event.repeat) {
                 document.getElementById('download-btn').style.opacity = 0.5;
             }
+            if (event.key === "a" && !event.repeat) {
+                toggleScreen();
+            }
         });
 
+        function toggleScreen() {
+            if (screen) {
+                document.body.style.opacity = 0;
+                screen = false;
+
+            } else if (!screen) {
+                document.body.style.opacity = 1;
+                screen = true;
+
+            }
+        }
         window.addEventListener("keyup", (event) => {
             if (event.key == "z") {
                 clearAnswer();
@@ -480,6 +497,7 @@
             if (event.key === "x") {
                 document.getElementById('download-btn').style.opacity = 0;
             }
+
         });
 
         function clearAnswer() {
