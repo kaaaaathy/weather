@@ -8,9 +8,13 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="stylesheets/main.css">
     <script src="https://cdn.jsdelivr.net/npm/rita"></script>
+    <script src="http://unpkg.com/tone"></script>
+
 </head>
 
 <body>
+    <div id="filter"></div>
+
     <button id="download-btn" style="z-index:1000" type="button">Download Questions</button>
 
     <div id="day-info">
@@ -32,17 +36,71 @@
             </iframe>
         </div>
     </div>
+    <audio loop autoplay id="rain-player">
+        <source src="332496__dave_girtsman__rain-storm.mp3" type="audio/ogg">
+    </audio>
+    <!-- <audio loop autoplay id="rain-sound">
+        <source src="793375__nicksamples__atmospheric-synth_c2.wav" type="audio/ogg">
+
+    </audio> -->
     <a href="/index.html" onclick="window.open(this.href, 'ASK A QUESTION',
 'left=800,top=20,width=400,height=500,toolbar=0,resizable=0'); return false;" id="ask">Ask a Question</a>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        let nextDay = document.getElementById("next-day");
+        const player = new Tone.Player({
+            url: "339494__stebbi30000gmailcom__airplane-atmos.wav",
+            autostart: true,
 
+            loop: true
+        });
+
+        const toneFilter = new Tone.Filter(1000, "lowpass").toDestination();
+        const dist = new Tone.Distortion(100).toDestination();
+
+        player.connect(toneFilter);
+        player.volume.value = 1;
+        player.playbackRate = 0.5;
+        Tone.getTransport().start;
+
+        const synth = new Tone.PolySynth().toDestination();
+        // set the attributes across all the voices using 'set'
+        synth.set({ detune: -2200 });
+        const synthTime = 8;
+        // play a chord
+        function randomSynth() {
+            let notes = [
+                ["C4", "E4", "A4"],
+                ["F4", "A4", "D4"],
+                ["D4", "G4", "A5"],
+                ["A4", "G5", "C4"]];
+            let randomNotes = Math.floor(Math.random() * notes.length)
+            console.log(randomNotes)
+
+            return notes[randomNotes];
+
+        }
+
+
+
+
+        let rainPlayer = document.getElementById('rain-player')
+
+
+
+
+        let nextDay = document.getElementById("next-day");
+        let questionsContainer = document.getElementById("questions-container")
         let tomorrow = document.getElementById("tomorrow");
+        let audio = document.getElementById('sound');
+        // let outline = document.getElementById('outline');
+        let filter = document.getElementById("filter");
+
+
+
 
         let weathers = {
             'start': `The $noun is $adj $modifier | $modifier the $noun $verb | If $noun is $adj, the $noun $verb`,
-            'noun': `fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, cumulus, cirrus, stratocumulus, fog, patches of $noun, swell, seas, wave, depression, droplets, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, sun, moon, tufts, wishing, wanting, Veil of $noun, towers of $noun`.toLowerCase().split(", ").join(" | "),
+            'noun': `gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, cumulus, cirrus, stratocumulus, fog, patches of $noun, swell, seas, wave, depression, droplets, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, sun, moon, tufts, wishing, wanting, Veil of $noun, towers of $noun`.toLowerCase().split(", ").join(" | "),
             'modifier': `at a distance, heard, but no $noun, within the past hour, at the time of observation, which the $noun or $noun may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun, on land, in a chaotic sky, in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | "),
             'verb': `freezes, knows, recedes, evaporates, lands, occludes, fronts, decreases, cools, warms, dissapates, weakens, intensifies, converges, outflows,becomes thicker`.toLowerCase().split(", ").join(" | "),
             'adj': `of cups, of swords, red, blue, loving, knowing, unprecedented, unknown, freezing, anvil-shaped, occluded, super, front, coastal, combined, primary, extratropical, DECREASING, CALM, cold, warm, DISSAPATING, Weakening, Rapidly Intensifying, Intertropical, Freezing, Moving, Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, steady, unsteady, well developed, heavy, less developed, discernable`.toLowerCase().split(", ").join(" | ")
@@ -158,6 +216,8 @@
                 resetSymbols;
                 checkRain(forecast.probabilityOfPrecipitation.value);
                 checkWind(forecast.windSpeed);
+                checkTemp(forecast.temperature, questionsContainer)
+                checkForecast(forecast.shortForecast, filter);
                 questions.forEach(q => {
                     q.answer = weatherAnswer();
                     let randomSym = symbols[Math.floor(Math.random() * symbols.length)];
@@ -232,6 +292,7 @@
             document.body.style.filter = "blur(" + day * 0.5 + "px)";
         }
         function checkTemp(temp, div) {
+            div.className = '';
             if (temp < 30) {
                 div.classList.add("cold");
             } else if (temp >= 30 && temp < 50) {
@@ -242,6 +303,28 @@
                 div.classList.add("warm");
             } else {
                 div.classList.add("hot");
+            }
+
+        }
+        function checkForecast(forecast, div) {
+            rainPlayer.pause();
+            div.className = '';
+            if (forecast.includes("Sunny") || forecast.includes("Clear")) {
+                div.classList.add("sunny");
+                console.log("added sunny to div")
+            } else if (forecast.includes("Partly Cloudy")) {
+                div.classList.add("partly-cloudy");
+                console.log("added partly to div")
+
+            } else if (forecast.includes("Cloudy") && !forecast.includes("Partly")) {
+                div.classList.add("cloudy");
+                console.log("added cloudy to div")
+
+            } else if (forecast.includes("Rain")) {
+                div.classList.add("rainy");
+                console.log("added rainy to div")
+                rainPlayer.play();
+
             }
 
         }
@@ -377,7 +460,7 @@
 
         window.addEventListener("keydown", (event) => {
             if (event.key == "z" && !event.repeat) {
-                giveAnswer(weatherAnswer(), "A", nycN, nycW);
+                giveAnswer("", "", nycN, nycW);
 
             }
             if (event.key === "x" && !event.repeat) {
@@ -397,8 +480,16 @@
         });
 
         function clearAnswer() {
+            // if (outline.classList.contains("shadow")) {
+            //     outline.classList.remove("shadow");
+            // }
             sky.classList.add("hide");
             answerPanel.classList.add("hide");
+            // synth.volume.value = -100;
+
+
+
+            Tone.Transport.stop();
 
 
 
@@ -424,8 +515,12 @@
             if (sky.classList.contains("hide")) {
                 sky.classList.remove("hide");
             }
-            // blur();
+            synth.triggerAttackRelease(randomSynth(), synthTime);
+            // randomSynth()
+            // synth.volume.value = 0.5
 
+
+            // Tone.Transport.start();
 
 
 
@@ -568,11 +663,12 @@
             }
         }
 
-        function windowResized() {
-            resizeCanvas(windowWidth, windowHeight);
-            // Optionally reposition divs if needed
-        }
+        document.body.addEventListener('mousedown', () => {
+            // audio.play();
+            Tone.start();
+            console.log(player.volume.value);
 
+        });
         document.getElementById('download-btn').addEventListener('click', () => {
             // Extract text from each Question object
             const questionTexts = questions.map(q => q.text);
