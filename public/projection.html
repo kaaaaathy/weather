@@ -37,7 +37,7 @@
         </div>
     </div>
     <audio loop autoplay id="rain-player">
-        <source src="332496__dave_girtsman__rain-storm.mp3" type="audio/ogg">
+        <source src="332496__dave_girtsman__rain-storm.wav" type="audio/ogg">
     </audio>
     <!-- <audio loop autoplay id="rain-sound">
         <source src="793375__nicksamples__atmospheric-synth_c2.wav" type="audio/ogg">
@@ -58,13 +58,16 @@
         const dist = new Tone.Distortion(100).toDestination();
 
         player.connect(toneFilter);
-        player.volume.value = 1;
+        player.volume.value = 3;
+
         player.playbackRate = 0.5;
         Tone.getTransport().start;
 
         const synth = new Tone.PolySynth().toDestination();
         // set the attributes across all the voices using 'set'
         synth.set({ detune: -2200 });
+        synth.volume.value = -3;
+
         const synthTime = 8;
         // play a chord
         function randomSynth() {
