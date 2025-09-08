@@ -28,30 +28,6 @@
   src: url("https://backend.sheepdog.work/storage/v1/object/public/assets/6a50fa2a-3514-41f5-a3a6-18662faf4ae8/d2VhdGhlci12Mi50dGY=");
 }
 
-/* ———————————— THIS IS THE CSS FOR THE INSTRUCTIONS ———————————— */
-/* ———————————— THIS IS THE CSS FOR THE INSTRUCTIONS ———————————— */
-/* ———————————— THIS IS THE CSS FOR THE INSTRUCTIONS ———————————— */
-/* ———————————— THIS IS THE CSS FOR THE INSTRUCTIONS ———————————— */
-/* ———————————— THIS IS THE CSS FOR THE INSTRUCTIONS ———————————— */
-/* ———————————— THIS IS THE CSS FOR THE INSTRUCTIONS ———————————— */
-/* ———————————— THIS IS THE CSS FOR THE INSTRUCTIONS ———————————— */
-
-#instruction {
-  align-items: center;
-  display: flex;
-  padding: none;
-  flex-flow: column wrap;
-
-}
-
-#qr {
-  background-image: url('/images/qr.png');
-  width: 200px;
-  height: 200px;
-  margin-top: 100px;
-  background-size: contain;
-
-}
 
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
@@ -97,16 +73,25 @@
 /* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
 /* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
 
-#form,
-#instruction {
-  margin: 40px;
+#form {
+  margin: auto;
+  margin-top: 60px;
   text-align: center;
+  width: 300px;
 
 }
 
 #instruction {
-  margin-top: 30%;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
 
+
+}
+
+#form {
+  display: flex;
+  flex-flow: column wrap;
 }
 
 button {
