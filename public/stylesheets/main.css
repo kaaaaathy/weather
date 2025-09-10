@@ -346,8 +346,8 @@ iframe {
 }
 
 .partly-cloudy {
-  background-image: url('partlycloudy.jpg');
-  opacity: 0.25;
+  background-image: url('partlycloudy.png');
+  opacity: 0.4;
 
 }
 
@@ -360,6 +360,7 @@ iframe {
 
 .sunny {
   background-image: url('sunny.jpg');
+
   opacity: 0.5;
 
 }
