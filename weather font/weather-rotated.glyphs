@@ -1,0 +1,9535 @@
+{
+.appVersion = "3260";
+.formatVersion = 3;
+DisplayStrings = (
+b,
+d,
+f,
+W,
+X,
+Y,
+V,
+j,
+k,
+l,
+i,
+h,
+q,
+r,
+"7",
+"0",
+e,
+K,
+L,
+F,
+E,
+g
+);
+customParameters = (
+{
+name = panose;
+value = (
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0
+);
+},
+{
+name = unicodeRanges;
+value = (
+0,
+1
+);
+},
+{
+name = glyphOrder;
+value = (
+.notdef,
+space,
+A,
+B,
+C,
+D,
+E,
+F,
+G,
+H,
+I,
+J,
+K,
+L,
+M,
+N,
+O,
+P,
+Q,
+R,
+S,
+T,
+U,
+V,
+W,
+X,
+Y,
+Z,
+a,
+b,
+c,
+d,
+e,
+f,
+g,
+h,
+i,
+j,
+k,
+l,
+m,
+n,
+o,
+p,
+q,
+r,
+s,
+t,
+u,
+v,
+w,
+x,
+y,
+z,
+one,
+two,
+three,
+four,
+five,
+six,
+seven,
+eight,
+nine,
+zero,
+period,
+comma,
+hyphen
+);
+}
+);
+date = "2025-08-12 00:26:37 +0000";
+familyName = weather;
+fontMaster = (
+{
+customParameters = (
+{
+name = typoAscender;
+value = 800;
+},
+{
+name = typoDescender;
+value = -200;
+},
+{
+name = typoLineGap;
+value = 200;
+},
+{
+name = winAscent;
+value = 1000;
+},
+{
+name = winDescent;
+value = 200;
+},
+{
+name = hheaAscender;
+value = 1000;
+},
+{
+name = hheaDescender;
+value = -200;
+},
+{
+name = strikeoutPosition;
+value = 250;
+},
+{
+name = strikeoutSize;
+value = 50;
+},
+{
+name = "prep Table Assembly";
+value = "SVTCA[0]	/* SetFreedomAndProjectionVectorToAxis */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHW[ ]	/* 1 value pushed */
+200
+GT[ ]	/* GreaterThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 2 values pushed */
+1 1
+INSTCTRL[ ]	/* SetInstrExecControl */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+1
+PUSHW[ ]	/* 2 values pushed */
+2048 2048
+MUL[ ]	/* Multiply */
+WCVTF[ ]	/* WriteCVTInFUnits */
+PUSHB[ ]	/* 2 values pushed */
+0 7
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 3 values pushed */
+25 1 0
+LOOPCALL[ ]	/* LoopAndCallFunction */
+PUSHB[ ]	/* 2 values pushed */
+0 7
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 4 values pushed */
+13 9 1 10
+LOOPCALL[ ]	/* LoopAndCallFunction */
+PUSHB[ ]	/* 2 values pushed */
+0 7
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 4 values pushed */
+22 6 1 10
+LOOPCALL[ ]	/* LoopAndCallFunction */
+PUSHB[ ]	/* 2 values pushed */
+0 8
+WS[ ]	/* WriteStore */
+PUSHW[ ]	/* 3 values pushed */
+896 1 11
+LOOPCALL[ ]	/* LoopAndCallFunction */
+PUSHB[ ]	/* 2 values pushed */
+0 9
+WS[ ]	/* WriteStore */
+PUSHW[ ]	/* 3 values pushed */
+128 1 11
+LOOPCALL[ ]	/* LoopAndCallFunction */
+PUSHW[ ]	/* 2 values pushed */
+3 0
+WCVTP[ ]	/* WriteCVTInPixels */
+PUSHB[ ]	/* 2 values pushed */
+36 1
+GETINFO[ ]	/* GetInfo */
+LTEQ[ ]	/* LessThenOrEqual */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+GETINFO[ ]	/* GetInfo */
+IF[ ]	/* If */
+PUSHW[ ]	/* 2 values pushed */
+3 100
+WCVTP[ ]	/* WriteCVTInPixels */
+PUSHB[ ]	/* 2 values pushed */
+40 1
+GETINFO[ ]	/* GetInfo */
+LTEQ[ ]	/* LessThenOrEqual */
+IF[ ]	/* If */
+PUSHW[ ]	/* 1 value pushed */
+2048
+GETINFO[ ]	/* GetInfo */
+IF[ ]	/* If */
+PUSHW[ ]	/* 2 values pushed */
+3 0
+WCVTP[ ]	/* WriteCVTInPixels */
+EIF[ ]	/* EndIf */
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 2 values pushed */
+39 1
+GETINFO[ ]	/* GetInfo */
+LTEQ[ ]	/* LessThenOrEqual */
+IF[ ]	/* If */
+PUSHW[ ]	/* 3 values pushed */
+2176 1 1088
+GETINFO[ ]	/* GetInfo */
+MUL[ ]	/* Multiply */
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+PUSHW[ ]	/* 2 values pushed */
+3 0
+WCVTP[ ]	/* WriteCVTInPixels */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 4 values pushed */
+16 6 1 14
+LOOPCALL[ ]	/* LoopAndCallFunction */
+PUSHW[ ]	/* 1 value pushed */
+511
+SCANCTRL[ ]	/* ScanConversionControl */
+PUSHB[ ]	/* 1 value pushed */
+4
+SCANTYPE[ ]	/* ScanType */
+PUSHB[ ]	/* 2 values pushed */
+2 0
+WCVTP[ ]	/* WriteCVTInPixels */
+PUSHB[ ]	/* 4 values pushed */
+5 100 6 0
+WCVTP[ ]	/* WriteCVTInPixels */
+WCVTP[ ]	/* WriteCVTInPixels */";
+},
+{
+name = "fpgm Table Assembly";
+value = "PUSHB[ ]	/* 1 value pushed */
+0
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+NEQ[ ]	/* NotEqual */
+IF[ ]	/* If */
+RCVT[ ]	/* ReadCVT */
+EIF[ ]	/* EndIf */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHW[ ]	/* 1 value pushed */
+14
+LTEQ[ ]	/* LessThenOrEqual */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+6
+GTEQ[ ]	/* GreaterThanOrEqual */
+AND[ ]	/* LogicalAnd */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+52
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 1 value pushed */
+40
+EIF[ ]	/* EndIf */
+ADD[ ]	/* Add */
+FLOOR[ ]	/* Floor */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+NEQ[ ]	/* NotEqual */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+SUB[ ]	/* Subtract */
+PUSHW[ ]	/* 2 values pushed */
+2048 2048
+MUL[ ]	/* Multiply */
+MUL[ ]	/* Multiply */
+SWAP[ ]	/* SwapTopStack */
+DIV[ ]	/* Divide */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+0
+RS[ ]	/* ReadStore */
+SWAP[ ]	/* SwapTopStack */
+WCVTP[ ]	/* WriteCVTInPixels */
+PUSHB[ ]	/* 3 values pushed */
+0 1 0
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+1
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+32
+ADD[ ]	/* Add */
+FLOOR[ ]	/* Floor */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+2
+FDEF[ ]	/* FunctionDefinition */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+3
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+ABS[ ]	/* Absolute */
+PUSHB[ ]	/* 4 values pushed */
+3 20 21 0
+WS[ ]	/* WriteStore */
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+19
+RS[ ]	/* ReadStore */
+DUP[ ]	/* DuplicateTopStack */
+ADD[ ]	/* Add */
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 2 values pushed */
+2 20
+RS[ ]	/* ReadStore */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 2 values pushed */
+37 3
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+2
+RS[ ]	/* ReadStore */
+EQ[ ]	/* Equal */
+JROT[ ]	/* JumpRelativeOnTrue */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+12
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+2
+RS[ ]	/* ReadStore */
+RS[ ]	/* ReadStore */
+SUB[ ]	/* Subtract */
+ABS[ ]	/* Absolute */
+PUSHB[ ]	/* 1 value pushed */
+4
+LT[ ]	/* LessThan */
+JROT[ ]	/* JumpRelativeOnTrue */
+PUSHB[ ]	/* 3 values pushed */
+2 2 2
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+33
+NEG[ ]	/* Negate */
+JMPR[ ]	/* Jump */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+2
+RS[ ]	/* ReadStore */
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 3 values pushed */
+14 21 1
+WS[ ]	/* WriteStore */
+JMPR[ ]	/* Jump */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+2
+RS[ ]	/* ReadStore */
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 3 values pushed */
+19 1 19
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NEG[ ]	/* Negate */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 3 values pushed */
+22 1 2
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+4
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+3
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+21
+RS[ ]	/* ReadStore */
+IF[ ]	/* If */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+22
+RS[ ]	/* ReadStore */
+RS[ ]	/* ReadStore */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NEG[ ]	/* Negate */
+EIF[ ]	/* EndIf */
+ELSE[ ]	/* Else */
+DUP[ ]	/* DuplicateTopStack */
+ABS[ ]	/* Absolute */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+192
+LT[ ]	/* LessThan */
+PUSHB[ ]	/* 1 value pushed */
+4
+MINDEX[ ]	/* MoveXToTopStack */
+AND[ ]	/* LogicalAnd */
+PUSHB[ ]	/* 3 values pushed */
+40 1 13
+RS[ ]	/* ReadStore */
+RCVT[ ]	/* ReadCVT */
+MUL[ ]	/* Multiply */
+RCVT[ ]	/* ReadCVT */
+PUSHB[ ]	/* 1 value pushed */
+6
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+3
+CINDEX[ ]	/* CopyXToTopStack */
+EIF[ ]	/* EndIf */
+GT[ ]	/* GreaterThan */
+OR[ ]	/* LogicalOr */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+ELSE[ ]	/* Else */
+ROLL[ ]	/* RollTopThreeStack */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+80
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+64
+EIF[ ]	/* EndIf */
+ELSE[ ]	/* Else */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+56
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+56
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 2 values pushed */
+1 13
+RS[ ]	/* ReadStore */
+RCVT[ ]	/* ReadCVT */
+MUL[ ]	/* Multiply */
+RCVT[ ]	/* ReadCVT */
+SUB[ ]	/* Subtract */
+ABS[ ]	/* Absolute */
+PUSHB[ ]	/* 1 value pushed */
+40
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 2 values pushed */
+1 13
+RS[ ]	/* ReadStore */
+RCVT[ ]	/* ReadCVT */
+MUL[ ]	/* Multiply */
+RCVT[ ]	/* ReadCVT */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+48
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+48
+EIF[ ]	/* EndIf */
+ELSE[ ]	/* Else */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+192
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+FLOOR[ ]	/* Floor */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+ROLL[ ]	/* RollTopThreeStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+10
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+ADD[ ]	/* Add */
+ELSE[ ]	/* Else */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+32
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+10
+ADD[ ]	/* Add */
+ELSE[ ]	/* Else */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+54
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+54
+ADD[ ]	/* Add */
+ELSE[ ]	/* Else */
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+12
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+0
+GT[ ]	/* GreaterThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+0
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+10
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+12
+RS[ ]	/* ReadStore */
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+30
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+30
+MPPEM[ ]	/* MeasurePixelPerEm */
+SUB[ ]	/* Subtract */
+PUSHW[ ]	/* 1 value pushed */
+4096
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+12
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1280
+DIV[ ]	/* Divide */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+ABS[ ]	/* Absolute */
+SUB[ ]	/* Subtract */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NEG[ ]	/* Negate */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+DUP[ ]	/* DuplicateTopStack */
+ABS[ ]	/* Absolute */
+PUSHB[ ]	/* 1 value pushed */
+22
+RS[ ]	/* ReadStore */
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+5
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+RCVT[ ]	/* ReadCVT */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+SUB[ ]	/* Subtract */
+ABS[ ]	/* Absolute */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+7
+RS[ ]	/* ReadStore */
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+7
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+8
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+6
+FDEF[ ]	/* FunctionDefinition */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+3
+CALL[ ]	/* CallFunction */
+DUP[ ]	/* DuplicateTopStack */
+ABS[ ]	/* Absolute */
+PUSHB[ ]	/* 2 values pushed */
+7 98
+WS[ ]	/* WriteStore */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+8
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+6
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 2 values pushed */
+1 13
+RS[ ]	/* ReadStore */
+RCVT[ ]	/* ReadCVT */
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 2 values pushed */
+1 13
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+RCVT[ ]	/* ReadCVT */
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+5
+LOOPCALL[ ]	/* LoopAndCallFunction */
+POP[ ]	/* PopTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+8
+RS[ ]	/* ReadStore */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 2 values pushed */
+48 5
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+MINDEX[ ]	/* MoveXToTopStack */
+LTEQ[ ]	/* LessThenOrEqual */
+IF[ ]	/* If */
+ADD[ ]	/* Add */
+LT[ ]	/* LessThan */
+ELSE[ ]	/* Else */
+SUB[ ]	/* Subtract */
+GT[ ]	/* GreaterThan */
+EIF[ ]	/* EndIf */
+IF[ ]	/* If */
+SWAP[ ]	/* SwapTopStack */
+EIF[ ]	/* EndIf */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+64
+GTEQ[ ]	/* GreaterThanOrEqual */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+64
+EIF[ ]	/* EndIf */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NEG[ ]	/* Negate */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+7
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+9
+RS[ ]	/* ReadStore */
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 3 values pushed */
+0 2 0
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+8
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+9
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+2
+DIV[ ]	/* Divide */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+7
+LOOPCALL[ ]	/* LoopAndCallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+9
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+RCVT[ ]	/* ReadCVT */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+14
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1024
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+WCVTP[ ]	/* WriteCVTInPixels */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+10
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+9 14 0
+RS[ ]	/* ReadStore */
+RCVT[ ]	/* ReadCVT */
+WS[ ]	/* WriteStore */
+LOOPCALL[ ]	/* LoopAndCallFunction */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 3 values pushed */
+0 1 0
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+11
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+RS[ ]	/* ReadStore */
+SWAP[ ]	/* SwapTopStack */
+WCVTP[ ]	/* WriteCVTInPixels */
+PUSHB[ ]	/* 3 values pushed */
+0 1 0
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+12
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+RCVT[ ]	/* ReadCVT */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+RCVT[ ]	/* ReadCVT */
+ROLL[ ]	/* RollTopThreeStack */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+ABS[ ]	/* Absolute */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+32
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 1 value pushed */
+48
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+32
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 1 value pushed */
+64
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NEG[ ]	/* Negate */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+3
+CINDEX[ ]	/* CopyXToTopStack */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+WCVTP[ ]	/* WriteCVTInPixels */
+WCVTP[ ]	/* WriteCVTInPixels */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+13
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+RCVT[ ]	/* ReadCVT */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+RCVT[ ]	/* ReadCVT */
+ROLL[ ]	/* RollTopThreeStack */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+ABS[ ]	/* Absolute */
+PUSHB[ ]	/* 1 value pushed */
+36
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+0
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 1 value pushed */
+64
+EIF[ ]	/* EndIf */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NEG[ ]	/* Negate */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+3
+CINDEX[ ]	/* CopyXToTopStack */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+WCVTP[ ]	/* WriteCVTInPixels */
+WCVTP[ ]	/* WriteCVTInPixels */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+14
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 4 values pushed */
+13 12 0 3
+RCVT[ ]	/* ReadCVT */
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+ELSE[ ]	/* Else */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+LOOPCALL[ ]	/* LoopAndCallFunction */
+POP[ ]	/* PopTopStack */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+15
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+2 2
+RCVT[ ]	/* ReadCVT */
+PUSHB[ ]	/* 1 value pushed */
+100
+SUB[ ]	/* Subtract */
+WCVTP[ ]	/* WriteCVTInPixels */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+16
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+15
+RS[ ]	/* ReadStore */
+MD[1]	/* MeasureDistance */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+15
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+16
+RS[ ]	/* ReadStore */
+MD[1]	/* MeasureDistance */
+PUSHB[ ]	/* 1 value pushed */
+0
+GT[ ]	/* GreaterThan */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+16
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+17
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+16
+DIV[ ]	/* Divide */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+DUP[ ]	/* DuplicateTopStack */
+PUSHW[ ]	/* 1 value pushed */
+1024
+MUL[ ]	/* Multiply */
+ROLL[ ]	/* RollTopThreeStack */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+17
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+17
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+SWAP[ ]	/* SwapTopStack */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+18
+FDEF[ ]	/* FunctionDefinition */
+MPPEM[ ]	/* MeasurePixelPerEm */
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+PUSHB[ ]	/* 2 values pushed */
+4 100
+WCVTP[ ]	/* WriteCVTInPixels */
+EIF[ ]	/* EndIf */
+DEPTH[ ]	/* GetDepthStack */
+PUSHB[ ]	/* 1 value pushed */
+13
+NEG[ ]	/* Negate */
+SWAP[ ]	/* SwapTopStack */
+JROT[ ]	/* JumpRelativeOnTrue */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+19
+FDEF[ ]	/* FunctionDefinition */
+MPPEM[ ]	/* MeasurePixelPerEm */
+LTEQ[ ]	/* LessThenOrEqual */
+IF[ ]	/* If */
+MPPEM[ ]	/* MeasurePixelPerEm */
+GTEQ[ ]	/* GreaterThanOrEqual */
+IF[ ]	/* If */
+PUSHB[ ]	/* 2 values pushed */
+4 100
+WCVTP[ ]	/* WriteCVTInPixels */
+EIF[ ]	/* EndIf */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+DEPTH[ ]	/* GetDepthStack */
+PUSHB[ ]	/* 1 value pushed */
+19
+NEG[ ]	/* Negate */
+SWAP[ ]	/* SwapTopStack */
+JROT[ ]	/* JumpRelativeOnTrue */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+20
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 18
+RS[ ]	/* ReadStore */
+NEQ[ ]	/* NotEqual */
+IF[ ]	/* If */
+PUSHB[ ]	/* 2 values pushed */
+18 18
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+1
+SUB[ ]	/* Subtract */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+17
+CALL[ ]	/* CallFunction */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+0
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 2 values pushed */
+15 2
+CINDEX[ ]	/* CopyXToTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 2 values pushed */
+16 2
+CINDEX[ ]	/* CopyXToTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+1
+SZPS[ ]	/* SetZonePointerS */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+3
+CINDEX[ ]	/* CopyXToTopStack */
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 2 values pushed */
+1 0
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+WS[ ]	/* WriteStore */
+ROLL[ ]	/* RollTopThreeStack */
+ROLL[ ]	/* RollTopThreeStack */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+16
+LOOPCALL[ ]	/* LoopAndCallFunction */
+POP[ ]	/* PopTopStack */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+16
+LOOPCALL[ ]	/* LoopAndCallFunction */
+POP[ ]	/* PopTopStack */
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 2 values pushed */
+1 0
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+16
+LOOPCALL[ ]	/* LoopAndCallFunction */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+15
+RS[ ]	/* ReadStore */
+GC[1]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+16
+RS[ ]	/* ReadStore */
+GC[1]	/* GetCoordOnPVector */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+2
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+14
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1024
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 2 values pushed */
+0 0
+SZP0[ ]	/* SetZonePointer0 */
+SWAP[ ]	/* SwapTopStack */
+WCVTP[ ]	/* WriteCVTInPixels */
+PUSHB[ ]	/* 1 value pushed */
+1
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+0
+MIAP[0]	/* MoveIndirectAbsPt */
+PUSHB[ ]	/* 3 values pushed */
+1 1 1
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+21
+FDEF[ ]	/* FunctionDefinition */
+SVTCA[0]	/* SetFreedomAndProjectionVectorToAxis */
+PUSHB[ ]	/* 2 values pushed */
+0 2
+RCVT[ ]	/* ReadCVT */
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+18
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+DUP[ ]	/* DuplicateTopStack */
+RCVT[ ]	/* ReadCVT */
+PUSHB[ ]	/* 1 value pushed */
+14
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+13
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+DUP[ ]	/* DuplicateTopStack */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 8 values pushed */
+24 24 1 0 17 0 19 0
+WS[ ]	/* WriteStore */
+WS[ ]	/* WriteStore */
+WS[ ]	/* WriteStore */
+ROLL[ ]	/* RollTopThreeStack */
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+20
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+1
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 2 values pushed */
+20 8
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+139
+CALL[ ]	/* CallFunction */
+ELSE[ ]	/* Else */
+CLEAR[ ]	/* ClearStack */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+22
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+23
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+24
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+2 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+25
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+3 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+26
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+4 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+27
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+5 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+28
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+6 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+29
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+7 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+30
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+8 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+31
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+9 21
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+43
+FDEF[ ]	/* FunctionDefinition */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+16
+DIV[ ]	/* Divide */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+6
+ADD[ ]	/* Add */
+MPPEM[ ]	/* MeasurePixelPerEm */
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 1 value pushed */
+1
+DELTAP1[ ]	/* DeltaExceptionP1 */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+44
+FDEF[ ]	/* FunctionDefinition */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+16
+DIV[ ]	/* Divide */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+22
+ADD[ ]	/* Add */
+MPPEM[ ]	/* MeasurePixelPerEm */
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 1 value pushed */
+1
+DELTAP2[ ]	/* DeltaExceptionP2 */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+45
+FDEF[ ]	/* FunctionDefinition */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+16
+DIV[ ]	/* Divide */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+38
+ADD[ ]	/* Add */
+MPPEM[ ]	/* MeasurePixelPerEm */
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 1 value pushed */
+1
+DELTAP3[ ]	/* DeltaExceptionP3 */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+32
+FDEF[ ]	/* FunctionDefinition */
+SVTCA[0]	/* SetFreedomAndProjectionVectorToAxis */
+PUSHB[ ]	/* 1 value pushed */
+15
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 2 values pushed */
+0 2
+RCVT[ ]	/* ReadCVT */
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+18
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+DUP[ ]	/* DuplicateTopStack */
+RCVT[ ]	/* ReadCVT */
+PUSHB[ ]	/* 1 value pushed */
+14
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+13
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+WS[ ]	/* WriteStore */
+DUP[ ]	/* DuplicateTopStack */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+1
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 6 values pushed */
+24 24 1 0 17 0
+WS[ ]	/* WriteStore */
+WS[ ]	/* WriteStore */
+ROLL[ ]	/* RollTopThreeStack */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 2 values pushed */
+20 8
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+139
+CALL[ ]	/* CallFunction */
+ELSE[ ]	/* Else */
+CLEAR[ ]	/* ClearStack */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+33
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+34
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+35
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+2 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+36
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+3 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+37
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+4 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+38
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+5 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+39
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+6 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+40
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+7 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+41
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+8 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+42
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+9 32
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+46
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+47
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+24
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+RS[ ]	/* ReadStore */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+46
+LOOPCALL[ ]	/* LoopAndCallFunction */
+POP[ ]	/* PopTopStack */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+48
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+47
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+47
+LOOPCALL[ ]	/* LoopAndCallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+49
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+GC[1]	/* GetCoordOnPVector */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+14
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1024
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+SHPIX[ ]	/* ShiftZoneByPixel */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+NEQ[ ]	/* NotEqual */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+GC[1]	/* GetCoordOnPVector */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+14
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1024
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+SHPIX[ ]	/* ShiftZoneByPixel */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+50
+FDEF[ ]	/* FunctionDefinition */
+SVTCA[0]	/* SetFreedomAndProjectionVectorToAxis */
+PUSHB[ ]	/* 2 values pushed */
+0 2
+RCVT[ ]	/* ReadCVT */
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+PUSHB[ ]	/* 2 values pushed */
+14 6
+RCVT[ ]	/* ReadCVT */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+1
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+49
+LOOPCALL[ ]	/* LoopAndCallFunction */
+PUSHB[ ]	/* 2 values pushed */
+5 1
+SZP2[ ]	/* SetZonePointer2 */
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+IUP[0]	/* InterpolateUntPts */
+EIF[ ]	/* EndIf */
+ELSE[ ]	/* Else */
+CLEAR[ ]	/* ClearStack */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+51
+FDEF[ ]	/* FunctionDefinition */
+SVTCA[0]	/* SetFreedomAndProjectionVectorToAxis */
+PUSHB[ ]	/* 1 value pushed */
+15
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 2 values pushed */
+0 2
+RCVT[ ]	/* ReadCVT */
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+PUSHB[ ]	/* 2 values pushed */
+14 6
+RCVT[ ]	/* ReadCVT */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+1
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+49
+LOOPCALL[ ]	/* LoopAndCallFunction */
+PUSHB[ ]	/* 2 values pushed */
+5 1
+SZP2[ ]	/* SetZonePointer2 */
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+IUP[0]	/* InterpolateUntPts */
+EIF[ ]	/* EndIf */
+ELSE[ ]	/* Else */
+CLEAR[ ]	/* ClearStack */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+52
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+SHC[1]	/* ShiftContourByLastPt */
+PUSHB[ ]	/* 1 value pushed */
+1
+ADD[ ]	/* Add */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+53
+FDEF[ ]	/* FunctionDefinition */
+SVTCA[0]	/* SetFreedomAndProjectionVectorToAxis */
+PUSHB[ ]	/* 2 values pushed */
+14 6
+RCVT[ ]	/* ReadCVT */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+1
+RCVT[ ]	/* ReadCVT */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1024
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+14
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1024
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 5 values pushed */
+0 0 0 0 0
+WCVTP[ ]	/* WriteCVTInPixels */
+MIAP[0]	/* MoveIndirectAbsPt */
+SWAP[ ]	/* SwapTopStack */
+SHPIX[ ]	/* ShiftZoneByPixel */
+PUSHB[ ]	/* 2 values pushed */
+52 1
+SZP2[ ]	/* SetZonePointer2 */
+LOOPCALL[ ]	/* LoopAndCallFunction */
+POP[ ]	/* PopTopStack */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+54
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+DUP[ ]	/* DuplicateTopStack */
+GC[1]	/* GetCoordOnPVector */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+14
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1024
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+0
+RS[ ]	/* ReadStore */
+SUB[ ]	/* Subtract */
+SHPIX[ ]	/* ShiftZoneByPixel */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+55
+FDEF[ ]	/* FunctionDefinition */
+MDAP[0]	/* MoveDirectAbsPt */
+SLOOP[ ]	/* SetLoopVariable */
+ALIGNRP[ ]	/* AlignRelativePt */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+56
+FDEF[ ]	/* FunctionDefinition */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+DUP[ ]	/* DuplicateTopStack */
+GC[1]	/* GetCoordOnPVector */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+14
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1024
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+0
+RS[ ]	/* ReadStore */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+1
+RS[ ]	/* ReadStore */
+MUL[ ]	/* Multiply */
+SHPIX[ ]	/* ShiftZoneByPixel */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+57
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+2 0
+SZPS[ ]	/* SetZonePointerS */
+CINDEX[ ]	/* CopyXToTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+DUP[ ]	/* DuplicateTopStack */
+GC[1]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+0
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+MD[0]	/* MeasureDistance */
+ROLL[ ]	/* RollTopThreeStack */
+ROLL[ ]	/* RollTopThreeStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+IF[ ]	/* If */
+DIV[ ]	/* Divide */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+1
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 3 values pushed */
+56 1 1
+SZP2[ ]	/* SetZonePointer2 */
+SZP1[ ]	/* SetZonePointer1 */
+LOOPCALL[ ]	/* LoopAndCallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+58
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+23
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 2 values pushed */
+12 0
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+11
+RS[ ]	/* ReadStore */
+CALL[ ]	/* CallFunction */
+NEG[ ]	/* Negate */
+ROLL[ ]	/* RollTopThreeStack */
+MDAP[0]	/* MoveDirectAbsPt */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+ROLL[ ]	/* RollTopThreeStack */
+SHPIX[ ]	/* ShiftZoneByPixel */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+59
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+23
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+6
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 2 values pushed */
+12 0
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+11
+RS[ ]	/* ReadStore */
+CALL[ ]	/* CallFunction */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+96
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+64
+LTEQ[ ]	/* LessThenOrEqual */
+IF[ ]	/* If */
+PUSHB[ ]	/* 4 values pushed */
+4 32 5 32
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 4 values pushed */
+4 38 5 26
+EIF[ ]	/* EndIf */
+WS[ ]	/* WriteStore */
+WS[ ]	/* WriteStore */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+10
+RS[ ]	/* ReadStore */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+SWAP[ ]	/* SwapTopStack */
+GC[0]	/* GetCoordOnPVector */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+6
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+2
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+ROLL[ ]	/* RollTopThreeStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+ABS[ ]	/* Absolute */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+5
+RS[ ]	/* ReadStore */
+SUB[ ]	/* Subtract */
+ABS[ ]	/* Absolute */
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+4
+RS[ ]	/* ReadStore */
+SUB[ ]	/* Subtract */
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 1 value pushed */
+5
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+3
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+2
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+SUB[ ]	/* Subtract */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+MINDEX[ ]	/* MoveXToTopStack */
+SWAP[ ]	/* SwapTopStack */
+GC[0]	/* GetCoordOnPVector */
+SUB[ ]	/* Subtract */
+SHPIX[ ]	/* ShiftZoneByPixel */
+ELSE[ ]	/* Else */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+10
+RS[ ]	/* ReadStore */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+10
+RS[ ]	/* ReadStore */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+6
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+2
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+6
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+5
+CINDEX[ ]	/* CopyXToTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+5
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+2
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+PUSHB[ ]	/* 1 value pushed */
+4
+MINDEX[ ]	/* MoveXToTopStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+ADD[ ]	/* Add */
+ABS[ ]	/* Absolute */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+3
+CINDEX[ ]	/* CopyXToTopStack */
+ADD[ ]	/* Add */
+ABS[ ]	/* Absolute */
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+POP[ ]	/* PopTopStack */
+ELSE[ ]	/* Else */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+MINDEX[ ]	/* MoveXToTopStack */
+SWAP[ ]	/* SwapTopStack */
+GC[0]	/* GetCoordOnPVector */
+SUB[ ]	/* Subtract */
+SHPIX[ ]	/* ShiftZoneByPixel */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+60
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+23
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+5
+MINDEX[ ]	/* MoveXToTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+SWAP[ ]	/* SwapTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+SHPIX[ ]	/* ShiftZoneByPixel */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+61
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+23
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+10
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+GC[0]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+SHPIX[ ]	/* ShiftZoneByPixel */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+62
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+23
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+3
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+0
+EQ[ ]	/* Equal */
+IF[ ]	/* If */
+MDAP[0]	/* MoveDirectAbsPt */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+5
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+6
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+5
+CINDEX[ ]	/* CopyXToTopStack */
+MD[0]	/* MeasureDistance */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+SUB[ ]	/* Subtract */
+PUSHW[ ]	/* 2 values pushed */
+2048 2048
+MUL[ ]	/* Multiply */
+MUL[ ]	/* Multiply */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+IF[ ]	/* If */
+DIV[ ]	/* Divide */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+MUL[ ]	/* Multiply */
+PUSHW[ ]	/* 1 value pushed */
+1024
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+SWAP[ ]	/* SwapTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+ROLL[ ]	/* RollTopThreeStack */
+SHPIX[ ]	/* ShiftZoneByPixel */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+63
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+23
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+10
+RS[ ]	/* ReadStore */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+ADD[ ]	/* Add */
+PUSHB[ ]	/* 1 value pushed */
+32
+ADD[ ]	/* Add */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+2
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+ROLL[ ]	/* RollTopThreeStack */
+SHPIX[ ]	/* ShiftZoneByPixel */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+64
+FDEF[ ]	/* FunctionDefinition */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+23
+RS[ ]	/* ReadStore */
+IF[ ]	/* If */
+LT[ ]	/* LessThan */
+ELSE[ ]	/* Else */
+GT[ ]	/* GreaterThan */
+EIF[ ]	/* EndIf */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+EIF[ ]	/* EndIf */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+65
+FDEF[ ]	/* FunctionDefinition */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+23
+RS[ ]	/* ReadStore */
+IF[ ]	/* If */
+GT[ ]	/* GreaterThan */
+ELSE[ ]	/* Else */
+LT[ ]	/* LessThan */
+EIF[ ]	/* EndIf */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+EIF[ ]	/* EndIf */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+66
+FDEF[ ]	/* FunctionDefinition */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+23
+RS[ ]	/* ReadStore */
+IF[ ]	/* If */
+LT[ ]	/* LessThan */
+ELSE[ ]	/* Else */
+GT[ ]	/* GreaterThan */
+EIF[ ]	/* EndIf */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+EIF[ ]	/* EndIf */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+23
+RS[ ]	/* ReadStore */
+IF[ ]	/* If */
+GT[ ]	/* GreaterThan */
+ELSE[ ]	/* Else */
+LT[ ]	/* LessThan */
+EIF[ ]	/* EndIf */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+EIF[ ]	/* EndIf */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+67
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+58
+CALL[ ]	/* CallFunction */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+23
+RS[ ]	/* ReadStore */
+IF[ ]	/* If */
+LT[ ]	/* LessThan */
+ELSE[ ]	/* Else */
+GT[ ]	/* GreaterThan */
+EIF[ ]	/* EndIf */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+EIF[ ]	/* EndIf */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+68
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+59
+CALL[ ]	/* CallFunction */
+ROLL[ ]	/* RollTopThreeStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+PUSHB[ ]	/* 1 value pushed */
+6
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+ROLL[ ]	/* RollTopThreeStack */
+SHPIX[ ]	/* ShiftZoneByPixel */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+GC[0]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+23
+RS[ ]	/* ReadStore */
+IF[ ]	/* If */
+LT[ ]	/* LessThan */
+ELSE[ ]	/* Else */
+GT[ ]	/* GreaterThan */
+EIF[ ]	/* EndIf */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+EIF[ ]	/* EndIf */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+6
+RS[ ]	/* ReadStore */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 1 value pushed */
+48
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+69
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+MINDEX[ ]	/* MoveXToTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+GC[0]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+12
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+11
+RS[ ]	/* ReadStore */
+CALL[ ]	/* CallFunction */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+SWAP[ ]	/* SwapTopStack */
+SHPIX[ ]	/* ShiftZoneByPixel */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+70
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+10 4
+CINDEX[ ]	/* CopyXToTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+CINDEX[ ]	/* CopyXToTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+6
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 2 values pushed */
+12 0
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+11
+RS[ ]	/* ReadStore */
+CALL[ ]	/* CallFunction */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+96
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+64
+LTEQ[ ]	/* LessThenOrEqual */
+IF[ ]	/* If */
+PUSHB[ ]	/* 4 values pushed */
+4 32 5 32
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 4 values pushed */
+4 38 5 26
+EIF[ ]	/* EndIf */
+WS[ ]	/* WriteStore */
+WS[ ]	/* WriteStore */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+GC[1]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+6
+RS[ ]	/* ReadStore */
+PUSHB[ ]	/* 1 value pushed */
+2
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+ADD[ ]	/* Add */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+DUP[ ]	/* DuplicateTopStack */
+ROLL[ ]	/* RollTopThreeStack */
+ROLL[ ]	/* RollTopThreeStack */
+SUB[ ]	/* Subtract */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+4
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+ABS[ ]	/* Absolute */
+SWAP[ ]	/* SwapTopStack */
+PUSHB[ ]	/* 1 value pushed */
+5
+RS[ ]	/* ReadStore */
+SUB[ ]	/* Subtract */
+ABS[ ]	/* Absolute */
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+4
+RS[ ]	/* ReadStore */
+SUB[ ]	/* Subtract */
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 1 value pushed */
+5
+RS[ ]	/* ReadStore */
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 1 value pushed */
+3
+CINDEX[ ]	/* CopyXToTopStack */
+PUSHB[ ]	/* 1 value pushed */
+2
+DIV[ ]	/* Divide */
+DUP[ ]	/* DuplicateTopStack */
+PUSHB[ ]	/* 1 value pushed */
+0
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+64
+ADD[ ]	/* Add */
+EIF[ ]	/* EndIf */
+FLOOR[ ]	/* Floor */
+PUSHB[ ]	/* 1 value pushed */
+1
+MUL[ ]	/* Multiply */
+SUB[ ]	/* Subtract */
+PUSHB[ ]	/* 1 value pushed */
+2
+CINDEX[ ]	/* CopyXToTopStack */
+GC[0]	/* GetCoordOnPVector */
+SUB[ ]	/* Subtract */
+SHPIX[ ]	/* ShiftZoneByPixel */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+SWAP[ ]	/* SwapTopStack */
+SHPIX[ ]	/* ShiftZoneByPixel */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+GC[0]	/* GetCoordOnPVector */
+SWAP[ ]	/* SwapTopStack */
+GC[1]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+1
+CALL[ ]	/* CallFunction */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+SHPIX[ ]	/* ShiftZoneByPixel */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+71
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 58
+CALL[ ]	/* CallFunction */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+72
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 59
+CALL[ ]	/* CallFunction */
+POP[ ]	/* PopTopStack */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+DUP[ ]	/* DuplicateTopStack */
+ALIGNRP[ ]	/* AlignRelativePt */
+PUSHB[ ]	/* 1 value pushed */
+6
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+SWAP[ ]	/* SwapTopStack */
+SHPIX[ ]	/* ShiftZoneByPixel */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+6
+RS[ ]	/* ReadStore */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 1 value pushed */
+48
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+73
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZP2[ ]	/* SetZonePointer2 */
+DUP[ ]	/* DuplicateTopStack */
+GC[1]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+0
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 3 values pushed */
+0 1 1
+SZP2[ ]	/* SetZonePointer2 */
+SZP1[ ]	/* SetZonePointer1 */
+SZP0[ ]	/* SetZonePointer0 */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 1 value pushed */
+54
+LOOPCALL[ ]	/* LoopAndCallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+74
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZP2[ ]	/* SetZonePointer2 */
+DUP[ ]	/* DuplicateTopStack */
+GC[1]	/* GetCoordOnPVector */
+PUSHB[ ]	/* 1 value pushed */
+0
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 3 values pushed */
+0 1 1
+SZP2[ ]	/* SetZonePointer2 */
+SZP1[ ]	/* SetZonePointer1 */
+SZP0[ ]	/* SetZonePointer0 */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 1 value pushed */
+54
+LOOPCALL[ ]	/* LoopAndCallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+75
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 1
+SZP1[ ]	/* SetZonePointer1 */
+SZP0[ ]	/* SetZonePointer0 */
+PUSHB[ ]	/* 1 value pushed */
+55
+LOOPCALL[ ]	/* LoopAndCallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+76
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+57
+LOOPCALL[ ]	/* LoopAndCallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+77
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+RCVT[ ]	/* ReadCVT */
+SWAP[ ]	/* SwapTopStack */
+DUP[ ]	/* DuplicateTopStack */
+MDAP[0]	/* MoveDirectAbsPt */
+DUP[ ]	/* DuplicateTopStack */
+GC[0]	/* GetCoordOnPVector */
+ROLL[ ]	/* RollTopThreeStack */
+SWAP[ ]	/* SwapTopStack */
+SUB[ ]	/* Subtract */
+SHPIX[ ]	/* ShiftZoneByPixel */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+78
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+10
+SWAP[ ]	/* SwapTopStack */
+WS[ ]	/* WriteStore */
+PUSHB[ ]	/* 1 value pushed */
+77
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+79
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+0 0 70
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+80
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+0 1 70
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+81
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+1 0 70
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+82
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+1 1 70
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+83
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+0 0 71
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+84
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+0 1 71
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+85
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+1 0 71
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+86
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+1 1 71
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+87
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+0 0 0 67
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+88
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+0 1 0 67
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+89
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+1 0 0 67
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+90
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+1 1 0 67
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+91
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+0 0 1 67
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+92
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+0 1 1 67
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+93
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+1 0 1 67
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+94
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+1 1 1 67
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+95
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+0 0 69
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+96
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+0 1 69
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+97
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+1 0 69
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+98
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+1 1 69
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+99
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+0 0 72
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+100
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+0 1 72
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+101
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+1 0 72
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+102
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+1 1 72
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+103
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+0 0 0 68
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+104
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+0 1 0 68
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+105
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+1 0 0 68
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+106
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+1 1 0 68
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+107
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+0 0 1 68
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+108
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+0 1 1 68
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+109
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+1 0 1 68
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+110
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 4 values pushed */
+1 1 1 68
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+111
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 60
+CALL[ ]	/* CallFunction */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+112
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 60
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+64
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+113
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 60
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+65
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+114
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 2 values pushed */
+0 60
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+66
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+115
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 60
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+64
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+116
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 60
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+65
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+117
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+0
+SZPS[ ]	/* SetZonePointerS */
+PUSHB[ ]	/* 2 values pushed */
+1 60
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+66
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+118
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 61
+CALL[ ]	/* CallFunction */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+119
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 61
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+64
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+120
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 61
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+65
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+121
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 61
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+66
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+122
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 61
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+64
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+123
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 61
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+65
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+124
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 61
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+66
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+125
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 62
+CALL[ ]	/* CallFunction */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+126
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 62
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+64
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+127
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 62
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+65
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+128
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 62
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+66
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+129
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 62
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+64
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+130
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 62
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+65
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+131
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 62
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+66
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+132
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 63
+CALL[ ]	/* CallFunction */
+MDAP[0]	/* MoveDirectAbsPt */
+PUSHB[ ]	/* 2 values pushed */
+48 1
+SZP1[ ]	/* SetZonePointer1 */
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+133
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 63
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+64
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+134
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 63
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+65
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+135
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+0 63
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+66
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+136
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 63
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+64
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+137
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 63
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+65
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+138
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 2 values pushed */
+1 63
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+66
+CALL[ ]	/* CallFunction */
+ENDF[ ]	/* EndFunctionDefinition */
+PUSHB[ ]	/* 1 value pushed */
+139
+FDEF[ ]	/* FunctionDefinition */
+PUSHB[ ]	/* 3 values pushed */
+11 0 3
+RCVT[ ]	/* ReadCVT */
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 1 value pushed */
+6
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 3 values pushed */
+4 2 3
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+SWAP[ ]	/* SwapTopStack */
+POP[ ]	/* PopTopStack */
+ELSE[ ]	/* Else */
+POP[ ]	/* PopTopStack */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+WS[ ]	/* WriteStore */
+CALL[ ]	/* CallFunction */
+PUSHB[ ]	/* 1 value pushed */
+8
+NEG[ ]	/* Negate */
+PUSHB[ ]	/* 1 value pushed */
+3
+DEPTH[ ]	/* GetDepthStack */
+LT[ ]	/* LessThan */
+JROT[ ]	/* JumpRelativeOnTrue */
+PUSHB[ ]	/* 2 values pushed */
+5 1
+SZP2[ ]	/* SetZonePointer2 */
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+IUP[0]	/* InterpolateUntPts */
+EIF[ ]	/* EndIf */
+ENDF[ ]	/* EndFunctionDefinition */";
+},
+{
+name = "CVT Table";
+value = "(
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    38,
+    38,
+    198,
+    38,
+    38,
+    198,
+    603,
+    \"-3\",
+    741,
+    473,
+    126,
+    \"-3\",
+    603,
+    \"-71\",
+    741,
+    473,
+    126,
+    \"-200\"
+)";
+}
+);
+id = m01;
+metricValues = (
+{
+pos = 800;
+},
+{
+pos = 700;
+},
+{
+pos = 500;
+},
+{
+},
+{
+pos = -200;
+},
+{
+}
+);
+name = Regular;
+}
+);
+glyphs = (
+{
+export = 0;
+glyphname = .notdef;
+lastChange = "2025-08-12 00:49:30 +0000";
+layers = (
+{
+layerId = m01;
+userData = {
+assembly = "NPUSHB[ ]	/* 251 values pushed */
+65 1 33 1 75 0 7 9 6 6 7 114 0 1 41 1 30 25 1 30 103 29 1 25 28 1 26 27 25 26 103 0 27 40 1 24 21 27 24 103 0 21 23 1 20 22 21 20 103 0 22 39 1 19 15 22 19 103 38 1 14 16 15 14 87 18 1 15 0 16 17 15 16 103 0 17 0 12 13 17 12 103 0 13 37 11 2 9 7 13 9 103 0 6 0 8 10 6 8 104 0 10 36 1 3 5 10 3 103 0 5 0 4 2 5 4 103 0 2 42 1 35 31 2 35 103 34 1 31 0 33 32 31 33 103 0 32 0 0 32 87 0 32 32 0 95 0 0 32 0 79 62 62 50 50 44 44 30 30 24 24 12 12 4 4 62 72 62 72 71 70 69 68 67 66 64 63 50 61 50 61 60 59 58 57 56 55 54 53 52 51 44 49 44 49 48 47 46 45 43 42 41 40 30 39 30 39 38 37 36 35 34 33 32 31 24 29 24 29 28 27 26 25 12 23 12 23 22 21 20 19 18 17 16 15 14 13 11 10 9 8 4 7 4 7 18 17 16 43 6 25
+CALL[ ]	/* CallFunction */";
+};
+width = 500;
+}
+);
+note = .notdef;
+},
+{
+glyphname = space;
+layers = (
+{
+layerId = m01;
+width = 200;
+}
+);
+note = space;
+unicode = (32,160);
+},
+{
+glyphname = A;
+lastChange = "2025-08-12 15:04:45 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(355,412,ls),
+(351,416,o),
+(346,416,qs),
+(294,416,ls),
+(289,416,o),
+(285,412,qs),
+(259,386,ls),
+(255,382,o),
+(255,377,qs),
+(255,326,ls),
+(255,321,o),
+(259,317,qs),
+(285,291,ls),
+(289,287,o),
+(294,287,qs),
+(333,287,l),
+(333,254,l),
+(286,207,ls),
+(281,202,o),
+(281,197,qs),
+(281,192,o),
+(285,188,qs),
+(289,184,o),
+(294,184,qs),
+(297,184,l),
+(298,185,l),
+(300,185,o),
+(301,186,q),
+(350,210,l),
+(356,214,o),
+(357,217,qs),
+(357,218,l),
+(382,267,l),
+(385,270,o),
+(385,274,qs),
+(385,377,ls),
+(385,382,o),
+(381,386,qs)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 38 values pushed */
+28 27 1 3 0 1 1 76 20 17 13 2 4 0 73 0 1 0 0 1 87 0 1 1 0 95 0 0 1 0 79 34 33 22 21 2 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = A;
+unicode = 65;
+},
+{
+glyphname = B;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(365,416,o),
+(359,416,qs),
+(308,416,ls),
+(302,416,o),
+(299,412,q),
+(273,386,l),
+(269,383,o),
+(269,377,qs),
+(269,326,ls),
+(269,320,o),
+(273,317,q),
+(299,291,l),
+(302,287,o),
+(308,287,qs),
+(346,287,l),
+(346,254,l),
+(299,207,ls),
+(295,203,o),
+(295,197,qs),
+(295,191,o),
+(299,188,q),
+(302,184,o),
+(308,184,qs),
+(311,184,l),
+(312,185,l),
+(314,185,o),
+(315,186,q),
+(363,210,l),
+(370,215,o),
+(371,217,q),
+(371,218,l),
+(395,267,l),
+(398,270,o),
+(398,274,qs),
+(398,377,ls),
+(398,383,o),
+(394,386,q),
+(368,412,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(701,412,l),
+(698,416,o),
+(692,416,qs),
+(641,416,ls),
+(635,416,o),
+(632,412,q),
+(606,386,l),
+(602,383,o),
+(602,377,qs),
+(602,326,ls),
+(602,320,o),
+(606,317,q),
+(632,291,l),
+(635,287,o),
+(641,287,qs),
+(679,287,l),
+(679,254,l),
+(632,207,ls),
+(628,203,o),
+(628,197,qs),
+(628,191,o),
+(632,188,q),
+(635,184,o),
+(641,184,qs),
+(644,184,l),
+(645,185,l),
+(647,185,o),
+(648,186,q),
+(696,210,l),
+(703,215,o),
+(704,217,q),
+(704,218,l),
+(729,267,l),
+(730,271,o),
+(731,274,q),
+(731,377,ls),
+(731,383,o),
+(727,386,q)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 52 values pushed */
+66 65 39 29 28 2 6 0 1 1 76 58 55 51 40 21 18 14 3 8 0 73 3 1 1 0 0 1 87 3 1 1 1 0 95 2 1 0 1 0 79 72 71 60 59 35 34 23 22 4 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 1000;
+}
+);
+note = B;
+unicode = 66;
+},
+{
+glyphname = C;
+lastChange = "2025-08-12 15:04:39 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(345,229,o),
+(342,229,qs),
+(290,229,ls),
+(287,229,o),
+(281,225,q),
+(255,199,l),
+(252,195,o),
+(252,190,qs),
+(252,138,ls),
+(252,134,o),
+(255,129,q),
+(281,104,ls),
+(285,100,o),
+(290,100,qs),
+(329,100,l),
+(329,66,l),
+(282,19,l),
+(277,16,o),
+(277,9,qs),
+(277,6,o),
+(281,0,q),
+(286,-3,o),
+(290,-3,qs),
+(294,-3,ls),
+(297,-3,o),
+(297,-1,q),
+(346,23,ls),
+(351,26,o),
+(354,30,q),
+(378,79,ls),
+(381,84,o),
+(381,87,qs),
+(381,190,ls),
+(381,193,o),
+(377,199,q),
+(351,225,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(351,600,l),
+(347,603,o),
+(342,603,qs),
+(290,603,ls),
+(286,603,o),
+(281,600,q),
+(255,574,l),
+(252,570,o),
+(252,565,qs),
+(252,513,ls),
+(252,509,o),
+(255,504,q),
+(281,478,l),
+(287,474,o),
+(290,474,qs),
+(329,474,l),
+(329,441,l),
+(282,394,l),
+(277,391,o),
+(277,384,qs),
+(277,381,o),
+(281,375,q),
+(287,371,o),
+(290,371,qs),
+(294,371,l),
+(294,372,l),
+(297,372,o),
+(297,373,q),
+(346,398,ls),
+(350,400,o),
+(354,404,q),
+(354,405,l),
+(378,454,l),
+(381,457,o),
+(381,462,qs),
+(381,565,ls),
+(381,568,o),
+(377,574,q)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 53 values pushed */
+64 63 2 2 3 56 49 38 3 1 2 27 26 2 0 1 3 76 19 12 3 3 0 73 0 1 0 0 1 0 99 0 2 2 3 95 0 3 3 16 2 78 70 69 58 57 33 31 21 20 4 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = C;
+unicode = 67;
+},
+{
+glyphname = D;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(345,239,o),
+(340,239,qs),
+(288,239,ls),
+(284,239,o),
+(279,236,q),
+(254,210,ls),
+(250,206,o),
+(250,201,qs),
+(250,149,ls),
+(250,144,o),
+(254,140,qs),
+(279,114,l),
+(284,111,o),
+(288,111,qs),
+(327,111,l),
+(327,77,l),
+(280,30,l),
+(276,27,o),
+(276,20,qs),
+(276,16,o),
+(279,11,q),
+(285,7,o),
+(288,7,qs),
+(292,7,l),
+(292,8,l),
+(296,9,l),
+(344,34,ls),
+(348,36,o),
+(352,40,q),
+(352,41,l),
+(376,90,ls),
+(379,95,o),
+(379,98,qs),
+(379,201,ls),
+(379,204,o),
+(375,210,q),
+(349,236,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(733,236,l),
+(729,239,o),
+(724,239,qs),
+(672,239,ls),
+(668,239,o),
+(663,236,q),
+(637,210,l),
+(633,204,o),
+(633,201,qs),
+(633,149,ls),
+(633,146,o),
+(637,140,q),
+(663,114,l),
+(668,111,o),
+(672,111,qs),
+(711,111,l),
+(711,77,l),
+(664,30,l),
+(659,27,o),
+(659,20,qs),
+(659,17,o),
+(663,11,q),
+(669,7,o),
+(672,7,qs),
+(675,7,l),
+(676,8,l),
+(679,9,l),
+(728,34,l),
+(734,38,o),
+(735,40,q),
+(735,41,l),
+(760,90,ls),
+(763,95,o),
+(763,98,qs),
+(763,201,ls),
+(763,204,o),
+(759,210,q)
+);
+},
+{
+closed = 1;
+nodes = (
+(546,593,o),
+(543,593,qs),
+(491,593,ls),
+(488,593,o),
+(482,589,q),
+(456,563,l),
+(452,557,o),
+(452,554,qs),
+(452,502,ls),
+(452,499,o),
+(456,493,q),
+(482,467,l),
+(487,464,o),
+(491,464,qs),
+(530,464,l),
+(530,430,l),
+(483,383,l),
+(478,380,o),
+(478,373,qs),
+(478,370,o),
+(482,364,q),
+(487,361,o),
+(491,361,qs),
+(495,361,l),
+(498,362,l),
+(547,387,ls),
+(552,390,o),
+(554,393,q),
+(554,394,l),
+(579,443,ls),
+(582,448,o),
+(582,451,qs),
+(582,554,ls),
+(582,557,o),
+(578,563,q),
+(552,589,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 27 values pushed */
+101 1 4 5 93 77 2 1 4 64 28 27 3 0 1 3 76 56 49 39 20 17 13 3 7 0 73
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+33
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 23 values pushed */
+0 4 4 5 97 0 5 5 16 77 3 1 1 1 0 95 2 1 0 0 20 0 78
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+50
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 20 values pushed */
+3 1 1 2 1 0 1 0 99 0 4 4 5 97 0 5 5 16 4 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 27 values pushed */
+0 5 0 4 1 5 4 103 3 1 1 0 0 1 87 3 1 1 1 0 95 2 1 0 1 0 79
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 15 values pushed */
+107 105 95 94 70 69 58 57 34 33 22 21 6 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = D;
+unicode = 68;
+},
+{
+glyphname = E;
+lastChange = "2025-09-10 21:05:58 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(77,217,o),
+(77,222,qs),
+(77,274,ls),
+(77,278,o),
+(74,283,q),
+(48,308,ls),
+(44,312,o),
+(39,312,qs),
+(-13,312,ls),
+(-18,312,o),
+(-22,308,qs),
+(-48,283,l),
+(-51,278,o),
+(-51,274,qs),
+(-51,235,l),
+(-85,235,l),
+(-132,282,l),
+(-135,286,o),
+(-142,286,qs),
+(-147,286,o),
+(-151,283,q),
+(-155,277,o),
+(-155,274,qs),
+(-155,270,l),
+(-154,270,l),
+(-154,267,o),
+(-153,266,q),
+(-128,218,ls),
+(-126,214,o),
+(-122,210,q),
+(-121,210,l),
+(-72,186,l),
+(-68,183,o),
+(-64,183,qs),
+(39,183,ls),
+(42,183,o),
+(48,187,q),
+(74,213,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(416,217,o),
+(416,222,qs),
+(416,274,ls),
+(416,279,o),
+(412,283,qs),
+(386,308,l),
+(383,312,o),
+(377,312,qs),
+(326,312,ls),
+(320,312,o),
+(317,308,q),
+(291,283,ls),
+(287,279,o),
+(287,274,qs),
+(287,235,l),
+(254,235,l),
+(207,282,ls),
+(203,286,o),
+(197,286,qs),
+(191,286,o),
+(188,283,qs),
+(184,279,o),
+(184,274,qs),
+(184,270,l),
+(185,270,l),
+(185,267,o),
+(186,266,q),
+(210,218,l),
+(217,210,l),
+(218,210,l),
+(267,186,l),
+(270,183,o),
+(274,183,qs),
+(377,183,ls),
+(382,183,o),
+(386,187,qs),
+(412,213,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(751,213,l),
+(755,219,o),
+(755,222,qs),
+(755,274,ls),
+(755,277,o),
+(751,283,q),
+(725,308,ls),
+(721,312,o),
+(716,312,qs),
+(664,312,ls),
+(659,312,o),
+(655,308,qs),
+(630,283,ls),
+(626,279,o),
+(626,274,qs),
+(626,235,l),
+(592,235,l),
+(545,282,l),
+(542,286,o),
+(535,286,qs),
+(531,286,o),
+(526,283,q),
+(522,277,o),
+(522,274,qs),
+(522,270,l),
+(523,270,l),
+(524,266,l),
+(549,218,ls),
+(551,214,o),
+(555,210,q),
+(556,210,l),
+(605,186,ls),
+(610,183,o),
+(613,183,qs),
+(716,183,ls),
+(719,183,o),
+(725,187,q)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 39 values pushed */
+102 101 2 4 5 94 91 87 77 4 3 4 66 65 40 3 2 3 58 55 51 41 4 1 2 29 28 2 0 1 5 76 21 18 14 3 4 0 73
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 26 values pushed */
+0 3 0 2 1 3 2 103 0 1 0 0 1 0 99 0 4 4 5 97 0 5 5 18 4 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 32 values pushed */
+0 5 0 4 3 5 4 103 0 3 0 2 1 3 2 103 0 1 0 0 1 87 0 1 1 0 95 0 0 1 0 79
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 15 values pushed */
+108 106 96 95 72 71 60 59 35 34 23 22 6 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = E;
+unicode = 69;
+},
+{
+glyphname = F;
+lastChange = "2025-09-10 21:05:53 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(618,386,o),
+(618,391,qs),
+(618,443,ls),
+(618,448,o),
+(614,452,qs),
+(588,478,ls),
+(584,482,o),
+(579,482,qs),
+(528,482,ls),
+(523,482,o),
+(519,478,qs),
+(493,452,ls),
+(489,448,o),
+(489,443,qs),
+(489,404,l),
+(456,404,l),
+(409,451,ls),
+(404,456,o),
+(399,456,qs),
+(396,456,o),
+(390,452,q),
+(386,448,o),
+(386,443,qs),
+(386,440,l),
+(387,439,l),
+(387,437,o),
+(388,436,q),
+(413,387,l),
+(417,381,o),
+(419,380,q),
+(420,380,l),
+(469,355,l),
+(471,353,o),
+(476,353,qs),
+(579,353,ls),
+(585,353,o),
+(588,356,qs),
+(614,382,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(614,49,ls),
+(618,53,o),
+(618,58,qs),
+(618,110,ls),
+(618,115,o),
+(614,119,qs),
+(589,145,l),
+(585,148,o),
+(580,148,qs),
+(528,148,ls),
+(524,148,o),
+(519,145,q),
+(493,119,l),
+(489,113,o),
+(489,110,qs),
+(489,71,l),
+(456,71,l),
+(409,118,l),
+(406,123,o),
+(399,123,qs),
+(396,123,o),
+(390,119,q),
+(386,115,o),
+(386,110,qs),
+(386,107,l),
+(387,106,l),
+(387,104,o),
+(388,103,q),
+(413,54,ls),
+(416,49,o),
+(419,47,q),
+(420,47,l),
+(469,22,l),
+(472,19,o),
+(476,19,qs),
+(580,19,ls),
+(583,19,o),
+(589,23,q)
+);
+},
+{
+closed = 1;
+nodes = (
+(957,220,o),
+(957,225,qs),
+(957,276,ls),
+(957,281,o),
+(953,285,qs),
+(927,311,ls),
+(923,315,o),
+(918,315,qs),
+(866,315,ls),
+(861,315,o),
+(857,311,qs),
+(832,285,l),
+(828,282,o),
+(828,276,qs),
+(828,238,l),
+(794,238,l),
+(747,285,l),
+(744,289,o),
+(738,289,qs),
+(732,289,o),
+(728,285,qs),
+(725,282,o),
+(725,276,qs),
+(725,272,l),
+(727,269,l),
+(751,221,ls),
+(754,214,o),
+(758,213,q),
+(807,189,ls),
+(812,186,o),
+(815,186,qs),
+(918,186,ls),
+(924,186,o),
+(927,190,q),
+(953,216,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(280,219,o),
+(280,225,qs),
+(280,276,ls),
+(280,282,o),
+(276,285,q),
+(250,311,l),
+(247,315,o),
+(241,315,qs),
+(190,315,ls),
+(184,315,o),
+(181,311,q),
+(155,285,l),
+(151,282,o),
+(151,276,qs),
+(151,238,l),
+(118,238,l),
+(71,285,ls),
+(67,289,o),
+(61,289,qs),
+(55,289,o),
+(52,285,q),
+(48,282,o),
+(48,276,qs),
+(48,273,l),
+(49,272,l),
+(49,270,o),
+(50,269,q),
+(74,221,l),
+(79,214,o),
+(81,213,q),
+(82,213,l),
+(131,189,l),
+(134,186,o),
+(138,186,qs),
+(241,186,ls),
+(247,186,o),
+(250,190,q),
+(276,216,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 92 values pushed */
+102 101 78 3 4 5 94 91 87 79 4 1 4 66 65 29 28 2 5 0 1 58 51 40 21 14 3 6 7 0 140 139 113 3 6 7 5 76 132 129 125 114 4 6 73 3 1 1 2 1 0 7 1 0 103 0 7 0 6 7 6 99 0 4 4 5 95 0 5 5 18 4 78 146 145 134 133 108 107 96 95 72 71 60 59 35 34 23 22 8 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = F;
+unicode = 70;
+},
+{
+glyphname = G;
+lastChange = "2025-08-12 15:04:02 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(412,253,o),
+(412,270,qs),
+(412,330,ls),
+(412,347,o),
+(400,359,qs),
+(370,389,ls),
+(358,401,o),
+(341,401,qs),
+(272,401,l),
+(262,398,l),
+(247,384,l),
+(222,359,ls),
+(210,347,o),
+(210,330,qs),
+(210,270,ls),
+(210,253,o),
+(222,241,qs),
+(252,211,ls),
+(264,199,o),
+(281,199,qs),
+(341,199,ls),
+(358,199,o),
+(370,211,qs),
+(400,241,ls)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 21 values pushed */
+0 1 0 0 1 89 0 1 1 0 97 0 0 1 0 81 42 49 2 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = G;
+unicode = 71;
+},
+{
+glyphname = H;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(365,401,o),
+(348,401,qs),
+(279,401,l),
+(269,398,l),
+(255,384,l),
+(229,359,ls),
+(217,347,o),
+(217,330,qs),
+(217,270,ls),
+(217,253,o),
+(229,241,qs),
+(259,211,ls),
+(271,199,o),
+(288,199,qs),
+(348,199,ls),
+(365,199,o),
+(377,211,qs),
+(407,241,ls),
+(419,253,o),
+(419,270,qs),
+(419,330,ls),
+(419,347,o),
+(407,359,qs),
+(377,389,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(743,389,ls),
+(731,401,o),
+(714,401,qs),
+(645,401,l),
+(635,398,l),
+(620,384,l),
+(595,359,ls),
+(583,347,o),
+(583,330,qs),
+(583,270,ls),
+(583,253,o),
+(595,241,qs),
+(625,211,ls),
+(637,199,o),
+(654,199,qs),
+(714,199,ls),
+(731,199,o),
+(743,211,qs),
+(773,241,ls),
+(785,253,o),
+(785,270,qs),
+(785,330,ls),
+(785,347,o),
+(773,359,qs)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 26 values pushed */
+3 1 1 0 0 1 89 3 1 1 1 0 97 2 1 0 1 0 81 42 56 42 55 4 7 26
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = H;
+unicode = 72;
+},
+{
+glyphname = I;
+lastChange = "2025-08-12 15:04:11 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(358,238,o),
+(341,238,qs),
+(272,238,l),
+(262,236,l),
+(248,221,l),
+(222,196,ls),
+(210,184,o),
+(210,167,qs),
+(210,107,ls),
+(210,90,o),
+(222,78,qs),
+(252,48,ls),
+(264,36,o),
+(281,36,qs),
+(341,36,ls),
+(358,36,o),
+(370,48,qs),
+(400,78,ls),
+(412,90,o),
+(412,107,qs),
+(412,167,ls),
+(412,184,o),
+(400,196,qs),
+(370,226,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(370,552,ls),
+(358,564,o),
+(341,564,qs),
+(272,564,l),
+(262,561,l),
+(248,547,l),
+(222,522,ls),
+(210,510,o),
+(210,493,qs),
+(210,433,ls),
+(210,416,o),
+(222,404,qs),
+(252,374,ls),
+(264,362,o),
+(281,362,qs),
+(341,362,ls),
+(358,362,o),
+(370,374,qs),
+(400,404,ls),
+(412,416,o),
+(412,433,qs),
+(412,493,ls),
+(412,510,o),
+(400,522,qs)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 31 values pushed */
+0 3 0 2 1 3 2 105 0 1 0 0 1 89 0 1 1 0 97 0 0 1 0 81 42 56 42 55 4 7 26
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = I;
+unicode = 73;
+},
+{
+glyphname = J;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(617,384,o),
+(617,401,qs),
+(617,460,ls),
+(617,477,o),
+(605,489,qs),
+(575,519,ls),
+(562,532,o),
+(546,532,qs),
+(477,532,l),
+(468,529,l),
+(453,515,l),
+(428,489,ls),
+(415,476,o),
+(415,461,qs),
+(415,401,ls),
+(415,385,o),
+(428,372,qs),
+(457,342,ls),
+(469,330,o),
+(486,330,qs),
+(546,330,ls),
+(563,330,o),
+(575,342,qs),
+(605,372,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(731,258,ls),
+(719,270,o),
+(702,270,qs),
+(633,270,l),
+(623,268,l),
+(583,228,ls),
+(571,216,o),
+(571,199,qs),
+(571,140,ls),
+(571,123,o),
+(583,111,qs),
+(613,81,ls),
+(626,68,o),
+(642,68,qs),
+(702,68,ls),
+(718,68,o),
+(731,81,qs),
+(761,111,ls),
+(773,123,o),
+(773,140,qs),
+(773,199,ls),
+(773,216,o),
+(761,228,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(393,273,o),
+(376,273,qs),
+(307,273,l),
+(297,271,l),
+(282,257,l),
+(257,231,ls),
+(245,219,o),
+(245,202,qs),
+(245,142,ls),
+(245,125,o),
+(257,113,qs),
+(287,83,ls),
+(301,71,o),
+(316,71,qs),
+(376,71,ls),
+(391,71,o),
+(405,83,qs),
+(435,113,ls),
+(447,125,o),
+(447,142,qs),
+(447,202,ls),
+(447,219,o),
+(435,231,qs),
+(405,261,ls)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 36 values pushed */
+0 1 0 0 3 1 0 105 5 1 3 2 2 3 89 5 1 3 3 2 97 4 1 2 3 2 81 42 58 41 62 42 49 6 7 28
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = J;
+unicode = 74;
+},
+{
+glyphname = K;
+lastChange = "2025-09-10 21:05:40 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(666,192,ls),
+(678,204,o),
+(678,221,qs),
+(678,290,l),
+(676,300,l),
+(661,314,l),
+(636,340,ls),
+(624,352,o),
+(607,352,qs),
+(547,352,ls),
+(530,352,o),
+(518,340,qs),
+(488,310,ls),
+(476,298,o),
+(476,281,qs),
+(476,221,ls),
+(476,204,o),
+(488,192,qs),
+(518,162,ls),
+(530,150,o),
+(547,150,qs),
+(607,150,ls),
+(624,150,o),
+(636,162,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(401,204,o),
+(401,221,qs),
+(401,290,l),
+(398,299,l),
+(384,314,l),
+(359,340,l),
+(345,352,o),
+(330,352,qs),
+(270,352,ls),
+(255,352,o),
+(241,340,qs),
+(211,310,ls),
+(199,298,o),
+(199,281,qs),
+(199,221,ls),
+(199,204,o),
+(211,192,qs),
+(241,162,ls),
+(253,150,o),
+(270,150,qs),
+(330,150,ls),
+(347,150,o),
+(359,162,qs),
+(389,192,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(124,204,o),
+(124,221,qs),
+(124,290,l),
+(121,299,l),
+(107,314,l),
+(82,340,l),
+(68,352,o),
+(53,352,qs),
+(-7,352,ls),
+(-22,352,o),
+(-36,340,qs),
+(-66,310,ls),
+(-78,298,o),
+(-78,281,qs),
+(-78,221,ls),
+(-78,204,o),
+(-66,192,qs),
+(-36,162,ls),
+(-24,150,o),
+(-7,150,qs),
+(53,150,ls),
+(70,150,o),
+(82,162,qs),
+(112,192,ls)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+11
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 27 values pushed */
+0 1 0 0 3 1 0 105 0 3 0 2 5 3 2 105 0 5 5 4 97 0 4 4 23 4 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 32 values pushed */
+0 1 0 0 3 1 0 105 0 3 0 2 5 3 2 105 0 5 4 4 5 89 0 5 5 4 97 0 4 5 4 81
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 9 values pushed */
+42 57 42 58 42 54 6 7 28
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = K;
+unicode = 75;
+},
+{
+glyphname = L;
+lastChange = "2025-09-10 21:05:46 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(559,324,ls),
+(576,324,o),
+(587,337,qs),
+(617,367,ls),
+(630,380,o),
+(630,396,qs),
+(630,465,l),
+(627,474,l),
+(613,489,l),
+(588,514,ls),
+(576,526,o),
+(559,526,qs),
+(499,526,ls),
+(482,526,o),
+(470,514,qs),
+(440,484,ls),
+(428,472,o),
+(428,455,qs),
+(428,396,ls),
+(428,379,o),
+(440,367,qs),
+(470,337,ls),
+(483,324,o),
+(499,324,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(587,-15,l),
+(617,15,ls),
+(630,28,o),
+(630,44,qs),
+(630,113,l),
+(627,122,l),
+(613,137,l),
+(588,162,ls),
+(575,175,o),
+(559,175,qs),
+(499,175,ls),
+(483,175,o),
+(470,162,qs),
+(440,133,ls),
+(428,121,o),
+(428,104,qs),
+(428,44,ls),
+(428,27,o),
+(440,15,qs),
+(470,-15,ls),
+(482,-27,o),
+(499,-27,qs),
+(559,-27,ls),
+(576,-27,o),
+(588,-15,q)
+);
+},
+{
+closed = 1;
+nodes = (
+(711,294,o),
+(711,277,qs),
+(711,217,ls),
+(711,200,o),
+(723,188,qs),
+(753,158,ls),
+(765,146,o),
+(782,146,qs),
+(842,146,ls),
+(859,146,o),
+(871,158,qs),
+(901,188,ls),
+(913,200,o),
+(913,217,qs),
+(913,286,l),
+(910,296,l),
+(896,310,l),
+(871,336,ls),
+(859,348,o),
+(842,348,qs),
+(782,348,ls),
+(765,348,o),
+(753,336,qs),
+(723,306,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(343,200,o),
+(343,217,qs),
+(343,286,l),
+(340,296,l),
+(326,310,l),
+(301,336,ls),
+(289,348,o),
+(272,348,qs),
+(212,348,ls),
+(195,348,o),
+(183,336,qs),
+(153,306,ls),
+(141,294,o),
+(141,277,qs),
+(141,217,ls),
+(141,200,o),
+(153,188,qs),
+(183,158,ls),
+(195,146,o),
+(212,146,qs),
+(272,146,ls),
+(289,146,o),
+(301,158,qs),
+(331,188,ls)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 45 values pushed */
+0 4 0 5 1 4 5 105 3 1 1 2 1 0 7 1 0 105 0 7 6 6 7 89 0 7 7 6 97 0 6 7 6 81 42 57 57 44 42 60 42 51 8 7 30
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = L;
+unicode = 76;
+},
+{
+glyphname = M;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(721,400,l),
+(837,293,l),
+(174,293,l),
+(290,400,l),
+(264,428,l),
+(99,274,l),
+(264,120,l),
+(290,148,l),
+(174,255,l),
+(837,255,l),
+(721,148,l),
+(747,120,l),
+(912,274,l),
+(747,428,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 41 values pushed */
+7 1 0 1 1 76 13 12 9 8 4 1 74 6 5 2 1 4 0 73 0 1 0 0 1 87 0 1 1 0 95 0 0 1 0 79 22 19 2 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = M;
+unicode = 77;
+},
+{
+glyphname = N;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(412,293,l),
+(412,255,l),
+(600,255,l),
+(600,293,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(113,293,l),
+(113,255,l),
+(301,255,l),
+(301,293,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(711,293,l),
+(711,255,l),
+(899,255,l),
+(899,293,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 31 values pushed */
+5 3 2 1 0 0 1 87 5 3 2 1 1 0 95 4 2 2 0 1 0 79 17 17 17 17 17 16 6 7 28
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = N;
+unicode = 78;
+},
+{
+glyphname = O;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(550,289,l),
+(634,398,l),
+(605,421,l),
+(516,307,l),
+(424,421,l),
+(395,398,l),
+(482,289,l),
+(100,289,l),
+(100,252,l),
+(473,252,l),
+(393,150,l),
+(423,127,l),
+(517,247,l),
+(611,130,l),
+(640,153,l),
+(561,252,l),
+(913,252,l),
+(913,289,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 42 values pushed */
+15 14 13 12 11 5 2 74 6 5 4 3 2 5 0 73 3 1 2 0 0 2 87 3 1 2 2 0 95 1 1 0 2 0 79 22 17 22 16 4 7 26
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = O;
+unicode = 79;
+},
+{
+glyphname = P;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(455,101,ls),
+(422,101,o),
+(395,126,qs),
+(347,175,ls),
+(322,199,o),
+(322,235,qs),
+(322,269,l),
+(106,269,l),
+(106,307,l),
+(359,307,l),
+(359,235,ls),
+(359,217,o),
+(373,201,q),
+(422,153,ls),
+(436,138,o),
+(455,138,qs),
+(552,138,ls),
+(573,138,o),
+(586,153,q),
+(635,201,l),
+(649,217,o),
+(649,235,qs),
+(649,307,l),
+(902,307,l),
+(902,269,l),
+(686,269,l),
+(686,235,ls),
+(686,199,o),
+(661,175,qs),
+(613,126,ls),
+(586,101,o),
+(553,101,qs)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 41 values pushed */
+3 1 1 4 1 0 2 1 0 103 0 2 5 5 2 87 0 2 2 5 95 6 1 5 2 5 79 0 0 0 31 0 29 17 21 53 17 21 7 7 27
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = P;
+unicode = 80;
+},
+{
+glyphname = Q;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(575,271,l),
+(499,398,l),
+(428,271,l),
+(110,271,l),
+(110,234,l),
+(405,234,l),
+(357,149,l),
+(644,149,l),
+(595,234,l),
+(898,234,l),
+(898,271,l)
+);
+}
+);
+userData = {
+assembly = "PUSHB[ ]	/* 4 values pushed */
+8 1 3 74
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+22
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 16 values pushed */
+4 1 3 2 1 0 1 3 0 103 0 1 1 20 1 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 24 values pushed */
+0 1 0 1 134 4 1 3 0 0 3 87 4 1 3 3 0 95 2 1 0 3 0 79
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 8 values pushed */
+18 17 17 17 16 5 7 27
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = Q;
+unicode = 81;
+},
+{
+glyphname = R;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(487,285,l),
+(520,285,ls),
+(524,285,o),
+(526,283,qs),
+(544,265,ls),
+(546,263,o),
+(546,259,qs),
+(546,225,ls),
+(546,221,o),
+(544,219,qs),
+(526,201,l),
+(525,199,o),
+(520,199,qs),
+(486,199,ls),
+(481,199,o),
+(480,201,q),
+(462,219,ls),
+(460,221,o),
+(460,225,qs),
+(460,259,ls),
+(460,263,o),
+(462,265,qs),
+(479,282,l),
+(481,284,l),
+(482,284,l),
+(482,285,l),
+(483,285,l),
+(484,285,l),
+(486,285,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(241,66,l),
+(768,66,l),
+(504,534,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(709,96,l),
+(300,96,l),
+(504,467,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 14 values pushed */
+21 18 9 6 4 0 1 1 76 34 31 2 1 74
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+11
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 27 values pushed */
+0 1 0 1 133 0 0 3 3 0 112 0 3 2 2 3 87 0 3 3 2 96 0 2 3 2 80
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 26 values pushed */
+0 1 0 1 133 0 0 3 0 133 0 3 2 2 3 87 0 3 3 2 96 0 2 3 2 80
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 7 values pushed */
+18 18 57 60 4 7 26
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = R;
+unicode = 82;
+},
+{
+glyphname = S;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(829,90,l),
+(825,83,l),
+(725,-17,l),
+(718,-22,l),
+(587,-76,ls),
+(584,-77,o),
+(579,-77,qs),
+(437,-77,ls),
+(432,-77,o),
+(429,-76,qs),
+(298,-22,ls),
+(295,-21,o),
+(291,-17,qs),
+(191,83,l),
+(186,90,l),
+(132,221,ls),
+(130,227,o),
+(130,229,qs),
+(130,371,ls),
+(130,373,o),
+(132,379,qs),
+(186,510,l),
+(191,517,l),
+(291,617,ls),
+(295,621,o),
+(298,622,qs),
+(429,676,ls),
+(431,677,o),
+(437,677,qs),
+(579,677,l),
+(587,676,l),
+(718,622,ls),
+(723,620,o),
+(724,617,q),
+(825,517,l),
+(829,510,l),
+(884,379,ls),
+(885,376,o),
+(885,371,qs),
+(885,229,ls),
+(885,224,o),
+(884,221,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(792,490,l),
+(698,585,l),
+(575,636,l),
+(441,636,l),
+(318,585,l),
+(223,490,l),
+(172,367,l),
+(172,233,l),
+(223,110,l),
+(318,16,l),
+(441,-36,l),
+(575,-36,l),
+(698,16,l),
+(792,110,l),
+(843,233,l),
+(843,367,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 47 values pushed */
+57 50 49 42 23 22 2 1 8 2 3 1 76 0 0 0 3 2 0 3 103 0 2 1 1 2 87 0 2 2 1 95 0 1 2 1 79 54 53 46 45 34 33 27 4 7 23
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = S;
+unicode = 83;
+},
+{
+glyphname = T;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(876,147,o),
+(874,153,qs),
+(821,280,l),
+(820,285,o),
+(817,287,q),
+(719,385,l),
+(713,389,l),
+(669,407,l),
+(727,407,ls),
+(760,407,o),
+(787,432,qs),
+(835,481,ls),
+(861,505,o),
+(861,541,qs),
+(861,579,l),
+(823,579,l),
+(823,541,ls),
+(823,523,o),
+(809,507,q),
+(760,459,ls),
+(747,445,o),
+(727,445,qs),
+(630,445,ls),
+(610,445,o),
+(596,459,qs),
+(548,507,ls),
+(533,522,o),
+(533,541,qs),
+(533,579,l),
+(496,579,l),
+(496,541,ls),
+(496,523,o),
+(482,507,q),
+(433,459,ls),
+(420,445,o),
+(400,445,qs),
+(303,445,ls),
+(282,445,o),
+(269,459,qs),
+(221,507,ls),
+(206,522,o),
+(206,541,qs),
+(206,579,l),
+(169,579,l),
+(169,541,ls),
+(169,505,o),
+(194,481,qs),
+(242,432,ls),
+(269,407,o),
+(303,407,qs),
+(347,407,l),
+(304,389,l),
+(300,388,o),
+(297,385,qs),
+(200,287,ls),
+(196,283,o),
+(195,280,qs),
+(142,153,ls),
+(141,150,o),
+(141,145,qs),
+(133,21,l),
+(174,21,l),
+(181,141,l),
+(231,261,l),
+(323,353,l),
+(443,403,l),
+(573,403,l),
+(693,353,l),
+(785,261,l),
+(835,141,l),
+(842,21,l),
+(883,21,l),
+(875,145,l),
+(876,145,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(512,484,o),
+(515,488,q),
+(521,481,l),
+(558,443,l),
+(471,443,l),
+(508,481,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 13 values pushed */
+77 1 5 4 73 13 10 3 4 0 1 2 76
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+11
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 26 values pushed */
+10 7 2 5 9 3 2 1 0 5 1 106 8 6 2 4 4 16 77 2 1 0 0 17 0 78
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+20
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 26 values pushed */
+10 7 2 5 9 3 2 1 0 5 1 106 2 1 0 0 4 95 8 6 2 4 4 16 0 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 33 values pushed */
+8 6 2 4 5 0 4 87 10 7 2 5 9 3 2 1 0 5 1 106 8 6 2 4 4 0 95 2 1 0 4 0 79
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 16 values pushed */
+75 74 65 63 21 53 21 53 21 42 20 20 17 11 7 31
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = T;
+unicode = 84;
+},
+{
+glyphname = U;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(809,147,o),
+(795,131,q),
+(746,83,ls),
+(733,69,o),
+(713,69,qs),
+(616,69,ls),
+(596,69,o),
+(582,83,qs),
+(534,131,ls),
+(519,146,o),
+(519,165,qs),
+(519,203,l),
+(482,203,l),
+(482,165,ls),
+(482,147,o),
+(468,131,q),
+(419,83,ls),
+(406,69,o),
+(386,69,qs),
+(289,69,ls),
+(268,69,o),
+(255,83,qs),
+(206,131,l),
+(192,147,o),
+(192,165,qs),
+(192,179,l),
+(854,535,l),
+(837,569,l),
+(159,204,l),
+(160,203,l),
+(155,203,l),
+(155,165,ls),
+(155,129,o),
+(180,105,qs),
+(228,56,ls),
+(255,31,o),
+(288,31,qs),
+(386,31,ls),
+(419,31,o),
+(446,56,qs),
+(494,105,ls),
+(500,111,o),
+(500,112,q),
+(507,105,l),
+(555,56,ls),
+(582,31,o),
+(615,31,qs),
+(712,31,ls),
+(746,31,o),
+(773,56,qs),
+(821,105,ls),
+(846,129,o),
+(846,165,qs),
+(846,203,l),
+(809,203,l),
+(809,165,ls)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 46 values pushed */
+29 12 2 3 0 1 76 27 24 2 0 74 4 1 0 3 0 133 5 1 3 1 1 3 87 5 1 3 3 1 95 2 1 1 3 1 79 53 21 63 55 53 16 6 7 28
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = U;
+unicode = 85;
+},
+{
+glyphname = V;
+lastChange = "2025-09-08 20:16:44 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(877,136,l),
+(869,215,l),
+(868,223,l),
+(815,350,ls),
+(814,353,o),
+(810,357,qs),
+(713,454,ls),
+(709,458,o),
+(706,459,qs),
+(576,513,l),
+(429,513,l),
+(298,459,ls),
+(295,458,o),
+(291,454,qs),
+(193,357,l),
+(189,350,l),
+(136,223,l),
+(135,215,l),
+(127,136,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(175,211,l),
+(225,331,l),
+(317,423,l),
+(437,472,l),
+(567,472,l),
+(687,423,l),
+(779,331,l),
+(829,211,l),
+(832,177,l),
+(172,177,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+11
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 20 values pushed */
+0 0 0 2 3 0 2 103 4 1 3 3 1 95 0 1 1 17 1 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 26 values pushed */
+0 0 0 2 3 0 2 103 4 1 3 1 1 3 87 4 1 3 3 1 95 0 1 3 1 79
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 12 values pushed */
+19 19 19 28 19 28 21 25 23 5 7 25
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = V;
+unicode = 86;
+},
+{
+glyphname = W;
+lastChange = "2025-09-08 20:16:22 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(890,174,l),
+(838,301,ls),
+(837,304,o),
+(833,308,qs),
+(736,405,l),
+(729,410,l),
+(707,419,l),
+(707,456,ls),
+(707,489,o),
+(682,516,qs),
+(633,564,ls),
+(609,589,o),
+(573,589,qs),
+(476,589,ls),
+(440,589,o),
+(416,564,qs),
+(367,516,ls),
+(342,489,o),
+(342,456,qs),
+(342,419,l),
+(320,410,l),
+(314,405,l),
+(216,308,ls),
+(214,306,o),
+(212,301,qs),
+(159,174,l),
+(157,166,l),
+(150,87,l),
+(899,87,l),
+(892,166,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(380,475,o),
+(394,489,qs),
+(443,538,ls),
+(457,552,o),
+(476,552,qs),
+(573,552,ls),
+(591,552,o),
+(607,538,q),
+(655,489,ls),
+(669,476,o),
+(669,456,qs),
+(669,435,l),
+(599,464,l),
+(452,464,l),
+(380,434,l),
+(380,456,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(198,162,l),
+(248,282,l),
+(340,374,l),
+(460,423,l),
+(590,423,l),
+(710,374,l),
+(802,282,l),
+(851,162,l),
+(855,128,l),
+(195,128,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 12 values pushed */
+33 30 2 4 2 22 9 2 5 4 2 76
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+9
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 35 values pushed */
+0 2 3 4 1 2 114 0 4 5 3 4 112 0 3 3 1 95 0 1 1 19 77 6 1 5 5 0 95 0 0 0 17 0 78
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+11
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 37 values pushed */
+0 2 3 4 3 2 4 128 0 4 5 3 4 5 126 0 3 3 1 95 0 1 1 19 77 6 1 5 5 0 95 0 0 0 17 0 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 34 values pushed */
+0 2 3 4 3 2 4 128 0 4 5 3 4 5 126 6 1 5 0 0 5 0 99 0 3 3 1 95 0 1 1 19 3 78
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 14 values pushed */
+46 46 46 55 46 55 25 54 30 61 16 7 7 27
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = W;
+unicode = 87;
+},
+{
+glyphname = X;
+lastChange = "2025-09-08 20:16:33 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(838,250,ls),
+(837,253,o),
+(833,257,qs),
+(736,354,ls),
+(732,358,o),
+(729,359,qs),
+(599,413,l),
+(452,413,l),
+(321,359,ls),
+(318,358,o),
+(314,354,qs),
+(216,257,l),
+(212,250,l),
+(159,123,l),
+(158,115,l),
+(150,36,l),
+(900,36,l),
+(892,115,l),
+(891,123,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(198,111,l),
+(248,231,l),
+(340,323,l),
+(460,372,l),
+(590,372,l),
+(710,323,l),
+(802,231,l),
+(851,111,l),
+(855,77,l),
+(195,77,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(670,612,ls),
+(670,593,o),
+(655,579,qs),
+(607,530,ls),
+(593,516,o),
+(573,516,qs),
+(476,516,ls),
+(457,516,o),
+(443,530,qs),
+(394,579,ls),
+(380,593,o),
+(380,612,qs),
+(380,684,l),
+(127,684,l),
+(127,647,l),
+(342,647,l),
+(342,612,ls),
+(342,578,o),
+(368,552,qs),
+(416,504,ls),
+(442,478,o),
+(476,478,qs),
+(573,478,ls),
+(609,478,o),
+(633,504,qs),
+(682,552,ls),
+(707,579,o),
+(707,612,qs),
+(707,647,l),
+(923,647,l),
+(923,684,l),
+(670,684,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+11
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 43 values pushed */
+0 1 0 2 3 1 2 103 6 1 4 4 7 95 11 9 2 7 7 16 77 0 5 5 8 95 0 8 8 19 77 10 1 3 3 0 95 0 0 0 17 0 78
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+25
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 40 values pushed */
+0 1 0 2 3 1 2 103 10 1 3 0 0 3 0 99 6 1 4 4 7 95 11 9 2 7 7 16 77 0 5 5 8 95 0 8 8 19 5 78
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+29
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 38 values pushed */
+11 9 2 7 6 1 4 8 7 4 103 0 1 0 2 3 1 2 103 10 1 3 0 0 3 0 99 0 5 5 8 95 0 8 8 19 5 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 45 values pushed */
+11 9 2 7 6 1 4 8 7 4 103 0 8 0 5 1 8 5 103 0 1 0 2 3 1 2 103 10 1 3 0 0 3 87 10 1 3 3 0 95 0 0 3 0 79
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 28 values pushed */
+29 29 19 19 29 60 29 60 55 52 47 46 45 44 39 36 31 30 19 28 19 28 28 24 17 12 7 25
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = X;
+unicode = 88;
+},
+{
+glyphname = Y;
+lastChange = "2025-09-08 20:16:39 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(851,153,l),
+(798,280,l),
+(797,285,o),
+(794,287,q),
+(701,379,l),
+(705,377,l),
+(800,618,l),
+(803,628,o),
+(798,635,q),
+(794,644,o),
+(782,644,qs),
+(191,644,ls),
+(181,644,o),
+(175,635,qs),
+(172,631,o),
+(172,624,qs),
+(172,620,o),
+(173,618,qs),
+(269,379,l),
+(177,287,ls),
+(173,283,o),
+(172,280,qs),
+(119,153,l),
+(118,145,l),
+(110,66,l),
+(860,66,l),
+(852,145,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(672,396,l),
+(560,443,l),
+(412,443,l),
+(302,398,l),
+(219,606,l),
+(755,606,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(158,141,l),
+(208,261,l),
+(300,353,l),
+(420,402,l),
+(550,402,l),
+(670,353,l),
+(762,261,l),
+(812,141,l),
+(815,107,l),
+(155,107,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 9 values pushed */
+31 28 20 7 4 5 4 1 76
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+11
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 29 values pushed */
+0 1 6 1 3 2 1 3 103 0 2 0 4 5 2 4 103 7 1 5 5 0 95 0 0 0 17 0 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 35 values pushed */
+0 1 6 1 3 2 1 3 103 0 2 0 4 5 2 4 103 7 1 5 0 0 5 87 7 1 5 5 0 95 0 0 5 0 79
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 20 values pushed */
+33 33 27 27 33 42 33 42 38 37 27 32 27 32 29 60 16 8 7 25
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = Y;
+unicode = 89;
+},
+{
+glyphname = Z;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(893,646,ls),
+(888,651,o),
+(881,651,qs),
+(825,651,ls),
+(819,651,o),
+(815,647,q),
+(772,617,l),
+(769,614,o),
+(768,611,q),
+(723,537,l),
+(694,500,l),
+(655,502,l),
+(627,537,l),
+(590,608,ls),
+(588,612,o),
+(586,613,q),
+(545,647,ls),
+(539,651,o),
+(534,651,qs),
+(483,651,ls),
+(477,651,o),
+(472,646,qs),
+(434,613,ls),
+(432,611,o),
+(430,606,qs),
+(400,524,l),
+(372,502,l),
+(341,503,l),
+(317,519,l),
+(264,600,l),
+(261,604,l),
+(210,647,l),
+(202,651,o),
+(198,651,qs),
+(136,651,ls),
+(129,651,o),
+(123,645,qs),
+(83,601,l),
+(78,594,o),
+(78,589,qs),
+(78,-53,ls),
+(78,-61,o),
+(89,-71,o),
+(96,-71,qs),
+(103,-71,o),
+(113,-60,o),
+(113,-53,qs),
+(113,582,l),
+(144,616,l),
+(192,616,l),
+(236,578,l),
+(290,497,ls),
+(292,494,o),
+(295,492,qs),
+(326,471,l),
+(335,468,l),
+(377,467,ls),
+(384,467,o),
+(388,470,qs),
+(426,500,ls),
+(430,504,o),
+(431,508,qs),
+(461,590,l),
+(490,616,l),
+(528,616,l),
+(561,589,l),
+(597,519,l),
+(599,516,l),
+(633,474,l),
+(639,468,o),
+(646,468,qs),
+(701,465,ls),
+(712,465,o),
+(716,472,q),
+(751,516,l),
+(752,518,l),
+(796,591,l),
+(831,616,l),
+(874,616,l),
+(911,581,l),
+(918,576,o),
+(924,576,qs),
+(931,576,o),
+(936,581,qs),
+(940,585,o),
+(940,593,qs),
+(940,601,o),
+(935,606,qs)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 11 values pushed */
+47 39 2 0 1 40 1 6 2 2 76
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+11
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 36 values pushed */
+0 0 1 8 1 0 8 128 11 9 2 7 5 3 2 1 0 7 1 103 10 1 8 4 1 2 6 8 2 105 0 6 6 23 6 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 44 values pushed */
+0 0 1 8 1 0 8 128 0 6 2 6 134 11 9 2 7 5 3 2 1 0 7 1 103 10 1 8 2 2 8 87 10 1 8 8 2 97 4 1 2 8 2 81
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 18 values pushed */
+84 83 76 75 68 66 22 39 36 22 23 22 37 18 36 12 7 31
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = Z;
+unicode = 90;
+},
+{
+glyphname = a;
+lastChange = "2025-08-12 15:05:29 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(318,284,l),
+(347,175,l),
+(387,175,l),
+(391,178,l),
+(391,219,l),
+(337,286,l),
+(440,267,l),
+(465,290,l),
+(465,311,l),
+(464,311,l),
+(441,333,l),
+(439,333,l),
+(339,316,l),
+(391,382,l),
+(391,422,l),
+(387,425,l),
+(341,425,l),
+(318,316,l),
+(292,425,l),
+(246,425,l),
+(243,422,l),
+(243,381,l),
+(295,316,l),
+(193,333,l),
+(168,311,l),
+(168,290,l),
+(193,267,l),
+(194,267,l),
+(296,286,l),
+(242,219,l),
+(242,178,l),
+(246,175,l),
+(292,175,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 53 values pushed */
+31 27 26 25 24 22 20 19 14 10 9 8 7 6 4 3 16 2 0 1 76 1 1 0 2 2 0 87 1 1 0 0 2 95 4 3 2 2 0 2 79 0 0 0 32 0 32 44 18 43 5 7 25
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = a;
+unicode = 97;
+},
+{
+glyphname = b;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(427,333,l),
+(426,333,l),
+(326,316,l),
+(378,381,l),
+(378,422,l),
+(374,425,l),
+(328,425,l),
+(305,316,l),
+(279,425,l),
+(233,425,l),
+(230,422,l),
+(230,380,l),
+(282,316,l),
+(180,333,l),
+(155,311,l),
+(155,289,l),
+(180,267,l),
+(181,267,l),
+(283,286,l),
+(229,218,l),
+(229,178,l),
+(233,175,l),
+(279,175,l),
+(304,284,l),
+(334,175,l),
+(374,175,l),
+(378,178,l),
+(378,220,l),
+(324,286,l),
+(427,267,l),
+(452,290,l),
+(452,311,l),
+(451,312,l),
+(451,311,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(859,311,l),
+(836,333,l),
+(834,333,l),
+(734,316,l),
+(786,381,l),
+(786,422,l),
+(782,425,l),
+(736,425,l),
+(713,316,l),
+(687,425,l),
+(641,425,l),
+(638,422,l),
+(638,380,l),
+(690,316,l),
+(588,333,l),
+(563,311,l),
+(563,289,l),
+(588,267,l),
+(589,267,l),
+(691,286,l),
+(637,218,l),
+(638,178,l),
+(641,175,l),
+(687,175,l),
+(712,284,l),
+(742,175,l),
+(782,175,l),
+(786,178,l),
+(786,220,l),
+(732,286,l),
+(835,267,l),
+(860,290,l),
+(860,311,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 73 values pushed */
+65 63 62 57 53 52 51 50 49 47 46 41 37 36 35 34 33 31 30 25 21 20 19 18 17 15 14 9 5 4 3 2 32 0 2 1 76 7 6 3 3 2 0 0 2 87 7 6 3 3 2 2 0 95 5 4 1 3 0 2 0 79 18 43 18 43 18 43 18 38 8 7 30
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = b;
+unicode = 98;
+},
+{
+glyphname = c;
+lastChange = "2025-08-12 15:05:34 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(337,110,l),
+(391,178,l),
+(391,218,l),
+(387,221,l),
+(341,221,l),
+(316,112,l),
+(286,221,l),
+(246,221,l),
+(243,218,l),
+(243,177,l),
+(297,110,l),
+(193,129,l),
+(168,106,l),
+(168,85,l),
+(169,84,l),
+(193,63,l),
+(194,63,l),
+(295,80,l),
+(242,14,l),
+(243,-26,l),
+(246,-29,l),
+(292,-29,l),
+(315,80,l),
+(341,-29,l),
+(387,-29,l),
+(391,-26,l),
+(391,15,l),
+(339,80,l),
+(441,63,l),
+(465,85,l),
+(465,106,l),
+(441,129,l),
+(439,129,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(337,518,l),
+(391,586,l),
+(391,626,l),
+(387,629,l),
+(341,629,l),
+(316,520,l),
+(286,629,l),
+(246,629,l),
+(243,626,l),
+(243,585,l),
+(297,518,l),
+(193,537,l),
+(168,514,l),
+(168,493,l),
+(169,493,l),
+(193,471,l),
+(194,471,l),
+(295,488,l),
+(242,423,l),
+(243,382,l),
+(246,379,l),
+(292,379,l),
+(315,488,l),
+(341,379,l),
+(387,379,l),
+(391,382,l),
+(391,423,l),
+(339,488,l),
+(441,471,l),
+(465,493,l),
+(465,515,l),
+(441,537,l),
+(439,537,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 38 values pushed */
+64 59 55 54 53 52 50 48 47 42 38 37 36 35 34 15 4 6 31 26 22 21 20 19 17 15 14 9 5 4 3 2 1 15 0 2 2 76
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+20
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 22 values pushed */
+3 1 2 1 1 0 2 0 99 5 1 4 4 6 95 7 1 6 6 16 4 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 29 values pushed */
+7 1 6 5 1 4 2 6 4 103 3 1 2 0 0 2 87 3 1 2 2 0 95 1 1 0 2 0 79
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 11 values pushed */
+18 44 18 43 18 44 18 38 8 7 30
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = c;
+unicode = 99;
+},
+{
+glyphname = d;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(431,157,l),
+(429,157,l),
+(329,139,l),
+(381,205,l),
+(381,245,l),
+(378,249,l),
+(332,249,l),
+(331,249,l),
+(308,139,l),
+(282,249,l),
+(236,249,l),
+(233,246,l),
+(233,204,l),
+(285,139,l),
+(183,157,l),
+(158,134,l),
+(158,113,l),
+(183,90,l),
+(184,90,l),
+(287,109,l),
+(232,42,l),
+(233,2,l),
+(236,-2,l),
+(282,-2,l),
+(308,108,l),
+(337,-2,l),
+(377,-2,l),
+(381,1,l),
+(381,43,l),
+(327,109,l),
+(431,90,l),
+(455,114,l),
+(455,134,l),
+(454,135,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(863,134,l),
+(862,135,l),
+(839,157,l),
+(837,157,l),
+(737,139,l),
+(789,205,l),
+(789,245,l),
+(786,249,l),
+(740,249,l),
+(716,139,l),
+(690,249,l),
+(645,249,l),
+(641,246,l),
+(641,204,l),
+(693,139,l),
+(591,157,l),
+(567,134,l),
+(567,113,l),
+(591,90,l),
+(592,90,l),
+(695,110,l),
+(640,42,l),
+(641,2,l),
+(645,-2,l),
+(690,-2,l),
+(716,108,l),
+(746,-2,l),
+(785,-2,l),
+(789,1,l),
+(789,43,l),
+(735,110,l),
+(839,90,l),
+(863,114,l),
+(863,134,l),
+(863,135,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(593,396,l),
+(539,462,l),
+(642,443,l),
+(667,467,l),
+(667,487,l),
+(666,488,l),
+(643,510,l),
+(641,510,l),
+(541,492,l),
+(593,558,l),
+(593,598,l),
+(589,602,l),
+(543,602,l),
+(520,492,l),
+(494,602,l),
+(448,602,l),
+(445,599,l),
+(445,557,l),
+(497,492,l),
+(395,510,l),
+(370,487,l),
+(370,466,l),
+(395,443,l),
+(396,443,l),
+(498,463,l),
+(444,395,l),
+(445,355,l),
+(448,351,l),
+(494,351,l),
+(519,461,l),
+(549,351,l),
+(589,351,l),
+(593,354,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 59 values pushed */
+100 99 98 97 95 93 92 87 83 82 81 80 79 77 76 71 16 8 10 66 64 63 62 58 54 53 52 51 50 48 47 46 42 38 37 36 35 33 31 30 29 24 20 19 18 17 16 14 13 8 4 3 2 1 35 0 2 2 76
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+11
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 30 values pushed */
+9 12 2 8 8 10 95 11 1 10 10 16 77 7 6 3 3 2 2 0 95 5 4 1 3 0 0 17 0 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 27 values pushed */
+7 6 3 3 2 5 4 1 3 0 2 0 99 9 12 2 8 8 10 95 11 1 10 10 16 8 78
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 23 values pushed */
+70 69 89 88 86 84 73 72 69 101 70 101 18 43 18 44 34 43 18 37 13 7 30
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = d;
+unicode = 100;
+},
+{
+glyphname = e;
+lastChange = "2025-09-10 21:05:19 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(328,240,l),
+(391,189,l),
+(429,190,l),
+(432,193,l),
+(432,236,l),
+(330,260,l),
+(432,287,l),
+(432,324,l),
+(429,328,l),
+(390,328,l),
+(328,277,l),
+(346,374,l),
+(324,397,l),
+(305,397,l),
+(304,396,l),
+(284,374,l),
+(284,373,l),
+(300,279,l),
+(239,328,l),
+(201,328,l),
+(198,325,l),
+(198,282,l),
+(300,260,l),
+(198,236,l),
+(198,193,l),
+(201,190,l),
+(240,190,l),
+(300,238,l),
+(284,143,l),
+(305,120,l),
+(325,120,l),
+(346,143,l),
+(346,145,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(665,240,l),
+(728,189,l),
+(765,190,l),
+(769,193,l),
+(769,236,l),
+(666,260,l),
+(769,287,l),
+(769,324,l),
+(766,328,l),
+(727,328,l),
+(665,277,l),
+(683,374,l),
+(661,397,l),
+(642,397,l),
+(641,396,l),
+(621,374,l),
+(621,373,l),
+(637,279,l),
+(576,328,l),
+(538,328,l),
+(535,325,l),
+(535,282,l),
+(637,260,l),
+(535,236,l),
+(535,193,l),
+(538,190,l),
+(577,190,l),
+(637,238,l),
+(621,143,l),
+(642,120,l),
+(661,120,l),
+(683,143,l),
+(683,145,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(-31,240,l),
+(32,189,l),
+(70,190,l),
+(73,193,l),
+(73,236,l),
+(-30,260,l),
+(73,287,l),
+(73,324,l),
+(70,328,l),
+(31,328,l),
+(-31,277,l),
+(-13,374,l),
+(-35,397,l),
+(-54,397,l),
+(-55,396,l),
+(-75,374,l),
+(-75,373,l),
+(-59,279,l),
+(-120,328,l),
+(-158,328,l),
+(-161,325,l),
+(-161,282,l),
+(-59,260,l),
+(-161,236,l),
+(-161,193,l),
+(-158,190,l),
+(-119,190,l),
+(-59,238,l),
+(-75,143,l),
+(-54,120,l),
+(-34,120,l),
+(-13,143,l),
+(-13,145,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 59 values pushed */
+64 59 56 55 54 53 52 50 48 47 42 38 37 36 35 34 16 3 5 31 26 23 22 21 20 19 17 15 14 9 5 4 3 2 1 16 0 2 97 92 89 88 87 86 85 83 81 80 75 71 70 69 68 67 16 6 8 3 76
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+22
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 29 values pushed */
+0 5 4 1 3 2 5 3 103 0 8 7 1 6 8 6 99 1 1 0 0 2 95 0 2 2 19 0 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 35 values pushed */
+0 5 4 1 3 2 5 3 103 0 2 1 1 0 8 2 0 103 0 8 6 6 8 87 0 8 8 6 95 7 1 6 8 6 79
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 19 values pushed */
+94 93 77 76 74 72 61 60 44 43 41 39 28 27 18 38 9 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = e;
+unicode = 101;
+},
+{
+glyphname = f;
+lastChange = "2025-09-10 21:05:28 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(410,352,l),
+(477,406,l),
+(458,302,l),
+(481,277,l),
+(502,277,l),
+(502,278,l),
+(503,278,l),
+(524,302,l),
+(524,303,l),
+(507,404,l),
+(573,351,l),
+(613,352,l),
+(616,355,l),
+(616,401,l),
+(507,425,l),
+(616,450,l),
+(616,496,l),
+(613,500,l),
+(572,500,l),
+(507,448,l),
+(524,550,l),
+(502,574,l),
+(481,574,l),
+(458,550,l),
+(458,548,l),
+(477,446,l),
+(410,500,l),
+(369,500,l),
+(366,496,l),
+(366,451,l),
+(366,450,l),
+(475,425,l),
+(366,395,l),
+(366,355,l),
+(369,352,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(503,-130,l),
+(524,-106,l),
+(524,-105,l),
+(507,-4,l),
+(573,-57,l),
+(613,-56,l),
+(616,-53,l),
+(616,-7,l),
+(507,16,l),
+(616,42,l),
+(616,88,l),
+(613,92,l),
+(572,92,l),
+(507,40,l),
+(524,141,l),
+(502,166,l),
+(481,166,l),
+(458,142,l),
+(458,140,l),
+(477,38,l),
+(410,92,l),
+(369,92,l),
+(366,88,l),
+(366,42,l),
+(475,17,l),
+(366,-13,l),
+(366,-53,l),
+(369,-56,l),
+(411,-56,l),
+(477,-2,l),
+(458,-106,l),
+(481,-131,l),
+(502,-131,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(830,234,l),
+(762,288,l),
+(722,288,l),
+(719,284,l),
+(719,239,l),
+(828,213,l),
+(719,183,l),
+(719,144,l),
+(722,140,l),
+(764,140,l),
+(830,194,l),
+(811,90,l),
+(834,66,l),
+(855,66,l),
+(856,67,l),
+(877,90,l),
+(877,92,l),
+(860,192,l),
+(926,140,l),
+(966,140,l),
+(969,143,l),
+(969,189,l),
+(860,213,l),
+(969,239,l),
+(969,284,l),
+(966,288,l),
+(925,288,l),
+(860,236,l),
+(877,338,l),
+(855,362,l),
+(834,362,l),
+(811,338,l),
+(811,336,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(181,90,l),
+(181,92,l),
+(163,192,l),
+(229,140,l),
+(269,140,l),
+(273,143,l),
+(273,189,l),
+(163,213,l),
+(273,239,l),
+(273,284,l),
+(270,288,l),
+(228,288,l),
+(163,236,l),
+(181,338,l),
+(158,362,l),
+(137,362,l),
+(114,338,l),
+(114,336,l),
+(133,234,l),
+(66,288,l),
+(25,288,l),
+(22,284,l),
+(22,239,l),
+(132,213,l),
+(22,183,l),
+(22,144,l),
+(25,140,l),
+(67,140,l),
+(133,194,l),
+(114,90,l),
+(138,66,l),
+(158,66,l),
+(159,67,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 159 values pushed */
+105 100 96 95 94 93 91 89 88 87 83 79 78 77 76 75 16 10 8 69 67 66 61 57 56 55 54 53 51 50 45 41 40 39 38 33 32 31 30 27 25 24 19 15 14 13 12 11 9 8 2 32 0 2 139 137 136 135 131 127 126 125 124 123 121 120 115 111 110 109 108 17 12 14 3 76 9 1 8 11 1 10 2 8 10 103 7 6 3 3 2 5 4 1 16 4 0 14 2 0 103 15 1 14 12 12 14 87 15 1 14 14 12 95 13 1 12 14 12 79 1 0 133 132 130 128 117 116 114 112 102 101 99 97 85 84 82 80 63 62 60 58 47 46 44 42 21 20 18 16 5 3 0 34 1 34 17 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 1000;
+}
+);
+note = f;
+unicode = 102;
+},
+{
+glyphname = g;
+lastChange = "2025-09-10 21:06:14 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(599,395,ls),
+(599,399,o),
+(593,406,o),
+(589,406,qs),
+(586,406,o),
+(585,405,q),
+(169,261,ls),
+(161,258,o),
+(161,251,qs),
+(161,243,o),
+(169,240,qs),
+(587,92,ls),
+(592,90,o),
+(599,95,o),
+(599,100,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(572,374,l),
+(572,130,l),
+(218,250,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(669,294,o),
+(669,277,qs),
+(669,220,ls),
+(669,204,o),
+(681,192,qs),
+(710,163,ls),
+(721,152,o),
+(738,152,qs),
+(795,152,ls),
+(810,152,o),
+(823,163,qs),
+(852,192,ls),
+(863,205,o),
+(863,220,qs),
+(863,286,l),
+(861,296,l),
+(823,334,ls),
+(811,346,o),
+(795,346,qs),
+(738,346,ls),
+(721,346,o),
+(710,334,qs),
+(681,305,ls)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 43 values pushed */
+17 1 0 2 1 76 0 0 2 0 134 0 3 0 4 1 3 4 105 0 1 2 2 1 87 0 1 1 2 95 0 2 1 2 79 57 41 17 38 36 5 7 27
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = g;
+unicode = 103;
+},
+{
+glyphname = h;
+lastChange = "2025-09-10 21:04:31 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(481,404,ls),
+(481,408,o),
+(475,414,o),
+(470,414,qs),
+(467,414,l),
+(51,270,ls),
+(43,267,o),
+(43,259,qs),
+(43,256,o),
+(47,250,o),
+(51,249,qs),
+(469,100,l),
+(474,99,o),
+(481,104,o),
+(481,108,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(454,382,l),
+(454,139,l),
+(100,258,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(551,302,o),
+(551,286,qs),
+(551,228,ls),
+(551,212,o),
+(563,200,qs),
+(592,172,ls),
+(603,160,o),
+(620,160,qs),
+(677,160,ls),
+(693,160,o),
+(705,172,qs),
+(734,200,l),
+(745,213,o),
+(745,228,qs),
+(745,295,l),
+(743,304,l),
+(705,342,ls),
+(693,354,o),
+(677,354,qs),
+(620,354,ls),
+(603,354,o),
+(592,342,qs),
+(563,314,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(790,301,o),
+(790,286,qs),
+(790,228,ls),
+(790,213,o),
+(801,200,q),
+(830,172,ls),
+(842,160,o),
+(858,160,qs),
+(916,160,ls),
+(933,160,o),
+(943,172,q),
+(972,200,ls),
+(984,212,o),
+(984,228,qs),
+(984,295,l),
+(981,304,l),
+(968,318,l),
+(944,342,ls),
+(932,354,o),
+(916,354,qs),
+(858,354,ls),
+(842,354,o),
+(830,342,qs),
+(802,314,l),
+(801,314,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 48 values pushed */
+17 1 0 2 1 76 0 0 2 0 134 0 3 0 4 1 3 4 105 0 1 0 2 0 1 2 103 0 6 6 5 97 0 5 5 18 6 78 57 43 57 41 17 37 37 7 7 29
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = h;
+unicode = 104;
+},
+{
+glyphname = i;
+lastChange = "2025-09-10 21:04:25 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(212,407,ls),
+(212,411,o),
+(206,417,o),
+(201,417,qs),
+(198,417,l),
+(-218,273,ls),
+(-226,270,o),
+(-226,262,qs),
+(-226,259,o),
+(-222,253,o),
+(-218,252,qs),
+(200,104,ls),
+(205,102,o),
+(212,107,o),
+(212,112,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(185,386,l),
+(185,142,l),
+(-169,261,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(391,280,l),
+(329,330,l),
+(291,330,l),
+(288,326,l),
+(288,284,l),
+(390,260,l),
+(288,232,l),
+(288,196,l),
+(291,192,l),
+(330,192,l),
+(391,242,l),
+(373,146,l),
+(395,123,l),
+(414,123,l),
+(415,123,l),
+(415,124,l),
+(435,146,l),
+(435,147,l),
+(419,240,l),
+(480,192,l),
+(518,192,l),
+(521,195,l),
+(521,238,l),
+(419,260,l),
+(521,284,l),
+(521,326,l),
+(518,330,l),
+(479,330,l),
+(419,281,l),
+(435,376,l),
+(414,399,l),
+(395,399,l),
+(374,376,l),
+(374,375,l),
+(373,374,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(575,305,o),
+(575,289,qs),
+(575,232,ls),
+(575,214,o),
+(587,204,q),
+(616,175,ls),
+(627,163,o),
+(643,163,qs),
+(701,163,ls),
+(717,163,o),
+(729,175,qs),
+(758,204,ls),
+(769,215,o),
+(769,232,qs),
+(769,298,l),
+(767,307,l),
+(753,321,l),
+(729,346,l),
+(716,357,o),
+(701,357,qs),
+(644,357,ls),
+(627,357,o),
+(616,346,qs),
+(587,317,ls)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 77 values pushed */
+51 46 43 42 41 40 39 36 34 33 28 24 23 22 21 20 16 5 3 17 1 0 2 2 76 0 0 2 0 134 0 6 0 7 3 6 7 105 4 1 3 0 5 1 3 5 103 0 1 2 2 1 87 0 1 1 2 96 0 2 1 2 80 75 72 63 61 48 47 18 41 17 37 37 8 7 27
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = i;
+unicode = 105;
+},
+{
+glyphname = j;
+lastChange = "2025-09-10 21:04:03 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(353,278,l),
+(291,328,l),
+(253,328,l),
+(250,324,l),
+(250,282,l),
+(352,258,l),
+(250,231,l),
+(250,194,l),
+(253,190,l),
+(292,190,l),
+(353,241,l),
+(335,144,l),
+(357,121,l),
+(376,121,l),
+(377,122,l),
+(397,144,l),
+(397,146,l),
+(381,239,l),
+(442,190,l),
+(480,190,l),
+(483,193,l),
+(483,236,l),
+(381,258,l),
+(483,282,l),
+(483,325,l),
+(480,328,l),
+(441,328,l),
+(381,280,l),
+(397,374,l),
+(376,397,l),
+(357,397,l),
+(336,374,l),
+(336,373,l),
+(335,373,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(537,304,o),
+(537,288,qs),
+(537,230,ls),
+(537,214,o),
+(549,202,qs),
+(578,173,ls),
+(589,162,o),
+(605,162,qs),
+(663,162,ls),
+(678,162,o),
+(691,173,qs),
+(720,202,ls),
+(731,215,o),
+(731,230,qs),
+(731,296,l),
+(729,306,l),
+(691,344,ls),
+(679,356,o),
+(663,356,qs),
+(606,356,ls),
+(589,356,o),
+(578,344,qs),
+(549,315,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(174,405,ls),
+(174,410,o),
+(168,416,o),
+(164,416,qs),
+(161,416,o),
+(160,415,q),
+(-256,272,ls),
+(-264,269,o),
+(-264,261,qs),
+(-264,253,o),
+(-256,250,qs),
+(162,102,ls),
+(167,100,o),
+(174,105,o),
+(174,110,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(63,355,l),
+(63,169,l),
+(-207,260,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(95,366,l),
+(147,384,l),
+(147,141,l),
+(95,158,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 90 values pushed */
+32 27 24 23 22 21 20 18 16 15 10 6 5 4 3 2 16 2 0 74 1 5 7 2 76 0 9 8 7 8 9 7 128 0 5 7 5 134 0 3 0 4 0 3 4 105 1 1 0 0 2 6 0 2 103 0 6 0 8 9 6 8 104 0 7 7 20 7 78 78 77 76 75 73 72 71 69 63 61 55 52 43 41 29 28 18 39 10 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = j;
+unicode = 106;
+},
+{
+glyphname = k;
+lastChange = "2025-09-10 21:04:12 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(334,413,ls),
+(334,417,o),
+(328,423,o),
+(323,423,qs),
+(320,423,l),
+(-96,279,ls),
+(-104,276,o),
+(-104,268,qs),
+(-104,265,o),
+(-100,259,o),
+(-96,258,qs),
+(322,110,ls),
+(327,108,o),
+(334,113,o),
+(334,118,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(307,391,l),
+(307,148,l),
+(-47,267,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(513,285,l),
+(451,336,l),
+(413,335,l),
+(410,332,l),
+(410,290,l),
+(410,289,l),
+(512,266,l),
+(410,238,l),
+(410,201,l),
+(413,198,l),
+(452,198,l),
+(513,248,l),
+(495,152,l),
+(517,129,l),
+(536,129,l),
+(537,129,l),
+(537,130,l),
+(557,152,l),
+(557,153,l),
+(541,246,l),
+(602,198,l),
+(640,198,l),
+(643,201,l),
+(643,244,l),
+(541,265,l),
+(643,289,l),
+(643,332,l),
+(640,335,l),
+(601,335,l),
+(541,287,l),
+(557,382,l),
+(536,404,l),
+(517,404,l),
+(496,382,l),
+(496,380,l),
+(495,380,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 65 values pushed */
+52 46 43 42 41 40 39 36 34 33 28 24 23 22 21 20 16 5 3 17 1 0 2 2 76 0 0 2 0 134 4 1 3 0 5 1 3 5 103 0 1 2 2 1 87 0 1 1 2 96 0 2 1 2 80 49 47 18 41 17 37 37 6 7 27
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = k;
+unicode = 107;
+},
+{
+glyphname = l;
+lastChange = "2025-09-10 21:04:20 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(526,266,l),
+(464,317,l),
+(426,317,l),
+(423,313,l),
+(423,271,l),
+(525,247,l),
+(423,219,l),
+(423,182,l),
+(426,179,l),
+(465,179,l),
+(526,229,l),
+(508,133,l),
+(530,110,l),
+(550,110,l),
+(550,111,l),
+(570,133,l),
+(570,134,l),
+(554,227,l),
+(615,179,l),
+(653,179,l),
+(656,182,l),
+(656,225,l),
+(554,247,l),
+(656,271,l),
+(656,313,l),
+(653,317,l),
+(614,317,l),
+(554,268,l),
+(570,363,l),
+(549,385,l),
+(530,385,l),
+(509,363,l),
+(509,361,l),
+(508,361,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(347,394,ls),
+(347,398,o),
+(341,404,o),
+(336,404,qs),
+(333,404,l),
+(-83,260,ls),
+(-91,257,o),
+(-91,249,qs),
+(-91,246,o),
+(-87,240,o),
+(-83,239,qs),
+(335,91,ls),
+(340,89,o),
+(347,94,o),
+(347,99,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(236,343,l),
+(236,157,l),
+(-34,248,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(268,354,l),
+(320,373,l),
+(320,129,l),
+(268,147,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 78 values pushed */
+32 27 24 23 22 21 20 18 16 15 10 6 5 4 3 2 16 2 0 51 1 3 5 2 76 0 7 6 5 6 7 5 128 0 3 5 3 134 1 1 0 0 2 4 0 2 103 0 4 0 6 7 4 6 104 0 5 5 20 5 78 55 54 53 52 50 49 48 46 41 39 29 28 18 39 8 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = l;
+unicode = 108;
+},
+{
+glyphname = m;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(339,344,o),
+(334,344,qs),
+(289,344,ls),
+(284,344,o),
+(281,341,qs),
+(258,318,ls),
+(255,315,o),
+(255,310,qs),
+(255,265,ls),
+(255,260,o),
+(258,257,qs),
+(281,234,ls),
+(284,231,o),
+(289,231,qs),
+(323,231,l),
+(323,201,l),
+(281,159,l),
+(277,157,o),
+(277,151,qs),
+(277,147,o),
+(281,143,qs),
+(284,140,o),
+(289,140,qs),
+(292,140,l),
+(295,141,l),
+(338,163,l),
+(344,167,o),
+(345,169,qs),
+(366,212,ls),
+(369,217,o),
+(369,219,qs),
+(369,310,ls),
+(369,314,o),
+(365,318,qs),
+(342,341,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(863,423,l),
+(902,346,l),
+(902,259,l),
+(843,197,l),
+(756,176,l),
+(679,176,l),
+(627,200,l),
+(585,254,l),
+(562,292,l),
+(507,385,l),
+(456,451,l),
+(386,482,l),
+(293,482,l),
+(188,457,l),
+(109,373,l),
+(109,260,l),
+(140,175,l),
+(176,188,l),
+(148,267,l),
+(148,358,l),
+(208,423,l),
+(298,444,l),
+(378,444,l),
+(432,420,l),
+(475,364,l),
+(499,323,l),
+(553,233,l),
+(602,169,l),
+(671,138,l),
+(761,138,l),
+(864,162,l),
+(940,244,l),
+(940,356,l),
+(897,440,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 31 values pushed */
+68 67 66 53 48 35 6 1 3 65 52 49 36 26 25 2 7 0 1 50 18 3 3 5 0 51 1 2 5 4 76
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+41
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 29 values pushed */
+0 1 0 0 5 1 0 103 0 3 3 4 95 0 4 4 19 77 0 5 5 2 95 0 2 2 20 2 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 26 values pushed */
+0 1 0 0 5 1 0 103 0 5 0 2 5 2 99 0 3 3 4 95 0 4 4 19 3 78
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 15 values pushed */
+63 62 56 55 46 45 39 38 32 31 20 19 6 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = m;
+unicode = 109;
+},
+{
+glyphname = n;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(314,333,o),
+(310,333,qs),
+(264,333,ls),
+(259,333,o),
+(256,330,qs),
+(233,307,l),
+(230,303,o),
+(230,299,qs),
+(230,253,ls),
+(230,250,o),
+(233,245,q),
+(256,223,l),
+(259,219,o),
+(264,219,qs),
+(298,219,l),
+(298,190,l),
+(257,148,l),
+(253,145,o),
+(253,139,qs),
+(253,136,o),
+(256,131,q),
+(259,128,o),
+(264,128,qs),
+(267,128,l),
+(267,129,l),
+(270,129,o),
+(270,130,q),
+(313,151,l),
+(319,155,o),
+(320,157,q),
+(320,158,l),
+(342,201,ls),
+(344,205,o),
+(344,208,qs),
+(344,299,ls),
+(344,303,o),
+(340,307,qs),
+(318,330,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(685,360,o),
+(688,360,qs),
+(722,360,l),
+(722,330,l),
+(681,289,l),
+(677,286,o),
+(677,280,qs),
+(677,277,o),
+(680,272,q),
+(685,269,o),
+(688,269,qs),
+(692,269,l),
+(695,271,l),
+(737,292,ls),
+(742,295,o),
+(744,298,qs),
+(766,342,ls),
+(768,346,o),
+(768,349,qs),
+(768,440,ls),
+(768,444,o),
+(765,448,q),
+(742,470,l),
+(739,474,o),
+(734,474,qs),
+(688,474,ls),
+(684,474,o),
+(680,470,qs),
+(658,448,ls),
+(654,444,o),
+(654,440,qs),
+(654,394,ls),
+(654,389,o),
+(658,386,q),
+(680,363,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(848,411,l),
+(887,335,l),
+(887,248,l),
+(828,185,l),
+(741,165,l),
+(664,165,l),
+(611,188,l),
+(570,242,l),
+(547,280,l),
+(492,373,l),
+(441,439,l),
+(371,471,l),
+(278,471,l),
+(173,446,l),
+(94,362,l),
+(94,249,l),
+(124,163,l),
+(161,176,l),
+(132,255,l),
+(132,347,l),
+(193,411,l),
+(283,432,l),
+(363,432,l),
+(416,408,l),
+(459,353,l),
+(484,312,l),
+(483,312,l),
+(537,221,l),
+(587,157,l),
+(656,126,l),
+(746,126,l),
+(848,151,l),
+(925,233,l),
+(925,344,l),
+(882,429,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 104 values pushed */
+52 41 2 5 2 107 106 92 40 4 3 5 105 87 73 53 4 1 3 104 91 88 74 68 65 61 29 28 2 10 0 1 89 21 3 3 7 0 90 1 4 7 6 76 0 1 0 0 7 1 0 103 0 5 5 2 95 6 1 2 2 19 77 0 3 3 2 95 6 1 2 2 19 77 0 7 7 4 95 0 4 4 20 4 78 102 101 95 94 85 84 77 76 70 69 47 46 35 34 23 22 8 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = n;
+unicode = 110;
+},
+{
+glyphname = o;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(848,413,l),
+(887,336,l),
+(887,249,l),
+(828,187,l),
+(741,166,l),
+(664,166,l),
+(612,189,l),
+(570,243,l),
+(547,282,l),
+(492,375,l),
+(441,441,l),
+(371,472,l),
+(278,472,l),
+(173,447,l),
+(94,363,l),
+(94,250,l),
+(125,165,l),
+(161,178,l),
+(133,257,l),
+(133,348,l),
+(193,413,l),
+(283,434,l),
+(363,434,l),
+(417,410,l),
+(460,354,l),
+(484,313,l),
+(538,223,l),
+(587,159,l),
+(656,128,l),
+(746,128,l),
+(849,152,l),
+(925,234,l),
+(925,346,l),
+(882,430,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(342,364,o),
+(326,364,qs),
+(258,364,l),
+(249,361,l),
+(234,347,l),
+(210,323,ls),
+(198,311,o),
+(198,294,qs),
+(198,236,ls),
+(198,219,o),
+(210,207,qs),
+(239,178,ls),
+(251,166,o),
+(267,166,qs),
+(326,166,ls),
+(342,166,o),
+(354,178,qs),
+(384,207,l),
+(396,221,o),
+(396,236,qs),
+(396,294,ls),
+(396,309,o),
+(384,323,q),
+(354,352,ls)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 61 values pushed */
+33 32 2 5 1 31 30 18 17 15 14 13 1 0 9 4 5 16 1 0 3 3 76 0 5 0 4 3 5 4 105 0 1 1 2 95 0 2 2 19 77 0 3 3 0 95 0 0 0 20 0 78 42 61 22 25 22 19 6 7 28
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = o;
+unicode = 111;
+},
+{
+glyphname = p;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(846,413,l),
+(885,336,l),
+(885,249,l),
+(826,187,l),
+(739,166,l),
+(662,166,l),
+(609,189,l),
+(568,243,l),
+(545,282,l),
+(490,375,l),
+(439,441,l),
+(369,472,l),
+(276,472,l),
+(171,447,l),
+(92,363,l),
+(92,250,l),
+(122,165,l),
+(159,178,l),
+(130,257,l),
+(130,348,l),
+(191,413,l),
+(281,434,l),
+(361,434,l),
+(414,410,l),
+(457,354,l),
+(482,313,l),
+(481,313,l),
+(536,223,l),
+(585,159,l),
+(654,128,l),
+(744,128,l),
+(846,152,l),
+(923,234,l),
+(923,346,l),
+(880,430,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(340,364,o),
+(324,364,qs),
+(256,364,l),
+(247,361,l),
+(232,347,l),
+(207,323,l),
+(196,310,o),
+(196,294,qs),
+(196,236,ls),
+(196,220,o),
+(207,207,q),
+(237,178,ls),
+(249,166,o),
+(265,166,qs),
+(324,166,ls),
+(340,166,o),
+(352,178,qs),
+(381,207,ls),
+(393,219,o),
+(393,236,qs),
+(393,294,ls),
+(393,311,o),
+(381,323,qs),
+(352,352,ls)
+);
+},
+{
+closed = 1;
+nodes = (
+(658,229,o),
+(673,229,qs),
+(731,229,ls),
+(746,229,o),
+(760,241,q),
+(789,271,ls),
+(801,282,o),
+(801,299,qs),
+(801,358,ls),
+(801,374,o),
+(789,386,qs),
+(760,415,ls),
+(748,427,o),
+(731,427,qs),
+(664,427,l),
+(654,425,l),
+(615,386,ls),
+(603,374,o),
+(603,358,qs),
+(603,299,ls),
+(603,283,o),
+(615,271,qs),
+(644,241,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 77 values pushed */
+34 1 6 1 33 1 5 6 32 31 19 18 15 14 1 0 8 7 5 16 1 4 7 17 1 0 3 5 76 0 6 0 7 4 6 7 105 0 5 0 4 3 5 4 105 0 1 1 2 95 0 2 2 19 77 0 3 3 0 95 0 0 0 20 0 78 57 41 42 61 22 25 23 19 8 7 30
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = p;
+unicode = 112;
+},
+{
+glyphname = q;
+lastChange = "2025-09-10 21:04:46 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(529,265,l),
+(545,196,l),
+(591,140,l),
+(581,124,l),
+(545,112,l),
+(490,112,l),
+(458,124,l),
+(448,140,l),
+(491,197,l),
+(505,266,l),
+(505,360,l),
+(468,419,l),
+(396,435,l),
+(354,373,l),
+(347,281,l),
+(368,197,l),
+(400,147,l),
+(376,127,l),
+(336,127,l),
+(302,142,l),
+(265,177,l),
+(243,230,l),
+(235,355,l),
+(200,351,l),
+(209,219,l),
+(237,150,l),
+(285,104,l),
+(330,84,l),
+(388,84,l),
+(421,113,l),
+(437,87,l),
+(485,70,l),
+(549,70,l),
+(601,87,l),
+(619,114,l),
+(657,84,l),
+(717,84,l),
+(767,104,l),
+(818,149,l),
+(849,219,l),
+(859,351,l),
+(824,355,l),
+(815,231,l),
+(791,178,l),
+(751,142,l),
+(712,127,l),
+(667,127,l),
+(641,147,l),
+(675,197,l),
+(698,281,l),
+(690,374,l),
+(646,434,l),
+(570,419,l),
+(529,361,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(382,285,l),
+(388,356,l),
+(410,388,l),
+(448,380,l),
+(470,345,l),
+(470,271,l),
+(459,218,l),
+(426,174,l),
+(400,217,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(663,285,l),
+(644,218,l),
+(614,173,l),
+(576,218,l),
+(564,271,l),
+(564,345,l),
+(588,380,l),
+(632,389,l),
+(656,355,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 41 values pushed */
+61 59 45 40 38 36 35 34 25 24 23 11 4 1 47 21 2 2 4 48 20 2 5 3 3 76 70 68 50 18 17 16 12 7 6 5 3 1 12 5 73
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+22
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 26 values pushed */
+0 4 0 2 3 4 2 103 0 3 0 5 3 5 99 0 1 1 0 95 0 0 0 16 1 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 32 values pushed */
+0 0 0 1 4 0 1 103 0 4 0 2 3 4 2 103 0 3 5 5 3 87 0 3 3 5 95 0 5 3 5 79
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 15 values pushed */
+66 65 57 56 53 52 43 42 31 30 29 28 6 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = q;
+unicode = 113;
+},
+{
+glyphname = r;
+lastChange = "2025-09-10 21:04:55 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(242,327,l),
+(270,273,l),
+(564,273,l),
+(564,296,l),
+(542,381,l),
+(571,393,l),
+(595,302,l),
+(595,273,l),
+(741,273,l),
+(644,363,l),
+(665,386,l),
+(804,257,l),
+(665,128,l),
+(644,151,l),
+(741,241,l),
+(595,241,l),
+(595,199,l),
+(532,123,l),
+(448,100,l),
+(374,100,l),
+(319,129,l),
+(278,189,l),
+(251,241,l),
+(-36,241,l),
+(-36,224,l),
+(-5,135,l),
+(-33,120,l),
+(-67,216,l),
+(-67,241,l),
+(-179,241,l),
+(-179,273,l),
+(-67,273,l),
+(-67,317,l),
+(-6,391,l),
+(76,414,l),
+(148,414,l),
+(202,386,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(338,157,l),
+(381,135,l),
+(445,135,l),
+(516,155,l),
+(564,213,l),
+(564,241,l),
+(287,241,l),
+(304,208,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(10,360,l),
+(-37,303,l),
+(-37,273,l),
+(234,273,l),
+(234,274,l),
+(216,308,l),
+(183,357,l),
+(141,379,l),
+(79,379,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 34 values pushed */
+30 1 6 4 53 48 45 42 41 37 34 31 17 16 13 10 9 1 0 15 3 6 2 76 27 26 25 24 23 22 21 7 4 74
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+41
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 28 values pushed */
+0 1 0 1 134 8 1 3 2 1 0 1 3 0 103 7 1 6 6 4 95 5 1 4 4 16 6 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 34 values pushed */
+0 1 0 1 134 5 1 4 7 1 6 3 4 6 103 8 1 3 0 0 3 87 8 1 3 3 0 95 2 1 0 3 0 79
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 12 values pushed */
+27 21 19 24 23 19 17 17 19 9 7 31
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = r;
+unicode = 114;
+},
+{
+glyphname = s;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(748,526,l),
+(678,526,l),
+(678,490,l),
+(735,490,l),
+(758,471,l),
+(768,443,l),
+(751,397,l),
+(208,113,l),
+(216,79,l),
+(664,79,l),
+(664,115,l),
+(289,115,l),
+(780,372,l),
+(806,444,l),
+(788,491,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 37 values pushed */
+8 1 0 2 1 76 0 3 0 2 0 3 2 103 0 0 1 1 0 87 0 0 0 1 95 0 1 0 1 79 17 21 17 18 4 7 26
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = s;
+unicode = 115;
+},
+{
+glyphname = t;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(581,248,l),
+(585,259,l),
+(593,266,l),
+(620,266,l),
+(620,300,l),
+(581,300,l),
+(557,279,l),
+(545,249,l),
+(561,205,l),
+(745,117,l),
+(277,117,l),
+(445,206,l),
+(460,249,l),
+(450,278,l),
+(425,300,l),
+(386,300,l),
+(386,267,l),
+(413,267,l),
+(421,259,l),
+(425,249,l),
+(418,229,l),
+(180,104,l),
+(196,86,l),
+(812,84,l),
+(812,88,l),
+(825,116,l),
+(588,229,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 50 values pushed */
+25 18 13 6 4 3 1 4 1 0 3 2 76 4 1 2 1 2 133 5 1 1 3 1 133 0 3 0 0 3 88 0 3 3 0 96 0 0 3 0 80 17 20 20 17 21 33 6 7 28
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = t;
+unicode = 116;
+},
+{
+glyphname = u;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(823,82,l),
+(823,117,l),
+(270,117,l),
+(450,204,l),
+(465,248,l),
+(454,278,l),
+(429,300,l),
+(389,300,l),
+(389,264,l),
+(416,264,l),
+(424,257,l),
+(428,248,l),
+(421,229,l),
+(183,115,l),
+(197,86,l),
+(197,82,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 44 values pushed */
+10 3 2 2 0 1 1 3 2 2 76 0 1 0 1 133 0 0 2 0 133 0 2 3 3 2 88 0 2 2 3 96 0 3 2 3 80 17 20 17 21 4 7 26
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = u;
+unicode = 117;
+},
+{
+glyphname = v;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(576,248,l),
+(580,257,l),
+(588,264,l),
+(615,264,l),
+(615,300,l),
+(574,300,l),
+(549,278,l),
+(538,248,l),
+(554,204,l),
+(734,117,l),
+(181,117,l),
+(181,82,l),
+(807,82,l),
+(807,87,l),
+(821,115,l),
+(583,229,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 40 values pushed */
+14 7 2 1 3 1 76 0 2 3 2 133 0 3 1 3 133 0 1 0 0 1 87 0 1 1 0 96 0 0 1 0 80 17 20 17 33 4 7 26
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = v;
+unicode = 118;
+},
+{
+glyphname = w;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(829,303,l),
+(846,360,l),
+(840,418,l),
+(784,480,l),
+(156,472,l),
+(156,437,l),
+(768,445,l),
+(806,402,l),
+(810,363,l),
+(798,326,l),
+(750,294,l),
+(684,267,l),
+(639,205,l),
+(639,120,l),
+(674,120,l),
+(674,193,l),
+(706,237,l),
+(764,261,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 31 values pushed */
+15 8 4 1 4 0 1 1 76 0 1 1 2 95 0 2 2 19 77 0 0 0 20 0 78 17 23 18 3 7 25
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = w;
+unicode = 119;
+},
+{
+glyphname = x;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(800,307,l),
+(837,343,l),
+(842,393,l),
+(823,441,l),
+(773,473,l),
+(754,443,l),
+(794,417,l),
+(806,388,l),
+(803,359,l),
+(767,325,l),
+(764,325,l),
+(154,315,l),
+(155,279,l),
+(771,283,l),
+(807,248,l),
+(812,218,l),
+(801,187,l),
+(761,158,l),
+(782,127,l),
+(830,163,l),
+(848,214,l),
+(841,267,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 40 values pushed */
+20 1 0 1 1 76 18 16 15 13 4 1 74 5 3 2 3 0 73 0 1 0 0 1 87 0 1 1 0 95 0 0 1 0 79 17 23 2 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = x;
+unicode = 120;
+},
+{
+glyphname = y;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(730,565,l),
+(659,565,l),
+(659,529,l),
+(716,529,l),
+(739,509,l),
+(749,482,l),
+(734,438,l),
+(239,185,l),
+(214,115,l),
+(231,69,l),
+(270,35,l),
+(338,35,l),
+(338,71,l),
+(283,71,l),
+(261,90,l),
+(252,115,l),
+(266,157,l),
+(269,158,l),
+(762,410,l),
+(787,483,l),
+(769,530,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 39 values pushed */
+14 11 4 3 0 2 1 76 0 3 0 2 0 3 2 103 0 0 1 1 0 87 0 0 0 1 95 0 1 0 1 79 17 23 17 22 4 7 26
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = y;
+unicode = 121;
+},
+{
+glyphname = z;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(896,246,l),
+(894,239,o),
+(890,236,qs),
+(845,194,l),
+(839,191,l),
+(784,170,ls),
+(782,169,o),
+(777,169,qs),
+(713,169,ls),
+(708,169,o),
+(706,170,qs),
+(593,221,l),
+(591,221,o),
+(589,223,qs),
+(509,285,l),
+(436,227,l),
+(433,225,l),
+(311,168,ls),
+(308,167,o),
+(304,166,q),
+(234,166,ls),
+(228,166,o),
+(225,169,q),
+(179,196,l),
+(175,200,l),
+(136,248,ls),
+(132,252,o),
+(132,256,q),
+(121,310,l),
+(121,316,l),
+(132,375,l),
+(132,380,o),
+(136,384,qs),
+(175,426,l),
+(182,431,l),
+(238,451,ls),
+(242,453,o),
+(245,453,qs),
+(309,453,ls),
+(312,453,o),
+(316,451,qs),
+(431,401,l),
+(435,398,l),
+(515,336,l),
+(587,393,l),
+(590,395,l),
+(711,452,ls),
+(714,453,o),
+(719,453,qs),
+(788,453,ls),
+(794,453,o),
+(797,451,qs),
+(842,423,ls),
+(845,421,o),
+(846,420,qs),
+(891,373,ls),
+(895,369,o),
+(896,364,qs),
+(906,311,ls),
+(907,308,o),
+(906,304,qs)
+);
+},
+{
+closed = 1;
+nodes = (
+(305,416,l),
+(248,416,l),
+(199,398,l),
+(167,363,l),
+(158,313,l),
+(167,267,l),
+(201,226,l),
+(239,203,l),
+(299,203,l),
+(415,257,l),
+(485,312,l),
+(414,368,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(821,393,l),
+(782,417,l),
+(723,417,l),
+(608,363,l),
+(539,308,l),
+(609,253,l),
+(717,206,l),
+(774,206,l),
+(823,224,l),
+(861,259,l),
+(869,307,l),
+(861,352,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 11 values pushed */
+79 67 60 45 30 16 6 4 5 1 76
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+25
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 22 values pushed */
+6 1 4 3 1 2 4 2 99 7 1 5 5 0 95 1 1 0 0 19 5 78
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 29 values pushed */
+1 1 0 7 1 5 4 0 5 103 6 1 4 2 2 4 87 6 1 4 4 2 95 3 1 2 4 2 79
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 17 values pushed */
+82 81 77 76 71 70 64 63 52 49 40 39 26 26 8 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = z;
+unicode = 122;
+},
+{
+glyphname = one;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(322,273,l),
+(284,394,l),
+(236,379,l),
+(270,270,l),
+(167,266,l),
+(169,206,l),
+(852,236,l),
+(850,296,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 5 values pushed */
+5 4 2 2 74
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+48
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 10 values pushed */
+5 4 2 2 74 1 0 2 1 73
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 12 values pushed */
+7 6 5 4 4 1 74 1 0 2 1 73
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 23 values pushed */
+0 1 2 0 2 1 114 0 2 1 0 2 87 0 2 2 0 95 0 0 2 0 79
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+48
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 10 values pushed */
+0 2 1 2 119 0 1 2 1 111
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 4 values pushed */
+0 1 1 118
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 6 values pushed */
+19 17 16 3 7 25
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = one;
+unicode = 49;
+},
+{
+glyphname = two;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(879,247,l),
+(266,218,l),
+(185,444,l),
+(138,427,l),
+(233,161,l),
+(238,156,l),
+(882,187,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 5 values pushed */
+3 2 2 0 74
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+37
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 10 values pushed */
+3 2 2 0 74 6 0 2 0 73
+ELSE[ ]	/* Else */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 17 values pushed */
+0 0 1 1 0 87 0 0 0 1 95 2 1 1 0 1 79
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+37
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 4 values pushed */
+0 0 0 118
+ELSE[ ]	/* Else */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 10 values pushed */
+0 0 0 6 0 6 20 3 7 23
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = two;
+unicode = 50;
+},
+{
+glyphname = three;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(872,243,l),
+(379,219,l),
+(337,343,l),
+(290,327,l),
+(327,217,l),
+(262,214,l),
+(178,448,l),
+(131,431,l),
+(227,165,l),
+(232,152,l),
+(875,183,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 7 values pushed */
+7 6 3 2 4 1 74
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+44
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 12 values pushed */
+7 6 3 2 4 1 74 10 0 2 0 73
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 14 values pushed */
+9 8 7 6 3 2 6 0 74 10 0 2 0 73
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 24 values pushed */
+0 0 1 2 1 0 114 0 1 0 2 1 87 0 1 1 2 95 3 1 2 1 2 79
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+44
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 10 values pushed */
+0 1 0 1 119 0 0 1 0 111
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 4 values pushed */
+0 0 0 118
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 11 values pushed */
+0 0 0 10 0 10 19 20 4 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = three;
+unicode = 51;
+},
+{
+glyphname = four;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(871,190,l),
+(869,250,l),
+(374,226,l),
+(303,441,l),
+(255,425,l),
+(322,224,l),
+(262,221,l),
+(183,441,l),
+(135,424,l),
+(231,159,l),
+(233,159,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 7 values pushed */
+6 5 2 1 4 1 74
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+44
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 12 values pushed */
+6 5 2 1 4 1 74 10 9 2 0 73
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 14 values pushed */
+8 7 6 5 2 1 6 0 74 10 9 2 0 73
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 23 values pushed */
+0 0 1 2 1 0 114 0 1 0 2 1 87 0 1 1 2 95 0 2 1 2 79
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+44
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 10 values pushed */
+0 1 0 1 119 0 0 1 0 111
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 4 values pushed */
+0 0 0 118
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 6 values pushed */
+17 19 19 3 7 25
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = four;
+unicode = 52;
+},
+{
+glyphname = five;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(873,187,l),
+(870,247,l),
+(473,228,l),
+(438,333,l),
+(391,317,l),
+(421,226,l),
+(370,223,l),
+(291,444,l),
+(244,427,l),
+(318,221,l),
+(262,218,l),
+(181,444,l),
+(134,427,l),
+(229,157,l),
+(339,162,l),
+(340,161,l),
+(343,162,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 9 values pushed */
+12 11 8 7 4 3 6 3 74
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 14 values pushed */
+12 11 8 7 4 3 6 3 74 15 2 2 1 73
+EIF[ ]	/* EndIf */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 25 values pushed */
+2 1 1 3 0 3 1 114 0 3 1 0 3 87 0 3 3 0 95 4 1 0 3 0 79
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+46
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 11 values pushed */
+0 3 1 3 119 2 1 1 3 1 111
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 16 values pushed */
+0 3 2 3 119 0 2 1 3 2 112 0 1 3 1 111
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 15 values pushed */
+2 0 14 13 10 9 6 5 0 16 2 15 5 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = five;
+unicode = 53;
+},
+{
+glyphname = six;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(894,178,l),
+(892,238,l),
+(582,224,l),
+(542,343,l),
+(495,327,l),
+(530,221,l),
+(470,219,l),
+(385,453,l),
+(338,436,l),
+(417,216,l),
+(352,213,l),
+(265,453,l),
+(218,436,l),
+(299,211,l),
+(242,208,l),
+(155,443,l),
+(109,426,l),
+(211,149,l),
+(212,147,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 11 values pushed */
+14 13 10 9 6 5 2 1 8 3 74
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 16 values pushed */
+14 13 10 9 6 5 2 1 8 3 74 18 17 2 0 73
+EIF[ ]	/* EndIf */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 30 values pushed */
+0 2 3 0 3 2 114 1 1 0 4 3 0 112 0 3 2 4 3 87 0 3 3 4 95 0 4 3 4 79
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+46
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 17 values pushed */
+0 3 2 3 119 0 2 0 3 2 112 1 1 0 3 0 111
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 22 values pushed */
+0 3 2 3 119 0 2 1 3 2 112 0 1 0 3 1 112 0 0 3 0 111
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 8 values pushed */
+17 19 19 19 19 5 7 27
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = six;
+unicode = 54;
+},
+{
+glyphname = seven;
+lastChange = "2025-09-10 21:05:03 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(852,231,l),
+(849,291,l),
+(333,268,l),
+(201,494,l),
+(198,498,o),
+(187,495,o),
+(187,490,qs),
+(170,260,l),
+(166,206,ls),
+(166,204,o),
+(169,202,q),
+(169,200,l),
+(172,200,l),
+(175,200,l),
+(176,201,l),
+(177,200,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 10 values pushed */
+8 1 1 0 1 76 4 1 1 73
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+48
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 7 values pushed */
+17 16 8 4 4 0 73
+ELSE[ ]	/* Else */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 16 values pushed */
+0 0 1 1 0 87 0 0 0 1 95 0 1 0 1 79
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+48
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+PUSHB[ ]	/* 4 values pushed */
+0 0 0 118
+ELSE[ ]	/* Else */
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+PUSHB[ ]	/* 5 values pushed */
+17 30 2 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = seven;
+unicode = 55;
+},
+{
+glyphname = eight;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(857,287,l),
+(527,272,l),
+(406,503,l),
+(402,507,o),
+(392,505,o),
+(392,500,q),
+(357,265,l),
+(327,263,l),
+(214,488,l),
+(211,492,o),
+(200,489,o),
+(200,484,q),
+(159,200,l),
+(161,194,o),
+(168,194,qs),
+(859,227,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+33
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+ELSE[ ]	/* Else */
+PUSHB[ ]	/* 5 values pushed */
+15 0 2 0 73
+EIF[ ]	/* EndIf */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+33
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 24 values pushed */
+0 0 1 2 1 0 114 0 1 0 2 1 87 0 1 1 2 95 3 1 2 1 2 79
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 10 values pushed */
+0 1 0 1 119 0 0 1 0 111
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 11 values pushed */
+0 0 0 15 0 15 21 23 4 7 24
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = eight;
+unicode = 56;
+},
+{
+glyphname = nine;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(885,232,l),
+(796,228,l),
+(741,343,l),
+(705,326,l),
+(753,226,l),
+(700,224,l),
+(592,453,l),
+(556,436,l),
+(657,222,l),
+(608,220,l),
+(498,453,l),
+(461,436,l),
+(564,219,l),
+(510,216,l),
+(510,219,o),
+(509,220,q),
+(378,456,l),
+(375,460,o),
+(365,458,o),
+(365,454,qs),
+(365,453,l),
+(326,209,l),
+(315,209,l),
+(186,450,l),
+(183,454,o),
+(173,452,o),
+(173,448,qs),
+(173,447,l),
+(132,176,l),
+(134,141,l),
+(887,172,l)
+);
+}
+);
+userData = {
+assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 15 values pushed */
+1 1 5 0 1 76 27 26 23 22 19 18 6 3 74
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+46
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 15 values pushed */
+27 26 23 22 19 18 6 3 74 30 1 0 3 0 73
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 15 values pushed */
+27 26 23 22 19 18 6 4 74 30 1 0 3 0 73
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+35
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 33 values pushed */
+2 1 1 3 0 3 1 114 0 0 5 3 0 112 4 1 3 1 5 3 87 4 1 3 3 5 95 6 1 5 3 5 79
+ELSE[ ]	/* Else */
+MPPEM[ ]	/* MeasurePixelPerEm */
+PUSHB[ ]	/* 1 value pushed */
+46
+LT[ ]	/* LessThan */
+IF[ ]	/* If */
+NPUSHB[ ]	/* 18 values pushed */
+4 1 3 1 3 119 2 1 1 0 3 1 112 0 0 3 0 111
+ELSE[ ]	/* Else */
+NPUSHB[ ]	/* 23 values pushed */
+0 4 3 4 119 0 3 1 4 3 112 2 1 1 0 4 1 112 0 0 4 0 111
+EIF[ ]	/* EndIf */
+EIF[ ]	/* EndIf */
+NPUSHB[ ]	/* 14 values pushed */
+0 0 0 30 0 30 19 19 19 54 23 7 7 27
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = nine;
+unicode = 57;
+},
+{
+glyphname = zero;
+lastChange = "2025-09-10 21:05:10 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(396,199,l),
+(402,203,o),
+(402,212,qs),
+(402,267,l),
+(450,267,l),
+(518,200,l),
+(522,193,o),
+(531,193,qs),
+(540,193,o),
+(544,199,q),
+(550,203,o),
+(550,212,qs),
+(550,216,l),
+(549,217,l),
+(549,220,o),
+(547,222,q),
+(512,291,ls),
+(508,300,o),
+(503,303,q),
+(502,303,l),
+(432,338,ls),
+(426,341,o),
+(420,341,qs),
+(419,341,l),
+(345,344,l),
+(270,344,ls),
+(263,344,o),
+(257,338,qs),
+(220,301,ls),
+(214,295,o),
+(214,288,qs),
+(214,232,l),
+(166,232,l),
+(98,300,l),
+(94,307,o),
+(84,307,qs),
+(77,307,o),
+(71,301,qs),
+(65,295,o),
+(65,288,qs),
+(65,283,l),
+(66,283,l),
+(66,280,o),
+(68,278,q),
+(103,208,ls),
+(106,201,o),
+(113,197,q),
+(114,197,l),
+(184,161,ls),
+(190,158,o),
+(196,158,qs),
+(197,158,l),
+(272,156,l),
+(346,156,ls),
+(355,156,o),
+(359,162,q)
+);
+},
+{
+closed = 1;
+nodes = (
+(282,202,o),
+(277,208,qs),
+(263,222,ls),
+(257,228,o),
+(257,236,qs),
+(257,264,ls),
+(257,272,o),
+(263,278,qs),
+(277,292,ls),
+(282,298,o),
+(290,298,qs),
+(319,298,ls),
+(328,298,o),
+(332,292,q),
+(351,273,l),
+(352,269,l),
+(352,236,ls),
+(352,228,o),
+(346,222,qs),
+(332,208,l),
+(328,202,o),
+(319,202,qs),
+(290,202,ls)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 59 values pushed */
+50 31 2 2 1 67 1 4 3 2 76 22 15 3 3 0 73 0 1 2 1 133 0 2 0 3 4 2 3 105 0 4 0 0 4 89 0 4 4 0 95 0 0 4 0 79 73 71 62 60 53 51 44 42 24 23 5 7 22
+CALL[ ]	/* CallFunction */";
+};
+width = 600;
+}
+);
+note = zero;
+unicode = 48;
+},
+{
+glyphname = period;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(167,447,l),
+(167,405,l),
+(848,405,l),
+(848,447,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(167,195,l),
+(167,153,l),
+(848,153,l),
+(848,195,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 31 values pushed */
+0 1 0 0 3 1 0 103 0 3 2 2 3 87 0 3 3 2 95 0 2 3 2 79 17 17 17 16 4 7 26
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = period;
+unicode = 46;
+},
+{
+glyphname = comma;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(162,442,l),
+(162,421,l),
+(415,421,l),
+(415,442,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(591,442,l),
+(591,421,l),
+(844,421,l),
+(844,442,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(162,200,l),
+(162,158,l),
+(844,158,l),
+(844,200,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 35 values pushed */
+3 1 1 2 1 0 5 1 0 103 0 5 4 4 5 87 0 5 5 4 95 0 4 5 4 79 17 17 17 17 17 16 6 7 28
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = comma;
+unicode = 44;
+},
+{
+glyphname = hyphen;
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(165,209,l),
+(165,167,l),
+(417,167,l),
+(417,209,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(594,209,l),
+(594,167,l),
+(846,167,l),
+(846,209,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(165,433,l),
+(165,412,l),
+(417,412,l),
+(417,433,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(594,433,l),
+(594,412,l),
+(846,412,l),
+(846,433,l)
+);
+}
+);
+userData = {
+assembly = "NPUSHB[ ]	/* 40 values pushed */
+7 1 5 6 1 4 1 5 4 103 3 1 1 0 0 1 87 3 1 1 1 0 95 2 1 0 1 0 79 17 17 17 17 17 17 17 16 8 7 30
+CALL[ ]	/* CallFunction */";
+};
+width = 1010;
+}
+);
+note = hyphen;
+unicode = 45;
+}
+);
+instances = (
+{
+instanceInterpolations = {
+m01 = 1;
+};
+name = Regular;
+properties = (
+{
+key = postscriptFontName;
+value = "weather-Regular";
+},
+{
+key = postscriptFullNames;
+values = (
+{
+language = ENG;
+value = "weather Regular";
+}
+);
+}
+);
+}
+);
+metrics = (
+{
+type = ascender;
+},
+{
+type = "cap height";
+},
+{
+type = "x-height";
+},
+{
+type = baseline;
+},
+{
+type = descender;
+},
+{
+type = "italic angle";
+}
+);
+settings = {
+disablesAutomaticAlignment = 1;
+disablesNiceNames = 1;
+};
+unitsPerEm = 1000;
+versionMajor = 1;
+versionMinor = 0;
+}

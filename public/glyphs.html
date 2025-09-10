@@ -15,25 +15,14 @@
         <div id="glyph"></div>
     </section>
 </body>
-<script src="/socket.io/socket.io.js"></script>
 
 <script>
-    const socket = io();
 
     let eWidth, eHeight, xCenter, yCenter;
-    let font1, font2;
     let margin = 16;
-    let caption = document.getElementById("caption");
-    let glyph = document.getElementById("glyph");
 
     let speaker = window.speechSynthesis;
-    let voices;
-
-    let instruction = "press any key";
-
-    socket.on('key input', function (key) {
-        handleKeyInput(key);
-    });
+    let voices = speaker.getVoices();
 
     let alphakey = {
         "a": "intermittent fall of snowflakes, slight",
@@ -103,62 +92,35 @@
         "-": "continuous shallow fog"
     }
 
-    let foo; // speech synthesis object
-
-    function setup() {
-
-        foo = new p5.Speech();
-        caption.innerHTML = instruction;
+    let caption = document.getElementById("caption");
+    let glyph = document.getElementById("glyph");
+    let keys = Object.keys(alphakey);
 
 
 
-    }
 
-
-
-    function keyPressed() {
-
-        let checkChar = match(key, '[a-zA-Z0-9]');
-        if (checkChar && key.length <= 1) {
-            socket.emit('key input', key);
-        }
-        handleKeyInput(key);
-
-    }
-
-
-    function handleKeyInput(key) {
+    let i = 0;
+    function animate() {
         voices = speaker.getVoices();
+        let utterance = new SpeechSynthesisUtterance(alphakey[i]);
+        utterance.rate = 0.6;
+        utterance.lang = "en-GB";
+        utterance.voice = voices[32];
+        speechSynthesis.speak(utterance);
 
 
-        let checkChar = match(key, '[a-zA-Z0-9]');
-        if (checkChar && key.length <= 1) {
+        glyph.innerHTML = keys[i];
+        glyph.style.height = window.innerWidth;
+        glyph.style.fontSize = window.innerWidth * 0.6;
+
+        caption.innerHTML = alphakey[keys[i]];
 
 
-            glyph.innerHTML = key;
-            glyph.style.height = window.innerWidth;
-            glyph.style.fontSize = window.innerWidth * 0.6;
-
-            caption.innerHTML = alphakey[key];
-
-            let utterance = new SpeechSynthesisUtterance(alphakey[key]);
-            utterance.rate = 0.6;
-            utterance.lang = "en-GB";
-            utterance.voice = voices[32];
-            speechSynthesis.speak(utterance);
-
-        }
-
-        else {
-            caption.innerHTML = instruction;
-
-            glyph.innerHTML = "";
-
-
-        }
+        i = (i + 1) % keys.length;
     }
 
-
+    setInterval(animate, 2000);
+    animate();
 
 
 
