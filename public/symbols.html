@@ -142,7 +142,7 @@
             caption.innerHTML = alphakey[key];
 
             let utterance = new SpeechSynthesisUtterance(alphakey[key]);
-            utterance.rate = 0.75 / day;
+            utterance.rate = 0.6;
             utterance.lang = "en-GB";
             utterance.voice = voices[32];
             speechSynthesis.speak(utterance);
