@@ -3,7 +3,9 @@
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IDMNYU/p5.js-speech@0.0.3/lib/p5.speech.js"></script>
     <link rel="stylesheet" type="" href="stylesheets/main.css">
+
     <meta charset="utf-8" />
 </head>
 
@@ -23,6 +25,9 @@
     let margin = 16;
     let caption = document.getElementById("caption");
     let glyph = document.getElementById("glyph");
+
+    let speaker = window.speechSynthesis;
+    let voices;
 
     let instruction = "press any key";
 
@@ -98,11 +103,11 @@
         "-": "continuous shallow fog"
     }
 
-
+    let foo; // speech synthesis object
 
     function setup() {
 
-
+        foo = new p5.Speech();
         caption.innerHTML = instruction;
 
 
@@ -112,6 +117,7 @@
 
 
     function keyPressed() {
+
         let checkChar = match(key, '[a-zA-Z0-9]');
         if (checkChar && key.length <= 1) {
             socket.emit('key input', key);
@@ -122,6 +128,7 @@
 
 
     function handleKeyInput(key) {
+        voices = speaker.getVoices();
 
 
         let checkChar = match(key, '[a-zA-Z0-9]');
@@ -133,6 +140,12 @@
             glyph.style.fontSize = window.innerWidth * 0.6;
 
             caption.innerHTML = alphakey[key];
+
+            let utterance = new SpeechSynthesisUtterance(alphakey[key]);
+            utterance.rate = 0.75 / day;
+            utterance.lang = "en-GB";
+            utterance.voice = voices[32];
+            speechSynthesis.speak(utterance);
 
         }
 

@@ -51,6 +51,9 @@
 
     let speaker = window.speechSynthesis;
     let voices;
+    let data;
+    let day = 1;
+    let windVar = 1;
 
     const player = new Tone.Player({
         url: "339494__stebbi30000gmailcom__airplane-atmos.wav",
@@ -82,7 +85,6 @@
             ["D4", "G4", "A5"],
             ["A4", "G5", "C4"]];
         let randomNotes = Math.floor(Math.random() * notes.length)
-        console.log(randomNotes)
 
         return notes[randomNotes];
 
@@ -129,9 +131,11 @@
             n.splice(n.indexOf("flooding"), 1);
         }
         weathers.noun = n.join("|")
-        console.log(weathers.noun);
     }
 
+    function resetModifiers() {
+        weathers.modifer = `at a distance, heard, but no $noun, within the past hour, at the time of observation, which the $noun or $noun may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun, on land, in a chaotic sky, in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | ");
+    }
     let rg = RiTa.grammar(weathers);
 
     function weatherSingularize() {
@@ -152,8 +156,7 @@
 
         return rg.expand();
     }
-    let data;
-    let day = 1;
+
 
 
     // FIGURE OUT WHAT DAY IT is
@@ -237,6 +240,7 @@
             makeWeatherPanel();
 
             resetSymbols;
+            resetModifiers();
             checkRain(forecast.probabilityOfPrecipitation.value);
             checkWind(forecast.windSpeed);
             checkTemp(forecast.temperature, questionsContainer)
@@ -252,6 +256,7 @@
 
 
     let nycURL = makeURL(nycN, nycW);
+
     function checkRain(rain) {
         resetNouns();
         if (rain < 25) {
@@ -281,9 +286,22 @@
     function resetSymbols() {
         symbols = [];
     }
+    function findLargestNumber(inputString) {
+        const regex = /\d+/g;
+        let maxNumber = null;
+        let match;
+
+        while ((match = regex.exec(inputString)) !== null) {
+            const currentNumber = parseInt(match[0], 10);
+            if (maxNumber === null || currentNumber > maxNumber) {
+                maxNumber = currentNumber;
+            }
+        }
+        return maxNumber;
+    }
 
     function checkWind(wind) {
-
+        wind = findLargestNumber(wind);
         if (wind < 3) {
             symbols.push("1");
             addModifier("evenly and without hurry");
@@ -307,6 +325,7 @@
 
 
         }
+        windVar = wind;
 
     }
 
@@ -337,18 +356,14 @@
         div.className = '';
         if (forecast.includes("Sunny") || forecast.includes("Clear")) {
             div.classList.add("sunny");
-            console.log("added sunny to div")
         } else if (forecast.includes("Partly Cloudy")) {
             div.classList.add("partly-cloudy");
-            console.log("added partly to div")
 
         } else if (forecast.includes("Cloudy") && !forecast.includes("Partly")) {
             div.classList.add("cloudy");
-            console.log("added cloudy to div")
 
         } else if (forecast.includes("Rain")) {
             div.classList.add("rainy");
-            console.log("added rainy to div")
             rainPlayer.play();
 
         }
@@ -433,9 +448,8 @@
         const xPos = Math.floor(xRand * (window.innerWidth - 3 * margin) + margin);
         const yPos = Math.floor(yRand * (window.innerHeight - 2 * margin) + margin);
         let randomSym = symbols[Math.floor(Math.random() * symbols.length)];
-        questions.push(new Question(xRand, msg, xPos, yPos, randomVelocity(), randomVelocity(), weatherAnswer(), randomSym, randomLatLon(maxN, minN), randomLatLon(maxW, minW)));
+        questions.push(new Question(xRand, msg, xPos, yPos, weatherAnswer(), randomSym, randomLatLon(maxN, minN), randomLatLon(maxW, minW)));
 
-        // console.log(questions);
         window.scrollTo(0, document.body.scrollHeight);
         // saveQuestions();
 
@@ -583,13 +597,14 @@
     // Update Question class to use HTML divs
 
     class Question {
-        constructor(id, text, x, y, velX, velY, answer, symbol, lat, lon) {
+        constructor(id, text, x, y, answer, symbol, lat, lon) {
             this.id = id;
             this.text = text;
             this.x = x;
             this.y = y;
-            this.velX = velX;
-            this.velY = velY;
+            this.quotient = randomMultiplier();
+            this.velX = windVar / this.quotient;
+            this.velY = windVar / this.quotient;
             this.angle = 0;
             this.life = 0;
             this.div = document.createElement('div');
@@ -657,8 +672,12 @@
             this.decay();
 
             if (!this.dragging) {
+                this.velX = windVar / this.quotient;
+                this.velY = windVar / this.quotient;
                 this.x += this.velX * Math.cos(this.angle * Math.PI / 180);
                 this.y += this.velY * Math.sin(this.angle * Math.PI / 180);
+                console.log(this.x);
+                console.log(windVar);
                 if (this.angle >= 360) {
                     this.angle = 0;
                 }
@@ -703,12 +722,12 @@
 
     }
 
-    function randomVelocity() {
-        let randomV = Math.random() - 0.5;
-        if (randomV != 0) {
-            return randomV;
+    function randomMultiplier() {
+        let randomM = Math.random() * (20 - 25) + 20;
+        if (randomM != 0) {
+            return randomM;
         } else {
-            return randomVelocity();
+            return returnNextDow();
         }
     }
 
@@ -717,8 +736,7 @@
         Tone.start();
         console.log(player.volume.value);
         voices = speaker.getVoices();
-        console.log(voices);
-        console.log(speaker)
+
 
     });
 
