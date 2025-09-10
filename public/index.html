@@ -105,6 +105,7 @@
     let overlay = document.getElementById("filter");
 
 
+    let peerNouns = []
 
     let weathers = {
         'start': `The $noun is $adj $modifier | $modifier the $noun $verb | If $noun is $adj, the $noun $verb`,
@@ -119,18 +120,13 @@
     weatherSingularize();
 
     function resetNouns() {
-        let n = weathers.noun.split('|')
-        if (n.includes("dryness")) {
-            n.splice(n.indexOf("dryness"), 1);
-        } if (n.includes("wetness")) {
-            n.splice(n.indexOf("wetness"), 1);
+        weathers.noun = `arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, cumulus, cirrus, stratocumulus, fog, patches of $noun, swell, seas, wave, depression, droplets, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, sun, moon, tufts, wishing, wanting, Veil of $noun, towers of $noun`.toLowerCase().split(", ").join(" | ");
+        if (peerNouns.length > 1) {
+            let reformatPN = peerNouns.join(" (2) | ");
+            weathers.noun += "|" + reformatPN;
+            console.log(weathers.noun);
 
-        } if (n.includes("dampness")) {
-            n.splice(n.indexOf("dampness"), 1);
-        } if (n.includes("flooding")) {
-            n.splice(n.indexOf("flooding"), 1);
         }
-        weathers.noun = n.join("|")
     }
 
     function resetModifiers() {
@@ -546,6 +542,7 @@
 
 
         Tone.Transport.stop();
+        speechSynthesis.cancel();
 
 
 
@@ -655,7 +652,7 @@
             let nounCheck = this.text.split(" ");
             nounCheck.forEach(word => {
                 if (RiTa.isNoun(word)) {
-                    addNoun(word + "(2)");
+                    peerNouns.push(word);
                     console.log("added " + word + " to nouns");
                 }
             });
@@ -676,8 +673,7 @@
                 this.velY = windVar / this.quotient;
                 this.x += this.velX * Math.cos(this.angle * Math.PI / 180);
                 this.y += this.velY * Math.sin(this.angle * Math.PI / 180);
-                console.log(this.x);
-                console.log(windVar);
+
                 if (this.angle >= 360) {
                     this.angle = 0;
                 }
