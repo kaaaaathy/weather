@@ -679,8 +679,14 @@
         }
         url = refreshClouds(makeURL(lat, lon));
 
-        answerDiv.innerHTML = answer;
-
+        answerDiv.innerHTML = convolute(answer);
+        spans = Array.from(document.getElementsByTagName('span'));
+        if (spans.length > 0) {
+            for (let i = 0; i < spans.length; i++) {
+                spans[i].style.filter = "blur(" + day * day + "px)";
+            }
+        }
+        console.log(spans)
         symbolDiv.innerHTML = symbol;
 
         answerPanel.classList.toggle("hide");
@@ -703,14 +709,7 @@
                 a[i] = "<span>" + a[i] + "</span>";
             }
         }
-        spans = document.getElementsByTagName('span');
-        if (spans.length > 0) {
-            for (let i = 0; i < spans.length; i++) {
-                spans[i].style.filter = "blur(" + day * day + "px)";
-                spans[i].style.background = "pink";
-            }
-        }
-        console.log(spans)
+
         return a.join(' ');
     }
 
@@ -742,7 +741,7 @@
 
 
             this.div.addEventListener("mouseenter", () => {
-                giveAnswer(this.text, convolute(this.answer), this.symbol, this.lat, this.lon);
+                giveAnswer(this.text, this.answer, this.symbol, this.lat, this.lon);
 
             });
 
