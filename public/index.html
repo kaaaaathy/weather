@@ -50,6 +50,7 @@
 <script>
 
     let speaker = window.speechSynthesis;
+    let soundStart = false;
     let voices;
     let data;
     let day = 1;
@@ -101,37 +102,39 @@
     let questionsContainer = document.getElementById("questions-container")
     let tomorrow = document.getElementById("tomorrow");
     let audio = document.getElementById('sound');
-    // let outline = document.getElementById('outline');
     let overlay = document.getElementById("filter");
 
 
     let peerNouns = []
 
     let weathers = {
-        'start': `The $noun is $adj $modifier | $modifier the $noun $verb | If $noun is $adj, the $noun $verb`,
-        'noun': `arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, cumulus, cirrus, stratocumulus, fog, patches of $noun, swell, seas, wave, depression, droplets, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, sun, moon, tufts, wishing, wanting, Veil of $noun, towers of $noun`.toLowerCase().split(", ").join(" | "),
-        'modifier': `at a distance, heard, but no $noun, within the past hour, at the time of observation, which the $noun or $noun may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun, on land, in a chaotic sky, in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | "),
-        'verb': `freezes, knows, recedes, evaporates, lands, occludes, fronts, decreases, cools, warms, dissapates, weakens, intensifies, converges, outflows,becomes thicker`.toLowerCase().split(", ").join(" | "),
-        'adj': `minor, major, of cups, of swords, red, green, blue, loving, knowing, unprecedented, unknown, freezing, anvil-shaped, occluded, super, front, coastal, combined, primary, extratropical, DECREASING, CALM, cold, warm, DISSAPATING, Weakening, Rapidly Intensifying, Intertropical, Freezing, Moving, Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, steady, unsteady, well developed, heavy, less developed, discernable`.toLowerCase().split(", ").join(" | ")
+        'start': `The $noun is $adj $modifier | $modifier the $noun $verb | If $noun is $adj, the $noun.nr() $verb`,
+        'noun': `love, ant, coin, queen of $noun.s().nr(), $king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patches of $noun, swell, seas, wave, depression, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wishing, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | "),
+        'modifier': `at a distance, heard, but no $noun, at the time of observation, which the $noun or $noun.nr() may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun.nr(), on land, in a chaotic sky, in the form of $noun.s(), in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | "),
+        'verb': `knows, recedes, lands, occludes, fronts,
+        decreases, dissapates, outflows, becomes thicker`.toLowerCase().split(", ").join(" | "),
+        'adj': `minor, major, dim, bright, loving, knowing, unprecedented, unknown, anvil-shaped, occluded, front, coastal, combined, primary, extratropical, DECREASING, CALM, DISSAPATING, Weakening, Intensifying, Intertropical, Moving, Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, steady, 
+        unsteady, well developed, heavy, less developed, discernable`.toLowerCase().split(", ").join(" | ")
     }
 
 
 
     weatherSingularize();
 
-    function resetNouns() {
-        weathers.noun = `arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, cumulus, cirrus, stratocumulus, fog, patches of $noun, swell, seas, wave, depression, droplets, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, sun, moon, tufts, wishing, wanting, Veil of $noun, towers of $noun`.toLowerCase().split(", ").join(" | ");
+    function resetGrammar() {
+        weathers.modifier = `at a distance, heard, but no $noun, at the time of observation, which the $noun or $noun may be faintly visible through ground glass, sufficiently dense to hide the $noun, on land, in a chaotic sky, in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | ");
+        weathers.verb = `knows, recedes, lands, occludes, fronts,
+        decreases, dissapates, outflows, becomes thicker`;
+        weathers.noun = `ant, love, coin, queen of $noun.s().nr(), $king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patches of $noun, swell, seas, wave, depression, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wishing, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | ");
         if (peerNouns.length > 1) {
-            let reformatPN = peerNouns.join(" (2) | ");
+            let reformatPN = peerNouns.join(" (3) | ");
             weathers.noun += "|" + reformatPN;
             console.log(weathers.noun);
 
         }
     }
 
-    function resetModifiers() {
-        weathers.modifer = `at a distance, heard, but no $noun, within the past hour, at the time of observation, which the $noun or $noun may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun, on land, in a chaotic sky, in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | ");
-    }
+
     let rg = RiTa.grammar(weathers);
 
     function weatherSingularize() {
@@ -216,12 +219,18 @@
     }
 
     function addModifier(phrase) {
-        weathers.modifier += "|" + phrase;
+        weathers.modifier += "|" + phrase + " (3) ";
+
+
+    }
+
+    function addVerb(phrase) {
+        weathers.verb += "|" + phrase + " (3) ";
 
 
     }
     function addNoun(phrase) {
-        weathers.noun += "|" + phrase;
+        weathers.noun += "|" + phrase + " (3) ";
         weatherSingularize();
 
 
@@ -236,7 +245,7 @@
             makeWeatherPanel();
 
             resetSymbols;
-            resetModifiers();
+            resetGrammar();
             checkRain(forecast.probabilityOfPrecipitation.value);
             checkWind(forecast.windSpeed);
             checkTemp(forecast.temperature, questionsContainer)
@@ -254,26 +263,66 @@
     let nycURL = makeURL(nycN, nycW);
 
     function checkRain(rain) {
-        resetNouns();
         if (rain < 25) {
             symbols.push("A");
-            addModifier("absolutely no");
+            addModifier("by no chance");
+            addModifier("by no means");
+            addModifier("diverging");
+            addVerb("dries");
+            addVerb("clears");
+
+            addVerb("evaporates");
+
             addNoun("dryness");
+            addNoun("blue sky");
+            addNoun("sun");
+            addNoun("cirrus");
+
+
+
         } else if (rain >= 25 && rain < 50) {
             symbols.push("B");
-            addModifier("probably not");
+            addModifier("probably");
+            addModifier("possibly");
+            addVerb("purifies");
+            addVerb("dampens");
+
             addNoun("dampness");
+            addNoun("stratocumulus");
+
+            addNoun("cumulus");
+            addNoun("fog");
+            addNoun("droplets");
+
 
         } else if (rain >= 50 && rain < 75) {
             symbols.push("C");
-            addModifier("more than likely");
+            addModifier("It is likely");
+            addModifier("All signs say");
+            addVerb("overflows");
+            addVerb("purifies");
+
             addNoun("wetness");
+            addNoun("stratocumulus");
+
+            addNoun("cumulus");
+            addNoun("fog");
+            addNoun("droplets");
 
         } else {
             symbols.push("D");
-            addModifier("most certainly");
-            addNoun("flooding");
+            addModifier("with certainty");
+            addModifier("All signs say");
+            addModifier("converging");
+            addVerb("overflows");
+            addVerb("floods");
 
+            addNoun("flooding");
+            addNoun("stratocumulus");
+
+            addNoun("cumulus");
+            addNoun("fog");
+            addNoun("droplets");
 
         }
 
@@ -298,25 +347,46 @@
 
     function checkWind(wind) {
         wind = findLargestNumber(wind);
-        if (wind < 3) {
+        if (wind < 5) {
             symbols.push("1");
-            addModifier("evenly and without hurry");
+            addModifier("without hurry");
+            addModifier("with patience");
+            addModifier("weakening");
+            addNoun("stillness");
+            addNoun("silence");
 
-        } else if (wind >= 3 && wind < 5) {
+
+
+        } else if (wind >= 5 && wind < 7) {
             symbols.push("2");
 
-            addModifier("waiting");
-            addModifier("watching");
+            addModifier("soon");
+            addModifier("eventually");
+            addModifier("intensifying");
+            addModifier("Rapidly");
+            addNoun("draft");
+
+            addNoun("breeze");
 
 
-        } else if (wind >= 5 && wind < 8) {
+
+        } else if (wind >= 7 && wind < 10) {
             symbols.push("3");
-            addModifier("almost certain");
-        } else {
-            symbols.push("4");
             addModifier("immediately");
             addModifier("ready for you");
             addModifier("hastened");
+            addModifier("Rapidly");
+            addNoun("draft");
+            addNoun("gust");
+
+
+        } else {
+            symbols.push("4");
+            addModifier("urgently");
+            addModifier("Rapidly");
+            addNoun("gust");
+            addNoun("gale");
+
 
 
 
@@ -336,14 +406,25 @@
         div.className = '';
         if (temp < 30) {
             div.classList.add("cold");
+            addVerb("freezes")
         } else if (temp >= 30 && temp < 50) {
             div.classList.add("cool");
+            addVerb("cools")
         } else if (temp >= 50 && temp < 70) {
             div.classList.add("temperate");
+            addVerb("cools")
+            addVerb("warms")
+            addVerb("evaporates")
         } else if (temp >= 70 && temp < 85) {
             div.classList.add("warm");
+            addVerb("warms");
+            addVerb("evaporates")
+
         } else {
             div.classList.add("hot");
+            addVerb("warms");
+            addVerb("evaporates")
+
         }
 
     }
@@ -532,12 +613,9 @@
     });
 
     function clearAnswer() {
-        // if (outline.classList.contains("shadow")) {
-        //     outline.classList.remove("shadow");
-        // }
+
         sky.classList.add("hide");
         answerPanel.classList.add("hide");
-        // synth.volume.value = -100;
 
 
 
@@ -556,32 +634,23 @@
     }
     function giveAnswer(question, answer, symbol, lat, lon) {
 
-        let utterance = new SpeechSynthesisUtterance(question);
-        utterance.rate = 0.75 / day;
-        utterance.lang = "en-GB";
-        utterance.voice = voices[32];
-        speechSynthesis.speak(utterance);
-
+        if (soundStart) {
+            let utterance = new SpeechSynthesisUtterance(question);
+            utterance.rate = 0.75 / day;
+            utterance.lang = "en-GB";
+            utterance.voice = voices[32];
+            speechSynthesis.speak(utterance);
+        }
         url = refreshClouds(makeURL(lat, lon));
 
         answerDiv.innerHTML = answer;
 
         symbolDiv.innerHTML = symbol;
 
-        if (answerPanel.classList.contains("hide")) {
-            answerPanel.classList.remove("hide");
-        }
+        answerPanel.classList.toggle("hide");
+        sky.classList.toggle("hide");
 
-        if (sky.classList.contains("hide")) {
-            sky.classList.remove("hide");
-        }
         synth.triggerAttackRelease(randomSynth(), synthTime);
-        // randomSynth()
-        // synth.volume.value = 0.5
-
-
-        // Tone.Transport.start();
-
 
 
 
@@ -651,7 +720,9 @@
 
             let nounCheck = this.text.split(" ");
             nounCheck.forEach(word => {
+                // if (RiTa.isNoun(word) && !RiTa.isVerb(word)) {
                 if (RiTa.isNoun(word)) {
+
                     peerNouns.push(word);
                     console.log("added " + word + " to nouns");
                 }
@@ -719,16 +790,20 @@
     }
 
     function randomMultiplier() {
-        let randomM = Math.random() * (20 - 25) + 20;
+        let randomM = Math.random() * (30 - 35) + 30;
+        let directionM = Math.floor(Math.random() * 2);
+        if (directionM == 1) {
+            randomM *= -1;
+        }
         if (randomM != 0) {
             return randomM;
         } else {
-            return returnNextDow();
+            return randomMultiplier();
         }
     }
 
     document.body.addEventListener('mousedown', () => {
-
+        soundStart = true;
         Tone.start();
         console.log(player.volume.value);
         voices = speaker.getVoices();
