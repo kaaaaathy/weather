@@ -55,7 +55,7 @@
     let data;
     let day = 1;
     let windVar = 1;
-
+    let spans = [];
     const player = new Tone.Player({
         url: "339494__stebbi30000gmailcom__airplane-atmos.wav",
         autostart: true,
@@ -109,7 +109,7 @@
 
     let weathers = {
         'start': `The $adj $noun $verb | $modifier the $noun $verb | If $noun is $adj, the $noun.nr() $verb`,
-        'noun': `love, ant, coin, queen of $noun.s().nr(), $king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patches of $noun, swell, seas, wave, depression, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wishing, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | "),
+        'noun': `love, ant, coin, queen of $noun.s().nr(), king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patches of $noun, swell, seas, wave, depression, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wishing, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | "),
         'modifier': `at a distance, seen without $noun.s(), at the time of observation, which the $noun or $noun.nr() may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun.nr(), on land, in a chaotic sky, in the form of $noun.s(), in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | "),
         'verb': `knows, recedes, lands, occludes, fronts,
         decreases, dissapates, outflows, becomes thicker`.toLowerCase().split(", ").join(" | "),
@@ -127,11 +127,10 @@
         unsteady, well developed, heavy, less developed, discernable`.toLowerCase().split(", ").join(" | ")
         weathers.verb = `knows, recedes, lands, occludes, fronts,
         decreases, dissapates, outflows, becomes thicker`.toLowerCase().split(", ").join(" | "),
-            weathers.noun = `ant, love, coin, queen of $noun.s().nr(), $king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patch of $noun, swell, seas, wave, wave of $noun, depression, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wishing, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | ");
+            weathers.noun = `ant, love, coin, queen of $noun.s().nr(), king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patch of $noun, swell, seas, wave, wave of $noun, depression, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wishing, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | ");
         if (peerNouns.length > 1) {
             let reformatPN = peerNouns.join(" (3) | ");
             weathers.noun += "|" + reformatPN;
-            console.log(weathers.noun);
 
         }
     }
@@ -422,6 +421,8 @@
     function blur() {
         iframe.style.filter = "blur(" + day + "px)";
         document.body.style.filter = "blur(" + day * 0.5 + "px)";
+
+
         player.volume.value = (1 / day) * 3;
 
     }
@@ -546,6 +547,7 @@
     let temp = 0;
     let rain = 0;
     let margin = 50;
+
 
     let screen = true;
 
@@ -694,6 +696,24 @@
 
     }
 
+    function convolute(answer) {
+        let a = answer.split(' ');
+        for (let i = 0; i < a.length; i++) {
+            if (RiTa.isNoun(a[i])) {
+                a[i] = "<span>" + a[i] + "</span>";
+            }
+        }
+        spans = document.getElementsByTagName('span');
+        if (spans.length > 0) {
+            for (let i = 0; i < spans.length; i++) {
+                spans[i].style.filter = "blur(" + day * day + "px)";
+                spans[i].style.background = "pink";
+            }
+        }
+        console.log(spans)
+        return a.join(' ');
+    }
+
     // Update Question class to use HTML divs
 
     class Question {
@@ -722,7 +742,7 @@
 
 
             this.div.addEventListener("mouseenter", () => {
-                giveAnswer(this.text, this.answer, this.symbol, this.lat, this.lon);
+                giveAnswer(this.text, convolute(this.answer), this.symbol, this.lat, this.lon);
 
             });
 
