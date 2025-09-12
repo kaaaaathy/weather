@@ -14,8 +14,8 @@
 }
 
 @font-face {
-  font-family: "Weather-Rotated";
-  src: url("fonts/weather-rotated.ttf");
+  font-family: "WeatherRotated";
+  src: url("fonts/WeatherRotated.ttf");
 }
 
 
@@ -24,10 +24,6 @@
   src: url("https://backend.sheepdog.work/storage/v1/object/public/assets/6a50fa2a-3514-41f5-a3a6-18662faf4ae8/SGVyc2hleS1Ob2FpbGxlcy10aW1lc2wtMS0xLnR0Zg==");
 }
 
-@font-face {
-  font-family: "Weather";
-  src: url("https://backend.sheepdog.work/storage/v1/object/public/assets/6a50fa2a-3514-41f5-a3a6-18662faf4ae8/d2VhdGhlci50dGY=");
-}
 
 
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
@@ -60,7 +56,7 @@
 }
 
 #glyph {
-  font-family: "Weather-Rotated";
+  font-family: "WeatherRotated", wingdings, dingbats;
   /* transform: rotateZ(90deg); */
   /* font-size: 800px; */
   text-align: center;
