@@ -248,6 +248,7 @@ iframe {
 #day-info {
   position: absolute;
   z-index: 1002;
+  user-select: none;
 
   margin: 20px;
 }
@@ -560,6 +561,7 @@ body {
   white-space: nowrap;
   /* letter-spacing: 0; */
   user-select: none;
+
   cursor: pointer;
   transition: letter-spacing 0.5s ease, opacity 1s ease;
 

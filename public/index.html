@@ -379,8 +379,6 @@
             addModifier("soon");
             addModifier("eventually");
             addAdj("intensifying");
-            addAdj("intensifies");
-
             addAdj("Rapidly");
             addNoun("draft");
             addNoun("breeze");
@@ -404,7 +402,6 @@
             symbols.push("4");
             addModifier("urgently");
             addAdj("Rapidly");
-            addAdj("intensifies");
             addNoun("barb");
             addNoun("blow");
             addNoun("gust");
@@ -675,7 +672,7 @@
         if (soundStart) {
             let utterance = new SpeechSynthesisUtterance(question);
             utterance.rate = 0.75 / day;
-            utterance.pitch = 0.75 / day;
+            utterance.pitch = 1.5 / day;
 
             utterance.lang = "en-GB";
             utterance.voice = voices[32];
