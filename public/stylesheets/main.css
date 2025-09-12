@@ -38,7 +38,8 @@
 
 #caption {
   font-size: 16px;
-  padding: 20px;
+  position: absolute;
+  bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   width: 100%;
