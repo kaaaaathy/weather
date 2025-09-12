@@ -14,6 +14,7 @@
 
 <body>
     <div id="filter"></div>
+    <div id="end" class="hide"></div>
 
     <button id="download-btn" style="z-index:1000" type="button">Download Questions</button>
 
@@ -617,6 +618,9 @@
         }
         if (event.key === "x" && !event.repeat) {
             document.getElementById('download-btn').style.opacity = 0.5;
+        }
+        if (event.key === "q" && !event.repeat) {
+            document.getElementById('end').classList.toggle('hide');
         }
         if (event.key === "a" && !event.repeat) {
             toggleScreen();

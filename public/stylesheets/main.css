@@ -35,6 +35,18 @@
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
 
+#end {
+  background-color: white;
+  mix-blend-mode: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  z-index: 2000;
+  pointer-events: none;
+  transition: 2s all ease;
+}
 
 #caption {
   font-size: 16px;
