@@ -60,7 +60,7 @@
   /* transform: rotateZ(90deg); */
   /* font-size: 800px; */
   text-align: center;
-  -webkit-text-stroke: 1.5px white;
+  -webkit-text-stroke: 3px white;
   color: transparent;
 }
 
