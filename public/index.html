@@ -14,7 +14,7 @@
 
 <body>
     <div id="filter"></div>
-    <div id="end" class="hide"></div>
+    <!-- <div id="end" class="hide"></div> -->
 
     <button id="download-btn" style="z-index:1000" type="button">Download Questions</button>
 
@@ -616,8 +616,15 @@
         if (event.key === "x" && !event.repeat) {
             document.getElementById('download-btn').style.opacity = 0.5;
         }
-        if (event.key === "q" && !event.repeat) {
-            document.getElementById('end').classList.toggle('hide');
+        if (event.key === "q" && !event.repeatz) {
+            document.body.classList.toggle("white");
+            document.getElementById('outline').style.opacity = "0"
+            document.getElementById('day-info').style.opacity = "0"
+            document.getElementById('ask').style.opacity = "0"
+
+            overlay.style.opacity = "0"
+
+
         }
         if (event.key === "a" && !event.repeat) {
             toggleScreen();
@@ -671,11 +678,11 @@
 
         if (soundStart) {
             let utterance = new SpeechSynthesisUtterance(question);
-            utterance.rate = 0.75 / day;
+            utterance.rate = 1 / day;
             utterance.pitch = 1.5 / day;
 
             utterance.lang = "en-GB";
-            utterance.voice = voices[32];
+            utterance.voice = voices[11];
             speechSynthesis.speak(utterance);
         }
         url = refreshClouds(makeURL(lat, lon));

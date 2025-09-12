@@ -35,7 +35,7 @@
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
 
-#end {
+.white {
   background-color: white;
   mix-blend-mode: inherit;
   width: 100%;
