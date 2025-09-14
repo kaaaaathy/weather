@@ -112,7 +112,7 @@
         'start': `The $adj $noun $verb | $modifier the $noun $verb | If $noun is $adj, the $noun.nr() $verb`,
         'noun': `love, ant, coin, queen of $noun.s().nr(), king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patches of $noun, swell, seas, wave, depression, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wishing, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | "),
         'modifier': `at a distance, seen without $noun.s(), at the time of observation, which the $noun or $noun.nr() may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun.nr(), on land, in a chaotic sky, in the form of $noun.s(), in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | "),
-        'verb': `knows, recedes, lands, occludes, fronts,
+        'verb': `knows, becomes, equals, pans, wants, gives, forgets, completes, becomes undone, shifts, grays, recedes, lands, occludes, fronts,
         decreases, dissapates, outflows, becomes thicker`.toLowerCase().split(", ").join(" | "),
         'adj': `minor, major, dim, bright, loving, knowing, unprecedented, unknown, anvil-shaped, occluded, frontal, coastal, combined, primary, extratropical, DECREASING, CALM, DISSAPATING, Intertropical, Moving, Moderate, Slight, Quasi-Stationary, Continuous, Intermittent, Near Stationary, steady, 
         unsteady, well developed, heavy, less developed, discernable`.toLowerCase().split(", ").join(" | ")
@@ -616,15 +616,8 @@
         if (event.key === "x" && !event.repeat) {
             document.getElementById('download-btn').style.opacity = 0.5;
         }
-        if (event.key === "q" && !event.repeatz) {
-            document.body.classList.toggle("white");
-            document.getElementById('outline').style.opacity = "0"
-            document.getElementById('day-info').style.opacity = "0"
-            document.getElementById('ask').style.opacity = "0"
-
-            overlay.style.opacity = "0"
-
-
+        if (event.key === "s" && !event.repeat) {
+            overlay.classList.toggle("white");
         }
         if (event.key === "a" && !event.repeat) {
             toggleScreen();
@@ -682,7 +675,7 @@
             utterance.pitch = 1.5 / day;
 
             utterance.lang = "en-GB";
-            utterance.voice = voices[11];
+            utterance.voice = voices[32];
             speechSynthesis.speak(utterance);
         }
         url = refreshClouds(makeURL(lat, lon));
