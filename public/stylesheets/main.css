@@ -60,15 +60,18 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: -200px;
+  /* top: 0; */
 }
 
 #glyph {
   font-family: "WeatherRotated", wingdings, dingbats;
   /* transform: rotateZ(90deg); */
-  /* font-size: 800px; */
+  font-size: 800px;
   text-align: center;
-  -webkit-text-stroke: 6px white;
+  -webkit-text-stroke: 1px white;
+
+  /* -webkit-text-stroke: 6px white; */
   color: transparent;
 }
 

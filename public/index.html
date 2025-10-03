@@ -110,7 +110,7 @@
 
     let weathers = {
         'start': `The $adj $noun $verb | $modifier the $noun $verb | If $noun is $adj, the $noun.nr() $verb`,
-        'noun': `love, ant, coin, queen of $noun.s().nr(), king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patches of $noun, swell, seas, wave, depression, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wishing, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | "),
+        'noun': `love, ant, coin, queen of $noun.s().nr(), king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patches of $noun, swell, seas, wave, depression, feathers, barbs, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | "),
         'modifier': `at a distance, seen without $noun.s(), at the time of observation, which the $noun or $noun.nr() may be faintly visible through ground glass, sufficiently dense to hide the $noun or $noun.nr(), on land, in a chaotic sky, in the form of $noun.s(), in the form of towers, in the form of battlements, covering $noun, exceeding horizon, alone, accompanied by $noun, measured in MILLIBARs, combined with $noun, during the past hour.`.toLowerCase().split(", ").join(" | "),
         'verb': `knows, becomes, equals, pans, wants, gives, forgets, completes, becomes undone, shifts, grays, recedes, lands, occludes, fronts,
         decreases, dissapates, outflows, becomes thicker`.toLowerCase().split(", ").join(" | "),
@@ -128,7 +128,7 @@
         unsteady, well developed, heavy, less developed, discernable`.toLowerCase().split(", ").join(" | ")
         weathers.verb = `knows, recedes, lands, occludes, fronts,
         decreases, dissapates, outflows, becomes thicker`.toLowerCase().split(", ").join(" | "),
-            weathers.noun = `ant, love, coin, queen of $noun.s().nr(), king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patch of $noun, swell, seas, wave, wave of $noun, depression, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wishing, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | ");
+            weathers.noun = `ant, love, coin, queen of $noun.s().nr(), king of $noun.s().nr(), arcana, gust, fear, image, prince, animal, cup, star, lover, sword, fool, tenderness, wish for $noun, memory, memory of $noun, patch of $noun, swell, seas, wave, wave of $noun, depression, intensification, shift, frontogenesis, squall line, ridge, Spray, Boundary, Convergence, Zone, KNOTS, LOVE, moon, tuft, wish, wanting, Veil of $noun.s().nr(), tower of $noun.s().nr()`.toLowerCase().split(", ").join(" | ");
         if (peerNouns.length > 1) {
             let reformatPN = peerNouns.join(" (3) | ");
             weathers.noun += "|" + reformatPN;
@@ -218,24 +218,25 @@
     }
 
     function addModifier(phrase) {
-        weathers.modifier += "|" + phrase + " (3) ";
+        // weathers.modifier += "|" + phrase + " (3) ";
+        weathers.modifier += "|" + phrase;
 
 
     }
 
     function addVerb(phrase) {
-        weathers.verb += "|" + phrase + " (3) ";
+        weathers.verb += "|" + phrase;
 
 
     }
 
     function addAdj(phrase) {
-        weathers.adj += "|" + phrase + " (3) ";
+        weathers.adj += "|" + phrase;
 
 
     }
     function addNoun(phrase) {
-        weathers.noun += "|" + phrase + " (3) ";
+        weathers.noun += "|" + phrase;
         weatherSingularize();
 
 
@@ -379,7 +380,7 @@
             addModifier("soon");
             addModifier("eventually");
             addAdj("intensifying");
-            addAdj("Rapidly");
+            addAdj("Rapid");
             addNoun("draft");
             addNoun("breeze");
             addNoun("feathers");
@@ -391,7 +392,6 @@
             symbols.push("3");
             addAdj("immediate");
             addModifier("ready for you");
-            addModifier("Rapidly");
             addVerb("hastens");
             addNoun("barb");
             addNoun("draft");
@@ -401,7 +401,7 @@
         } else {
             symbols.push("4");
             addModifier("urgently");
-            addAdj("Rapidly");
+            addAdj("Rapid");
             addNoun("barb");
             addNoun("blow");
             addNoun("gust");
@@ -470,7 +470,7 @@
         } else if (forecast.includes("Cloudy") && !forecast.includes("Partly")) {
             div.classList.add("cloudy");
 
-        } else if (forecast.includes("Rain")) {
+        } else if (forecast.includes("Rain") || forecast.includes("Showers") || forecast.includes("Snow")) {
             div.classList.add("rainy");
             rainPlayer.play();
 
