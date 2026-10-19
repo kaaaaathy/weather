@@ -41,7 +41,7 @@
         <source src="332496__dave_girtsman__rain-storm.wav" type="audio/ogg">
     </audio>
 
-    <a href="/ask.html" onclick="window.open(this.href, 'ASK A QUESTION',
+    <a href="ask.html" onclick="window.open(this.href, 'ASK A QUESTION',
 'left=800,top=20,width=350,height=450,toolbar=0,resizable=0'); return false;" id="ask">Ask a Question</a>
 
 </body>
@@ -481,7 +481,7 @@
 
     async function getData() {
         try {
-            const response = await fetch('https://api.weather.gov/gridpoints/OKX/64,64/forecast');
+            const response = await fetch('https://api.weather.gov/gridpoints/OKX/50,50/forecast');
             data = await response.json();
             newDay(day);
             nextDay.addEventListener('click', () => {
