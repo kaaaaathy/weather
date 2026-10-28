@@ -88,6 +88,10 @@
   margin-top: 60px;
   text-align: center;
   width: 300px;
+  display: flex;
+  flex-flow: column wrap;
+  text-transform: lowercase;
+  font-family: "Hershey Futuram", sans-serif;
 
 }
 
@@ -99,24 +103,6 @@
 
 }
 
-#form {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-button {
-  font-family: "Hershey Futuram", sans-serif;
-  text-transform: uppercase;
-
-}
-
-#instruction,
-#submit {
-  text-transform: uppercase;
-  font-size: 16px;
-}
-
-
 
 #input {
   border: 1px dotted white;
@@ -125,9 +111,7 @@ button {
   width: 100%;
   border-radius: 50%;
   color: white;
-  font-size: 20px;
   text-align: center;
-  padding: 20px;
   font-family: "Hershey Futuram", sans-serif;
   transition: 0.5s ease all;
 }
@@ -155,13 +139,18 @@ button {
 #submit {
   background: white;
   color: black;
-  border-radius: 8px;
-  padding: 10px;
-  margin-top: 40px;
+  border: transparent;
+  border-radius: 50%;
+  padding: 15px;
+  margin-top: 20px;
   width: 100%;
   font-family: "Hershey Futuram", sans-serif;
 }
 
+#submit:hover {
+  border-radius: 50%;
+
+}
 
 /* ———————————— THIS IS THE CSS FOR ANSWERS HTML ———————————— */
 /* ———————————— THIS IS THE CSS FOR ANSWERS HTML ———————————— */
@@ -399,7 +388,7 @@ iframe {
   top: 0;
   z-index: 1003;
   mix-blend-mode: screen;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   transition: background-image 2s ease, opacity 0.5s ease;
 
 
@@ -431,9 +420,9 @@ body {
 }
 
 #outline {
-  width: 95%;
-  height: 92%;
-  margin: 2% 2.5%;
+  width: 99.5%;
+  height: 99%;
+  /* margin: 2% 2.5%; */
   position: absolute;
   border-radius: 50%;
   border: 2px dotted #777;
