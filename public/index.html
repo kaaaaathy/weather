@@ -46,7 +46,7 @@
 
 </body>
 <script src="/socket.io/socket.io.js"></script>
-<script src="http://unpkg.com/tone"></script>
+<script src="https://unpkg.com/tone"></script>
 
 <script>
 
@@ -75,7 +75,7 @@
 
     const synth = new Tone.PolySynth().toDestination();
     // set the attributes across all the voices using 'set'
-    synth.set({ detune: -2200 });
+    synth.set({detune: -2200});
     synth.volume.value = -4;
 
     const synthTime = 8;
@@ -565,7 +565,7 @@
     });
 
 
-    socket.on('drag', ({ id, x, y }) => {
+    socket.on('drag', ({id, x, y}) => {
         let dragged = questions.find(q => q.id == id);
         if (dragged) {
             dragged.x = x * window.innerWidth;
@@ -871,7 +871,7 @@
     document.getElementById('download-btn').addEventListener('click', () => {
         // Extract text from each Question object
         const questionTexts = questions.map(q => q.text);
-        const blob = new Blob([questionTexts.join('\n')], { type: 'text/plain' });
+        const blob = new Blob([questionTexts.join('\n')], {type: 'text/plain'});
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
