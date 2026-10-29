@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ASK A QUESTION</title>
     <link rel="icon" href="/favicon.ico">
@@ -38,7 +38,7 @@
                 input.value = '';
 
             } else if (bannedWords.some(word => value.includes(word))) {
-                alert("Your message contains a word that kathy decided to censor, sorry!");
+                alert("Your message contains a word that kathy decided to censor.");
             }
         });
     </script>

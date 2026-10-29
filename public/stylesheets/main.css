@@ -84,7 +84,7 @@
   justify-items: center;
 
   letter-spacing: 1px;
-  font-size: 12px;
+  font-size: 14px;
   animation: 30s gradate ease infinite;
 
 }
@@ -118,11 +118,11 @@
 
 #instruction {
   text-align: center;
-  margin: 20px 0px;
-  width: 100%;
+  margin-top: 20%;
+  margin-bottom: 20px;
+  filter: blur(0.5px);
   text-transform: uppercase;
   font-family: "Hershey times", sans-serif;
-  filter: blur(0.5px);
 
 }
 
@@ -131,7 +131,7 @@
   border-bottom: 1px dotted white;
   border: transparent;
   background: rgba(255, 255, 255, 0.1);
-  height: 100px;
+  height: 30%;
   width: 80%;
   box-shadow: 0 0 5px white;
 
