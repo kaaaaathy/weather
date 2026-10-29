@@ -75,7 +75,7 @@
 
     const synth = new Tone.PolySynth().toDestination();
     // set the attributes across all the voices using 'set'
-    synth.set({detune: -2200});
+    synth.set({ detune: -2200 });
     synth.volume.value = -4;
 
     const synthTime = 8;
@@ -160,7 +160,7 @@
     // FIGURE OUT WHAT DAY IT is
     let now = new Date(Date.now());
     const dowCurrent = now.getDay();
-    nextDay.innerText = "THIS " + returnNextDow(dowCurrent);
+    nextDay.innerText = "ON " + returnNextDow(dowCurrent + day);
 
 
     function returnNextDow(day) {
@@ -175,13 +175,13 @@
         }
 
         let nextdow;
-        if (day + 2 >= 7) {
-            nextdow = (day + 2) % 7;
+        if (day + 1 >= 7) {
+            nextdow = (day + 1) % 7;
         }
         else {
-            nextdow = day + 2;
+            nextdow = day + 1;
         }
-
+        console.log(day + " is the day number offset");
         weathers.modifier += "|" + dowref[nextdow];
         return dowref[nextdow];
     }
@@ -246,7 +246,7 @@
     function newDay(day) {
         if (data) {
             forecast = data.properties.periods[day]
-            console.log(forecast);
+            // console.log(forecast);
             temp = forecast.temperature;
             makeWeatherPanel();
 
@@ -484,25 +484,7 @@
             const response = await fetch('https://api.weather.gov/gridpoints/OKX/50,50/forecast');
             data = await response.json();
             newDay(day);
-            nextDay.addEventListener('click', () => {
 
-                if (day < 6) {
-                    day++;
-                } else {
-                    day = 1;
-                }
-                newDay(day);
-
-                nextDay.innerText = "THIS " + returnNextDow(dowCurrent + day);
-
-
-            })
-            tomorrow.addEventListener('click', () => {
-                day = 1;
-
-                newDay(day);
-
-            })
 
         } catch (error) {
             console.error('Error:', error);
@@ -532,7 +514,25 @@
 
 
 
+    nextDay.addEventListener('click', () => {
 
+        if (day < 6) {
+            day++;
+        } else {
+            day = 1;
+        }
+
+        nextDay.innerText = "ON " + returnNextDow(dowCurrent + day);
+        console.log(returnNextDow(dowCurrent + day) + "is the next day in the sequence");
+        newDay(day);
+
+
+    })
+    tomorrow.addEventListener('click', () => {
+        day = 1;
+        newDay(day);
+
+    })
 
 
 
@@ -565,7 +565,7 @@
     });
 
 
-    socket.on('drag', ({id, x, y}) => {
+    socket.on('drag', ({ id, x, y }) => {
         let dragged = questions.find(q => q.id == id);
         if (dragged) {
             dragged.x = x * window.innerWidth;
@@ -687,7 +687,7 @@
                 spans[i].style.filter = "blur(" + day * day + "px)";
             }
         }
-        console.log(spans)
+        // console.log(spans)
         symbolDiv.innerHTML = symbol;
 
         answerPanel.classList.toggle("hide");
@@ -871,7 +871,7 @@
     document.getElementById('download-btn').addEventListener('click', () => {
         // Extract text from each Question object
         const questionTexts = questions.map(q => q.text);
-        const blob = new Blob([questionTexts.join('\n')], {type: 'text/plain'});
+        const blob = new Blob([questionTexts.join('\n')], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;

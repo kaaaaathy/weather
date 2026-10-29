@@ -84,32 +84,65 @@
 /* ———————————— THIS IS THE CSS FOR INDEX HTML ———————————— */
 
 #form {
-  margin: auto;
-  margin-top: 60px;
   text-align: center;
-  width: 300px;
+  height: 100%;
   display: flex;
   flex-flow: column wrap;
-  text-transform: lowercase;
-  font-family: "Hershey Futuram", sans-serif;
+  justify-items: center;
 
+  letter-spacing: 1px;
+  font-size: 12px;
+  animation: 30s gradate ease infinite;
+
+}
+
+@keyframes gradate {
+  0% {
+    box-shadow: inset 0px 0px 30px rgb(92, 92, 113);
+    background-color: rgb(31, 43, 54);
+  }
+
+  33% {
+    box-shadow: inset 0px 0px 30px rgb(18, 78, 93);
+
+    background-color: rgb(19, 48, 79);
+
+
+  }
+
+
+  66% {
+    box-shadow: inset 0px 0px 30px rgb(102, 92, 161);
+    background-color: rgb(40, 86, 133);
+
+  }
+
+  100% {
+    box-shadow: inset 0px 0px 30px rgb(92, 92, 113);
+    background-color: rgb(31, 43, 54);
+  }
 }
 
 #instruction {
   text-align: center;
-  margin-bottom: 40px;
+  margin: 20px 0px;
   width: 100%;
-
+  text-transform: uppercase;
+  font-family: "Hershey times", sans-serif;
+  filter: blur(0.5px);
 
 }
 
 
 #input {
-  border: 1px dotted white;
-  background: black;
-  height: 150px;
-  width: 100%;
-  border-radius: 50%;
+  border-bottom: 1px dotted white;
+  border: transparent;
+  background: rgba(255, 255, 255, 0.1);
+  height: 100px;
+  width: 80%;
+  box-shadow: 0 0 5px white;
+
+  margin: 0px 10%;
   color: white;
   text-align: center;
   font-family: "Hershey Futuram", sans-serif;
@@ -125,7 +158,7 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 0px white;
+    box-shadow: 0 0 5px white;
 
   }
 
@@ -137,18 +170,24 @@
 }
 
 #submit {
-  background: white;
-  color: black;
+  background: rgb(255, 255, 255, 0.9);
+  color: rgb(31, 43, 54);
   border: transparent;
-  border-radius: 50%;
-  padding: 15px;
-  margin-top: 20px;
-  width: 100%;
+  padding: 10px;
+  margin: 25px 25%;
+  width: 50%;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
   font-family: "Hershey Futuram", sans-serif;
+  transition: 1s all ease;
+
 }
 
 #submit:hover {
+  transition: 1s all ease;
   border-radius: 50%;
+
 
 }
 
@@ -236,22 +275,26 @@ iframe {
   position: absolute;
   z-index: 1002;
   user-select: none;
+  text-transform: lowercase;
 
   margin: 20px;
 }
 
 #next-day,
 #tomorrow {
-  background: #444;
+  background: #000;
   color: white;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
-  /* border-radius: 4px; */
   outline: none !important;
-  padding: 4px;
+  padding: 4px 0px;
+  margin-right: 10px;
   border: transparent;
+  text-transform: uppercase;
   font-family: 'Hershey Times';
-  /* border-bottom: 1px solid white; */
+  cursor: pointer;
+  border-bottom: 1px dotted white;
+
 
 }
 
@@ -420,12 +463,11 @@ body {
 }
 
 #outline {
-  width: 99.5%;
+  width: 99.75%;
   height: 99%;
-  /* margin: 2% 2.5%; */
   position: absolute;
   border-radius: 50%;
-  border: 2px dotted #777;
+  border: 1px dotted green;
   overflow: hidden;
   transition: 1s box-shadow 1s ease-in;
   box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.3);
@@ -499,7 +541,8 @@ body {
   line-height: 1.2rem;
   z-index: 10;
   color: white;
-  font-size: 12px;
+  text-shadow: #000;
+  font-size: 11px;
   pointer-events: none;
 
 }
@@ -510,17 +553,16 @@ body {
   font-family: 'Hershey Times';
   letter-spacing: 1px;
   bottom: 20px;
-  padding: 4px;
-  background: rgba(255, 255, 255, 0.2);
-  font-size: 10px;
-  /* border-radius: 4px; */
-  /* border: 1px dotted white; */
-  /* background: black; */
+  font-size: 11px;
   color: white;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 
+  background: #000;
+  padding: 4px 0px;
+  cursor: pointer;
+  border-bottom: 1px dotted white;
 }
 
 #ask {
@@ -528,18 +570,21 @@ body {
 
 }
 
+
+
 #ask:hover,
 #tomorrow:hover,
 #next-day:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transition: background 0.5s ease;
+  /* background: rgba(255, 255, 255, 0.1); */
+  letter-spacing: 2px;
+  transition: letter-spacing 0.5s ease;
 
 }
 
 #ask,
 #tomorrow,
 #next-day {
-  transition: background 0.5s ease;
+  transition: letter-spacing 0.5s ease;
 
 }
 
@@ -552,13 +597,9 @@ body {
 
 }
 
-/* span {
-  color: green;
-} */
 
 .question {
   font-family: "Hershey Futuram", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  /* font-size: 14px; */
   color: white;
   padding: 20px;
   position: absolute;
