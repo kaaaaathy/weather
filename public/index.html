@@ -42,7 +42,7 @@
     </audio>
 
     <a href="ask.html" onclick="window.open(this.href, 'ASK A QUESTION',
-'left=800,top=20,width=350,height=450,toolbar=0,resizable=0'); return false;" id="ask">Ask a Question</a>
+'left=800,top=20,width=350,height=275,toolbar=0,resizable=0'); return false;" id="ask">Ask a Question</a>
 
 </body>
 <script src="/socket.io/socket.io.js"></script>
@@ -244,6 +244,8 @@
 
 
     function newDay(day) {
+        blur();
+
         if (data) {
             forecast = data.properties.periods[day]
             // console.log(forecast);
@@ -261,8 +263,8 @@
                 let randomSym = symbols[Math.floor(Math.random() * symbols.length)];
                 q.symbol = randomSym;
             })
-            blur();
         }
+
     }
 
 
