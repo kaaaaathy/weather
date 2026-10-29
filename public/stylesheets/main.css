@@ -19,13 +19,6 @@
 }
 
 
-/* @font-face {
-  font-family: "Hershey Times";
-  src: url("https://backend.sheepdog.work/storage/v1/object/public/assets/6a50fa2a-3514-41f5-a3a6-18662faf4ae8/SGVyc2hleS1Ob2FpbGxlcy10aW1lc2wtMS0xLnR0Zg==");
-} */
-
-
-
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
 /* ———————————— THIS IS THE CSS FOR THE GLYPH PROJ ———————————— */
@@ -641,3 +634,30 @@ s #questions-container {
   }
 
 }
+
+/* 
+#tomorrow,
+#next-day,
+#weather-info,
+#submit,
+#ask,
+#instruction {
+  transition: 1s font-size ease;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #tomorrow,
+  #next-day,
+  #weather-info,
+  #submit,
+  #ask,
+  #instruction {
+    font-size: 13px;
+    transition: 1s font-size ease;
+  }
+
+
+
+
+} */
