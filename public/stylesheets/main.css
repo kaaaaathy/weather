@@ -82,9 +82,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-items: center;
-
   letter-spacing: 1px;
-  font-size: 14px;
   animation: 30s gradate ease infinite;
 
 }
@@ -97,9 +95,7 @@
 
   33% {
     box-shadow: inset 0px 0px 30px rgb(18, 78, 93);
-
     background-color: rgb(19, 48, 79);
-
 
   }
 
@@ -118,10 +114,10 @@
 
 #instruction {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 25%;
   margin-bottom: 20px;
-  filter: blur(0.5px);
-  text-transform: uppercase;
+  opacity: 0.7;
+  font-size: 16px;
   font-family: "Hershey times", sans-serif;
 
 }
@@ -131,14 +127,12 @@
   border-bottom: 1px dotted white;
   border: transparent;
   background: rgba(255, 255, 255, 0.1);
-  height: 30%;
+  height: 25%;
   width: 80%;
   box-shadow: 0 0 5px white;
-
   margin: 0px 10%;
   color: white;
   text-align: center;
-  font-family: "Hershey Futuram", sans-serif;
   transition: 0.5s ease all;
 }
 
@@ -162,6 +156,14 @@
 
 }
 
+#input,
+#submit {
+  font-size: 14px;
+  font-family: "Hershey Futuram", sans-serif;
+  font-size: 14px;
+
+}
+
 #submit {
   background: rgb(255, 255, 255, 0.9);
   color: rgb(31, 43, 54);
@@ -172,8 +174,8 @@
   border-radius: 2px;
   cursor: pointer;
   text-transform: uppercase;
-  font-family: "Hershey Futuram", sans-serif;
   transition: 1s all ease;
+
 
 }
 
